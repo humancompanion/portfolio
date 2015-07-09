@@ -1,0 +1,67 @@
+/*  Typography
+---------------------------------------- */
+h1 {
+  @include type-1();
+}
+
+h2 {
+  @include type-2();
+}
+
+h3 {
+  @include type-3();
+}
+
+h4 {
+  @include type-4();
+}
+
+h5 {
+  @include type-5();
+}
+
+h6 {
+  @include type-6();
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+body {
+  @include type-body();
+}
+
+p {
+  @include type-body();
+}
+
+.small {
+  @include type-small();
+}
+
+.fine-print {
+  @include type-xsmall();
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+hr {
+  margin: 0.5rem 0;
+  height: 1px;
+  border: 1px solid $grey-medium;
+}

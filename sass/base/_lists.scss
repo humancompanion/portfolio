@@ -1,0 +1,129 @@
+/*////////////////////////////////////////////////////////*/
+/*//                                                    //*/
+/*//    Lists                                           //*/
+/*//                                                    //*/
+/*////////////////////////////////////////////////////////*/
+
+@mixin defaultList() {
+  list-style: none;
+  @include type-body();
+  margin: 0;
+  padding: 0;
+
+  > li {
+    line-height: $base-line-height;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+  }
+}
+
+$margin-bottom-default: 1rem;
+
+
+// UNORDERED, ORDERED
+ul,
+ol {
+  @include defaultList();
+}
+
+.list--bullet {
+  @include defaultList();
+  margin-bottom: $margin-bottom-default;
+
+  > li {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+  }
+}
+
+.list--ordered {
+  margin-bottom: $margin-bottom-default;
+
+  > li {
+    list-style-type: decimal;
+    margin-left: 1.25rem;
+    line-height: $base-line-height;
+  }
+}
+
+
+// INLINE
+.list--inline {
+  @include defaultList();
+  margin-bottom: $margin-bottom-default;
+
+  > li {
+    display: inline;
+  }
+}
+
+// COMMA
+.list--comma {
+  @include defaultList();
+
+  > li {
+    &:after {
+      content:', '
+    }
+  }
+}
+
+// MEDIA OBJECT
+.list--media-object {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.8rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .figure {
+    margin-right: 0.65rem;
+    vertical-align: top;
+    min-width: 65px;
+  }
+
+  .body {
+    flex: 1;
+
+    .header {
+      padding-top: 0;
+
+      &.link {
+        color: $color_link;
+      }
+    }
+  }
+}
+
+// MEDIA
+.list--media {
+  .header {
+    @include type-5();
+    color: $blue;
+    font-family: $font_regular;
+    font-weight: bold;
+  }
+
+  .body {
+    margin: 0;
+    padding-bottom: 0.25rem;
+    @include fontSize($type-M);
+  }
+
+  .sub-header {
+    margin: 0;
+    color: $grey-light;
+  }
+
+  .header,
+  .sub-header {
+    margin: 0;
+    padding-top: 0;
+  }
+}

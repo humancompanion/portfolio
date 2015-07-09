@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            //
+//    COLOR                                                                   //
+//                                                                            //
+////////////////////////////////////////////////////////////////////////////////
+
+// -----------------------------------------------------------------------------
+// Base
+
+$white          : #fff;
+$black          : #000;
+$blue           : #324fe1;
+$grey-darkest   : #333333;
+$grey-dark      : #666666;
+$grey-medium    : #454958;
+$grey-light     : #cccccc;
+$grey-lightest  : #fafafc;
+
+
+// by Type
+$color_base       : $grey-medium;
+$color_link       : $blue;
+$color_linkhover  : darken($blue, 10%);
+$color_linkactive : darken($blue, 15%);

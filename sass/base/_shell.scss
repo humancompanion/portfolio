@@ -1,0 +1,88 @@
+// ---------------------------------------------------------------------------
+// Base: Shell
+.l-content,
+.l-columns-two,
+.l-columns-three {
+  position: relative;
+  max-width: $width--page;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $padding--page;
+}
+
+.l-columns-three {
+  .l-columns-primary {
+    order: 1;
+  }
+
+  .l-columns-secondary--left,
+  .l-columns-secondary--left--fixed {
+    order: 3;
+  }
+
+  .l-columns-secondary--right,
+  .l-columns-secondary--right--fixed {
+    order: 2;
+  }
+}
+
+.l-columns-primary,
+.l-columns-secondary {
+  min-height: 1px;
+}
+
+@include breakpoint(ML) {
+  .l-columns-two {
+    .l-columns-primary {
+      order: 2;
+    }
+    .l-columns-secondary {
+      order: 1;
+    }
+    .l-columns-secondary--right {
+      order: 3;
+    }
+  }
+
+  .l-columns-three {
+    .l-columns-primary {
+      order: 1;
+    }
+
+    .l-columns-secondary--left,
+    .l-columns-secondary--left--fixed {
+      order: 3;
+    }
+
+    .l-columns-secondary--right,
+    .l-columns-secondary--right--fixed {
+      order: 2;
+    }
+
+    .l-columns-secondary--right--fixed {
+      width: $width--fixed-rail !important;
+    }
+  }
+}
+
+@include breakpoint(XL) {
+  .l-columns-three {
+    .l-columns-primary {
+      order: 2;
+    }
+
+    .l-columns-secondary--left,
+    .l-columns-secondary--left--fixed {
+      order: 1;
+    }
+
+    .l-columns-secondary--left--fixed {
+      width: $width--fixed-rail !important;
+    }
+
+    .l-columns-secondary--right,
+    .l-columns-secondary--right--fixed {
+      order: 3;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* Links
+---------------------------------------- */
+a {
+  color: $color_link;
+  line-height: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $color_linkhover;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color_linkactive;
+  }
+  &:focus {
+    color: $color_linkactive;
+    outline-offset: 2px;
+  }
+}
+
