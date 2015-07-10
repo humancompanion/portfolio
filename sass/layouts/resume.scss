@@ -1,32 +1,11 @@
+// ---------------------------------------------------------------------------
+// Layout: Resume
 @import "util/util";
 
 /* ----------------------------- Base -----------------------------------*/
-body {
-  background-color: $grey-medium;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 .8em;
-  max-width: 1200px;
-  background: $grey-lightest;
-  border: solid $grey-medium;
-  border-width: 8px 0 2px 0;
-
-  @include breakpoint(ML) {
-    padding: 0 2%;
-  }
-}
-
 ul li {
   margin-left: 10px;
   list-style-type: circle;
-}
-
-blockquote {
-  font-style: italic;
-  padding-left: 25px;
-  margin-bottom: 1em;
 }
 
 p,
@@ -132,7 +111,7 @@ div.section_body {
 .skills div.section_body dl {
   margin-bottom: 1em;
 
-  @include breakpoint(M) {
+  @include breakpoint(MML) {
     float: left;
     width: 30%;
     padding-left: 15px;
@@ -154,12 +133,17 @@ div.section_body {
 /* ----------------------------- Technical -----------------------------------*/
 .talent {
   float: left;
-  width: 30%;
+  width: 40%;
+
+  @include breakpoint(M) {
+    width: 25%;
+  }
 }
 
 .talent h2 {
   margin-bottom: 6px;
 }
+
 
 /* ----------------------------- Experience -----------------------------------*/
 .job {
@@ -176,6 +160,7 @@ div.section_body {
   text-transform: inherit;
   border-top: 1px solid #ccc;
   padding-top: 1em;
+  margin-bottom: 0;
 }
 
 .first h3 {

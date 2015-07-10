@@ -1,0 +1,17 @@
+// ---------------------------------------------------------------------------
+// Util: Component Mixins
+
+// Module title & desc treatment
+@mixin module-title() {
+  @include type-2();
+  margin: 0;
+  line-height: 1;
+
+  .module-title__desc {
+    display: block;
+    @include type-small();
+    margin: 0;
+    padding-left: $size-base;
+    line-height: 1;
+  }
+}

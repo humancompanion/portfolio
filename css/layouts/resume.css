@@ -1,26 +1,7 @@
 /* ----------------------------- Base -----------------------------------*/
-body {
-  background-color: #454958; }
-
-.container {
-  margin: 0 auto;
-  padding: 0 .8em;
-  max-width: 1200px;
-  background: #fafafc;
-  border: solid #454958;
-  border-width: 8px 0 2px 0; }
-  @media (min-width: 48em) {
-    .container {
-      padding: 0 2%; } }
-
 ul li {
   margin-left: 10px;
   list-style-type: circle; }
-
-blockquote {
-  font-style: italic;
-  padding-left: 25px;
-  margin-bottom: 1em; }
 
 p, ol, ul {
   padding-bottom: 6px; }
@@ -50,7 +31,7 @@ header h3 {
   margin-top: 3rem; }
 
 .enlarge {
-  font-family: 'Cantarell', 'ProximaNova', 'HelveticaNeue', Helvetica, Arial, serif;
+  font-family: 'Cantarell', 'Open Sans', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   padding: 0;
@@ -120,7 +101,7 @@ div.section_body {
 
 .skills div.section_body dl {
   margin-bottom: 1em; }
-  @media (min-width: 35em) {
+  @media (min-width: 42em) {
     .skills div.section_body dl {
       float: left;
       width: 30%;
@@ -138,7 +119,10 @@ div.section_body {
 /* ----------------------------- Technical -----------------------------------*/
 .talent {
   float: left;
-  width: 30%; }
+  width: 40%; }
+  @media (min-width: 35em) {
+    .talent {
+      width: 25%; } }
 
 .talent h2 {
   margin-bottom: 6px; }
@@ -149,7 +133,7 @@ div.section_body {
   margin-bottom: 1.5em; }
 
 .job .location {
-  font-family: 'Cantarell', 'ProximaNova', 'HelveticaNeue', Helvetica, Arial, serif;
+  font-family: 'Cantarell', 'Open Sans', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   padding: 0;
@@ -165,7 +149,8 @@ div.section_body {
 .job h3 {
   text-transform: inherit;
   border-top: 1px solid #ccc;
-  padding-top: 1em; }
+  padding-top: 1em;
+  margin-bottom: 0; }
 
 .first h3 {
   border-top: 0px;
@@ -176,7 +161,7 @@ div.section_body {
   list-style-type: none;
   margin-left: -1em;
   margin-top: 1em;
-  font-family: 'ProximaNova', 'HelveticaNeue', Helvetica, Arial, serif;
+  font-family: 'Open Sans', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
@@ -188,7 +173,7 @@ div.section_body {
   list-style-type: disc; }
 
 .notes, ol.notes li {
-  font-family: 'ProximaNova', 'HelveticaNeue', Helvetica, Arial, serif;
+  font-family: 'Open Sans', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
   margin: 0; }

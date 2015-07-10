@@ -57,15 +57,15 @@
 }
 
 // Examples:
-//  .g-B--full
-//  .g-S--fit
-//  .g-M--1of2
-//  .g-L--1of3
-//  .g-XL--1of4
+//  .g-B-full
+//  .g-S-fit
+//  .g-M-1of2
+//  .g-L-1of3
+//  .g-XL-1of4
 @mixin grid-sizing($name: "") {
   $sep: "-";
   @if $name == "" {
-    $sep: "B-";
+    $sep: "B";
   }
   .g-#{$name}#{$sep}-fit > .g-cell,
   .g-cell.g-#{$name}#{$sep}-fit {
@@ -105,15 +105,15 @@
 }
 
 // Examples:
-//    .g-B--gutters
-//    .g-S--gutters
-//    .g-M--guttersLarge
-//    .g-L--gutters2x
-//    .g-XL--gutters3x
+//    .g-B-gutters
+//    .g-S-gutters
+//    .g-M-guttersLarge
+//    .g-L-gutters2x
+//    .g-XL-gutters3x
 @mixin grid-gutters($name: "") {
   $sep: "-";
   @if $name == "" {
-    $name: "B-";
+    $name: "B";
   }
   .g-#{$name}#{$sep}gutters {
     margin-left: -0.5rem;

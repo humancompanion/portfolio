@@ -1,0 +1,17 @@
+{
+	"version": 3,
+	"file": "portfolio.css",
+	"sources": [
+		"../../portfolio.scss",
+		"../../../util/_util.scss",
+		"../../../util/_variables.scss",
+		"../../../util/_functions.scss",
+		"../../../util/_type_mixins.scss",
+		"../../../util/var/_type_sizes.scss",
+		"../../../util/var/_sizing.scss",
+		"../../../util/var/_color.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "",
+	"names": []
+}

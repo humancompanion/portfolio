@@ -1,5 +1,38 @@
-/*  Typography
----------------------------------------- */
+// ---------------------------------------------------------------------------
+// Typography
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Cantarell|Open+Sans);
+
+// Normalization to start
+html {
+  @include font-smoothing(on);
+  font-size: $base-font-size;
+  text-size-adjust: none;
+}
+
+body {
+  color: $color_base;
+  @include type-body();
+}
+
+*[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+*[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+bdo[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+bdo[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
 h1 {
   @include type-1();
 }
@@ -34,10 +67,6 @@ h6 a {
   text-decoration: none;
 }
 
-body {
-  @include type-body();
-}
-
 p {
   @include type-body();
 }
@@ -65,3 +94,10 @@ hr {
   height: 1px;
   border: 1px solid $grey-medium;
 }
+
+blockquote {
+  font-style: italic;
+  padding-left: 25px;
+  margin-bottom: 1em;
+}
+

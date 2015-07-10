@@ -26,6 +26,10 @@ module.exports = function(grunt) {
             dest: 'css/base.css'
           },
           {
+            src: 'sass/components.scss',
+            dest: 'css/components.css'
+          },
+          {
             expand: true,
             cwd: 'sass/layouts/',
             src: '*.scss',

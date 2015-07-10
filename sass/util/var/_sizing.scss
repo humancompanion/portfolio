@@ -1,29 +1,17 @@
 // ---------------------------------------------------------------------------
 // Sizing
 
-$size-base          : 4px;
-$size-small         : $size-base * 2;  // 8px
-$size-default       : $size-base * 3;  // 12px
-$size-medium        : $size-base * 6;  // 24px
-$size-large         : $size-base * 9;  // 36px
-$size-extra-large   : $size-medium * 2; // 48px
-
-
-// ---------------------------------------------------------------------------
-// Border Radius :: "bdrs" is Emmet abbr for "border-radius"
-//   http://docs.emmet.io/css-abbreviations/
-//   http://docs.emmet.io/cheat-sheet/
-
-$bdrs-1: 3px;
-$bdrs-2: 6px;
-$bdrs-3: 10px;
-
+$size-base  : 4px;
+$size-S     : $size-base * 2;  // 8px
+$size-SM    : $size-base * 3;  // 12px
+$size-M     : $size-base * 4;  // 16px
+$size-ML    : $size-base * 6;  // 24px
+$size-L     : $size-base * 9;  // 36px
+$size-XL    : $size-ML * 2; // 48px
 
 // ---------------------------------------------------------------------------
-// Layout-ish values
-$width--page        : 980px;
-$width--page-gutter : 8px;
-$width--gutter      : 2.38%;
-$width--fixed-rail  : 220px;
-$padding--page      : 0 $width--page-gutter;
-$header-max-width   : 936px;
+// Layout
+
+$page--max-width          : 1200px;
+$page--gutter-width-S     : 0.8em;
+$page--gutter-width-ML    : 2%;

@@ -1,7 +1,4 @@
 // -----------------------------------------------------------------------------
-// Typography
-
-// -----------------------------------------------------------------------------
 // Breakpoints
 $breakpoints: (
   "(min-width: 15em)" "XS",       //  240px at 16px base font
@@ -16,7 +13,7 @@ $breakpoints: (
   "(min-width: 78.75em)" "XXL"    // 1260px at 16px base font
 );
 
-//  From HugoG: http://hugogiraudel.com/2014/01/13/sass-string-replacement-function/
+// From HugoG: http://hugogiraudel.com/2014/01/13/sass-string-replacement-function/
 // http://sassmeister.com/gist/1b4f2da5527830088e4d
 // Replace `$search` with `$replace` in `$string`
 // @param {String} $string - Initial string
@@ -119,30 +116,6 @@ $breakpoints: (
 }
 
 // -----------------------------------------------------------------------------
-// Placholder prefixed
-@mixin placeholder {
-    &::-webkit-input-placeholder { @content }
-    &:-moz-placeholder           { @content }
-    &::-moz-placeholder          { @content }
-    &:-ms-input-placeholder      { @content }
-}
-
-// -----------------------------------------------------------------------------
-// Target touch devices
-//
-// Currently experimental, relies on current knowledge that Firefox (which DOES
-// support touch events, does not support websqldatabase or cssreflections.
-// Very very very very prototype-quality.
-// Known to work on iOS devices, not yet tested beyond that.
-
-@mixin touch-only() {
-    .touch.websqldatabase.cssreflections & {
-        @content
-    }
-}
-
-
-// -----------------------------------------------------------------------------
 // list-columns: Takes a long (unordered) list and breaks it into columns
 @mixin list-columns($count: 2, $gutter_size: $size-medium) {
   -webkit-column-count: $count;
@@ -153,4 +126,53 @@ $breakpoints: (
      -moz-column-gap: $gutter_size;
       -ms-column-gap: $gutter_size;
           column-gap: $gutter_size;
+}
+
+// -----------------------------------------------------------------------------
+// Bleed: Bleeds components to the edge of the viewport
+@mixin bleed($padding: $page--gutter-width-S, $sides: left right) {
+  @if $sides == 'all' {
+    margin: -#{$padding};
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
+
+@mixin unbleed($sides: left right) {
+  @if $sides == 'all' {
+    margin: 0;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: 0;
+    }
+  }
+}
+
+@mixin bleed-until($point) {
+  @include bleed();
+
+  @include breakpoint($point) {
+    $sides: left right;
+
+    @each $side in $sides {
+      padding-#{$side}: 0;
+    }
+    @include unbleed();
+  }
+}
+
+@mixin remove-grid-padding-until($point) {
+  $sides: left right;
+
+  @each $side in $sides {
+    margin-#{$side}: - $grid-padding;
+  }
+
+  @include breakpoint($point) {
+    @include unbleed();
+  }
 }

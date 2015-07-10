@@ -1,0 +1,43 @@
+// ---------------------------------------------------------------------------
+// Component: Navigation
+
+@import "util/util";
+@import "util/component-mixins";
+
+.primary-nav {
+  display: none;
+  padding: 2em 0;
+
+  @include breakpoint(ML) {
+    display: inherit;
+  }
+
+  .primary-nav__item {
+    @include breakpoint(ML) {
+      display: inline-block;
+    }
+  }
+
+  .module-title {
+    display: block;
+    width: 100%;
+    @include type-3();
+    margin: 0;
+    padding: $size-M 0;
+
+    @include breakpoint(ML) {
+      padding-bottom: $size-SM;
+      border-bottom: 4px solid $blue-light;
+    }
+  }
+
+  .module-title__desc {
+    display: block;
+    @include type-small();
+    margin: 0;
+    padding-left: $size-base;
+    line-height: 1;
+  }
+}
+
+

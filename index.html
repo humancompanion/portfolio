@@ -1,1 +1,52 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Matthew Dingee &bull; UX Designer</title>
+    <meta name="keywords" content="resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
+    <meta name="description" content="Resume for Matthew Dingee, a User Experience designer." />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layouts/portfolio.css">
+    <!--[if IE]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="l-portfolio">
+    <div class="l-shell">
+      <header class="header" role="banner">
+        <h1 class="header__title">Matthew Dingee</h1>
+        <h4 class="header__sub-title">User Experience Designer</h4>
+      </header>
+      <nav class="primary-nav">
+        <ul class="primary-nav__body l-grid g-ML-gutters">
+          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#case_studies"><span class="module-title__desc">Recent Work</span> Case Studies</a></li>
+          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#experience"><span class="module-title__desc">Professional</span> Experience</a></li>
+          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#skills"><span class="module-title__desc">To Pay the Bills</span> Skills</a></li>
+        </ul>
+      </nav>
+      <main class="content-well" role="main" id="main" tabindex="0">
+        <section class="accordion accordion--bleed">
+          <div id="case_studies" class="p-module">
+            <input id="ac-1" name="accordion-A" type="checkbox" />
+            <label for="ac-1" class="module-title"><span class="module-title__desc">Recent Work</span> Case Studies</label>
+            <article class="p-module__content p-module__content--case-studies">
+            </article>
+          </div>
+          <div id="experience" class="p-module">
+            <input id="ac-2" name="accordion-A" type="checkbox" />
+            <label for="ac-2" class="module-title"><span class="module-title__desc">Professional</span> Experience</label>
+            <article class="p-module__content p-module__content--experience">
+            </article>
+          </div>
+          <div id="skills" class="p-module">
+            <input id="ac-3" name="accordion-A" type="checkbox" />
+            <label for="ac-3" class="module-title"><span class="module-title__desc">To Pay the Bills</span> Skills</label>
+            <article class="p-module__content p-module__content--skills">
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

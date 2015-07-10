@@ -1,0 +1,20 @@
+// ---------------------------------------------------------------------------
+// Component: Header
+
+@import "util/util";
+
+.header {
+  @include bleed();
+
+  @include breakpoint(ML) {
+    border-bottom: 1px solid $grey-light;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__sub-title {
+
+  }
+}
