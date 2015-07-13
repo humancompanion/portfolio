@@ -23,7 +23,7 @@
     "time-grunt": "^0.4.0"
   },
   "dependencies": {
-    "node-bourbon": "^4.2.1-beta1"
+    "node-bourbon": "^4.2.3"
   },
   "scripts": {
     "open:repo": "opener https://github.com/EightShapes/portfolio/",

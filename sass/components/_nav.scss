@@ -40,4 +40,13 @@
   }
 }
 
+.home-nav__body {
+  @include type-body($font_light);
+  @include lineHeight($base-line-height + 2px);
+}
+
+.home-nav__header {
+  font-weight: bold;
+}
+
 

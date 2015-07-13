@@ -3,17 +3,21 @@
 
 $white          : #fff;
 $black          : #000;
-$blue           : #324fe1;
+$blue           : rgb(48,121,237);
 $blue-light     : #57A3E8;
+$red            : rgb(226,32,43);
 $grey-darkest   : #333333;
 $grey-dark      : #666666;
 $grey-medium    : #454958;
 $grey-light     : #cccccc;
 $grey-lightest  : #fafafc;
 
+$white-off        : rgb(243,240,227);
 
 // by Type
 $color_base       : $grey-medium;
 $color_link       : $blue;
 $color_linkhover  : darken($blue, 10%);
 $color_linkactive : darken($blue, 15%);
+
+

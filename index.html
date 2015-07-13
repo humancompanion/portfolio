@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Matthew Dingee &bull; UX Designer</title>
-    <meta name="keywords" content="resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
+    <meta name="keywords" content="matthew dingee, portfolio, resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
     <meta name="description" content="Resume for Matthew Dingee, a User Experience designer." />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -14,39 +14,40 @@
   </head>
   <body class="l-portfolio">
     <div class="l-shell">
-      <header class="header" role="banner">
-        <h1 class="header__title">Matthew Dingee</h1>
-        <h4 class="header__sub-title">User Experience Designer</h4>
+      <header class="header header-home" role="banner">
+        <h1 class="header-home__title">Matthew Dingee</h1>
       </header>
-      <nav class="primary-nav">
-        <ul class="primary-nav__body l-grid g-ML-gutters">
-          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#case_studies"><span class="module-title__desc">Recent Work</span> Case Studies</a></li>
-          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#experience"><span class="module-title__desc">Professional</span> Experience</a></li>
-          <li class="primary-nav__item g-cell g-ML-1of3"><a class="module-title" href="#skills"><span class="module-title__desc">To Pay the Bills</span> Skills</a></li>
-        </ul>
-      </nav>
       <main class="content-well" role="main" id="main" tabindex="0">
-        <section class="accordion accordion--bleed">
-          <div id="case_studies" class="p-module">
-            <input id="ac-1" name="accordion-A" type="checkbox" />
-            <label for="ac-1" class="module-title"><span class="module-title__desc">Recent Work</span> Case Studies</label>
-            <article class="p-module__content p-module__content--case-studies">
-            </article>
+        <section class="home__body l-grid g-ML-gutters">
+          <div class="home__body-left g-cell g-B-fit">
+            <h3 class="home__title">user experience designer</h3>
           </div>
-          <div id="experience" class="p-module">
-            <input id="ac-2" name="accordion-A" type="checkbox" />
-            <label for="ac-2" class="module-title"><span class="module-title__desc">Professional</span> Experience</label>
-            <article class="p-module__content p-module__content--experience">
-            </article>
-          </div>
-          <div id="skills" class="p-module">
-            <input id="ac-3" name="accordion-A" type="checkbox" />
-            <label for="ac-3" class="module-title"><span class="module-title__desc">To Pay the Bills</span> Skills</label>
-            <article class="p-module__content p-module__content--skills">
-            </article>
+          <div class="home__body-right g-cell g-B-1of3">
+            <nav class="home-nav">
+              <dl class="home-nav__body list--definition">
+                <dt class="home-nav__header">Work</dt>
+                <dd class="home-nav__item"><a href="case-study/cisco.html">Cisco</a></dd>
+                <dd class="home-nav__item"><a href="case-study/marriott.html">Marriott</a></dd>
+                <dd class="home-nav__item"><a href="case-study/ncarb.html">NCARB</a></dd>
+                <dd class="home-nav__item"><a href="case-study/heritage.html">Heritage</a></dd>
+                <dt class="home-nav__header">Experience</dt>
+                <dd class="home-nav__item"><a href="resume.html#eightshapes">EightShapes</a></dd>
+                <dd class="home-nav__item"><a href="resume.html#microsoft">Microsoft</a></dd>
+                <dd class="home-nav__item"><a href="resume.html#tellme">Tellme</a></dd>
+                <dt class="home-nav__header">Skills</dt>
+                <dd class="home-nav__item"><a href="process.html#ux">UX Design</a></dd>
+                <dd class="home-nav__item"><a href="process.html#dev">Development</a></dd>
+              </ul>
+            </nav>
           </div>
         </section>
       </main>
+      <footer class="footer" role="footer">
+          <ul class="list--inline contact-info">
+            <li><a href="mailto:matthew.j.dingee@gmail.com">matthew.j.dingee@gmail.com</a></li>
+            <li><a href="tel://1-202-725-0202">202-725-0202</a></li>
+          </ul>
+      </footer>
     </div>
   </body>
 </html>

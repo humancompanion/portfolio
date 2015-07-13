@@ -15,6 +15,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           includePaths: [
+            require('node-bourbon').includePaths,
             'sass/',
             'components/sass'
           ],
@@ -42,7 +43,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       options: {
         map: true, // Use and update the sourcemap
-        browsers: ["last 2 versions"]
+        browsers: ["last 3 versions"]
       },
       project_css: {
         expand: true,
@@ -69,6 +70,7 @@ module.exports = function(grunt) {
       minify: {
         src: [
           'css/base.css',
+          'css/components.css',
           'css/layouts/*.css'
         ],
         dest: 'css/portfolio.min.css'

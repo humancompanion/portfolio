@@ -1,2 +1,32 @@
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwb3J0Zm9saW8uY3NzIn0= */
+.l-portfolio .home__body {
+  margin-top: 40%; }
+  @media (min-width: 48em) {
+    .l-portfolio .home__body {
+      padding-left: 15%; } }
+.l-portfolio .home__body-left {
+  margin-right: 1em;
+  padding-right: 8px;
+  border-right: 1px solid #000; }
+  @media (min-width: 30em) {
+    .l-portfolio .home__body-left {
+      margin-right: 1.5em; } }
+.l-portfolio .home__body-right {
+  min-width: 110px; }
+.l-portfolio .home__title {
+  margin-top: 0;
+  color: #e2202b; }
+.l-portfolio .footer {
+  margin: 2em 0 1em;
+  text-align: right; }
+  @media (min-width: 48em) {
+    .l-portfolio .footer {
+      padding-right: 15%; } }
+.l-portfolio .list--inline.contact-info {
+  font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0.008rem;
+  margin: 0; }
+/*# sourceMappingURL=portfolio.css.map */

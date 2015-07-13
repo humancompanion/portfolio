@@ -6,6 +6,12 @@ body {
 
 .l-shell {
   position: relative;
+  @include display(flex);
+  @include flex-flow(row wrap);
+  @include flex-basis($base-font-size);
+  @include flex-direction(column);
+  min-height: 100vh;
+  height: 100%;
   max-width: $page--max-width;
   margin: 0 auto;
   padding: 0 $page--gutter-width-S;
@@ -16,4 +22,12 @@ body {
   @include breakpoint(ML) {
     padding: 0 $page--gutter-width-ML;
   }
+}
+
+.content-well {
+  @include flex(1);
+}
+
+.header,
+.footer {
 }

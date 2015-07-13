@@ -41,8 +41,9 @@
   .module-title {
     @include type-2();
     margin: 0;
-    line-height: 1;
     padding: $size-ML $size-SM;
+    line-height: 1;
+    text-transform: inherit;
   }
 
   .module-title__desc {
@@ -50,7 +51,7 @@
     @include type-small();
     margin: 0;
     padding-left: $size-base;
-    line-height: 1;
+    line-height: 1.5;
   }
 
 }

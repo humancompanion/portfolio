@@ -5,16 +5,48 @@
 
 .header {
   @include bleed();
+  border-bottom: 1px solid $red;
+}
 
-  @include breakpoint(ML) {
-    border-bottom: 1px solid $grey-light;
+.header-home {
+  &__title {
+    @include type-4();
+    margin: 2em 0 1em;
+
+    @include breakpoint(ML) {
+      padding-left: 15%;
+    }
   }
+}
+
+.header-resume {
+  @include clear();
 
   &__title {
-    margin-bottom: 0;
+    @include breakpoint(M) {
+      float: left;
+      width: 60%;
+    }
+  }
+
+  &__body {
+    @include breakpoint(M) {
+      float: right;
+      width: 40%;
+    }
+  }
+
+  &__email {
+    display: block;
+    margin-top: calculateRem($base-line-height * 2);
+  }
+
+  &__footer {
+    @include clear();
   }
 
   &__sub-title {
-
+    font-style: italic;
   }
 }
+
