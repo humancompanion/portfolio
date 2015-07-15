@@ -169,7 +169,7 @@ section {
 footer {
   *zoom: 1;
   margin: 2em 0 1em;
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #BEBFC5; }
   footer:before, footer:after {
     content: "";
     display: table; }

@@ -174,7 +174,8 @@ p {
   line-height: 24px;
   line-height: 1.5rem;
   color: #454958;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.75rem;
+  max-width: 48rem; }
 
 .small {
   font-family: 'Lora', 'Georgia', serif;
@@ -203,9 +204,20 @@ hr {
   border: 1px solid #454958; }
 
 blockquote {
-  font-style: italic;
-  padding-left: 25px;
-  margin-bottom: 1em; }
+  font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0;
+  color: #333333;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin: 0.75rem 0;
+  color: #454958;
+  padding-left: 1.8rem;
+  margin: 2rem auto; }
 
 .enlarge {
   font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -277,6 +289,8 @@ img {
   .l-grid.g-row {
     margin-top: 36px;
     margin-bottom: 36px; }
+  .l-grid.g-row--painted {
+    background-color: #BEBFC5; }
 
 .g-cell {
   -webkit-flex: 1;
@@ -876,13 +890,13 @@ body {
 
 .l-shell {
   position: relative;
-  max-width: 1200px;
+  max-width: 75em;
   margin: 0 auto;
   padding: 0 0.8rem;
   background: #fff;
   border: solid #454958;
   border-width: 8px 0 2px 0; }
-  @media (min-width: 48em) {
+  @media (min-width: 64em) {
     .l-shell {
       padding: 0 1.8rem; } }
 
@@ -1070,7 +1084,7 @@ ul, ol {
   font-size: 1.3125rem; }
 .list--media .sub-header {
   margin: 0;
-  color: #cccccc; }
+  color: #BEBFC5; }
 .list--media .header, .list--media .sub-header {
   margin: 0;
   padding-top: 0; }

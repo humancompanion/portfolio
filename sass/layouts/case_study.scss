@@ -4,10 +4,24 @@
 @import "util/util";
 
 .l-case_study {
+  .g-row--bleed {
+    margin-left: -#{$page--gutter-width-S};
+    margin-right: -#{$page--gutter-width-S};
+    padding-right: 1rem;
+
+    @include breakpoint(XL) {
+      margin-left: -#{$page--gutter-width-XL};
+      margin-right: -#{$page--gutter-width-XL};
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+    }
+  }
+
   .g-cell-content {
     margin-bottom: 1rem;
   }
 
+  .img--1x,
   .img--2x {
     box-shadow: 0 0 10px 1px rgba(0,0,0,.15);
   }
@@ -17,9 +31,8 @@
   }
 
   .case-study-section__header-img {
-    @include breakpoint(M) {
-      text-align: center;
-    }
+    text-align: center;
+
     @include breakpoint(ML) {
       text-align: right;
     }

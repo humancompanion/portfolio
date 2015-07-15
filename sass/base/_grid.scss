@@ -14,6 +14,10 @@
     margin-top: $size-L;
     margin-bottom: $size-L;
   }
+
+  &.g-row--painted {
+    background-color: $grey-light;
+  }
 }
 
 .g-cell {

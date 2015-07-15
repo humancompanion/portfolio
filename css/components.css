@@ -63,6 +63,15 @@
     margin-bottom: 8px; }
   .header-case-study__project {
     margin-top: 0; }
+  .header-case-study__url {
+    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    color: #454958;
+    margin-bottom: 0.75rem;
+    text-transform: lowercase; }
 
 .primary-nav {
   display: none;

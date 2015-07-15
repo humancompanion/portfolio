@@ -19,7 +19,7 @@ body {
   border: solid $grey-medium;
   border-width: 8px 0 2px 0;
 
-  @include breakpoint(ML) {
+  @include breakpoint(XL) {
     padding: 0 $page--gutter-width-XL;
   }
 }
