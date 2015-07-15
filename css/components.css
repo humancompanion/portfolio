@@ -1,8 +1,8 @@
 .header {
-  margin-left: -0.8em;
-  padding-left: 0.8em;
-  margin-right: -0.8em;
-  padding-right: 0.8em;
+  margin-left: -0.8rem;
+  padding-left: 0.8rem;
+  margin-right: -0.8rem;
+  padding-right: 0.8rem;
   border-bottom: 1px solid #e2202b; }
 
 .header-home__title {
@@ -49,6 +49,21 @@
   .header-resume__sub-title {
     font-style: italic; }
 
+.header-case-study {
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-grow: inherit;
+  -moz-flex-grow: inherit;
+  flex-grow: inherit;
+  -ms-flex-positive: inherit; }
+  .header-case-study__title {
+    margin-bottom: 8px; }
+  .header-case-study__project {
+    margin-top: 0; }
+
 .primary-nav {
   display: none;
   padding: 2em 0; }
@@ -87,7 +102,7 @@
     padding-left: 4px;
     line-height: 1; }
 
-.home-nav__body {
+.home-nav__body, .case-study-nav__body {
   font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -98,6 +113,9 @@
   line-height: 26px;
   line-height: 1.625rem; }
 
-.home-nav__header {
+.case-study-nav__title.is-current {
+  padding-left: 4px; }
+
+.home-nav__header, .case-study-nav__header {
   font-weight: bold; }
 /*# sourceMappingURL=components.css.map */

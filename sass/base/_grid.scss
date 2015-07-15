@@ -1,94 +1,111 @@
+// ---------------------------------------------------------------------------
+// Base: Grid - A version of Solved by Flexbox
+
 .l-grid {
-  // display: table-cell;
-  @include display(flex);
-  @include flex-flow(row wrap);
-  @include flex-basis($base-font-size);
+  display: table-cell;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: $base-font-size;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &.g-row {
+    margin-top: $size-L;
+    margin-bottom: $size-L;
+  }
 }
 
 .g-cell {
-  @include flex(1);
+  flex: 1;
 }
 
 .g-flex_cells {
   & > .g-cell {
-    @include display(flex);
+    display: table-cell;
+    display: flex;
   }
 }
 
+
+// Align grid cells
 .g-top {
-  @include align-items(flex-start);
+  align-items: flex-start;
 }
 
 .g-bottom {
-  @include align-items(flex-end);
+  align-items: flex-end;
 }
 
 .g-center {
-  @include align-items(center);
+  align-items: center;
 }
 
 .g-v-top {
-  @include justify-content(flex-start);
+  justify-content: flex-start;
 }
 
 .g-v-bottom {
-  @include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 .g-v-center {
-  @include justify-content(center);
+  justify-content: center;
 }
 
-
+// Align individual cells
 .g-cell-top {
-  @include align-self(flex-start);
+  align-self: flex-start;
 }
 
 .g-cell-bottom {
-  @include align-self(flex-end);
+  align-self: flex-end;
 }
 
 .g-cell-center {
-  @include align-self(center);
+  align-self: center;
+}
+
+.l-grid.g-debug {
+  .g-cell {
+    // border: 1px dashed $black;
+  }
 }
 
 // Examples:
-//  .g-B-full
-//  .g-S-fit
-//  .g-M-1of2
-//  .g-L-1of3
-//  .g-XL-1of4
+//  .g-B--full
+//  .g-S--fit
+//  .g-M--1of2
+//  .g-L--1of3
+//  .g-XL--1of4
 @mixin grid-sizing($name: "") {
   $sep: "-";
   @if $name == "" {
-    $sep: "B";
+    $sep: "B-";
   }
   .g-#{$name}#{$sep}-fit > .g-cell,
   .g-cell.g-#{$name}#{$sep}-fit {
-    @include flex(1);
+    flex: 1;
   }
   .g-#{$name}#{$sep}-full > .g-cell,
   .g-cell.g-#{$name}#{$sep}-full {
     width: 100% !important;
-    @include flex(none);
+    flex: none;
   }
   .g-#{$name}#{$sep}-1of2 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of2 {
     width: 50% !important;
-    @include flex(none);
+    flex: none;
   }
   .g-#{$name}#{$sep}-1of3 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of3 {
     width: 33.3333% !important;
-    @include flex(none);
+    flex: none;
   }
   .g-#{$name}#{$sep}-1of4 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of4 {
     width: 25% !important;
-    @include flex(none);
+    flex: none;
   }
 }
 
@@ -104,7 +121,7 @@
 }
 
 // Examples:
-//    .g-B-gutters
+//    .g-B--gutters
 //    .g-S-gutters
 //    .g-M-guttersLarge
 //    .g-L-gutters2x
@@ -136,6 +153,14 @@
     margin-left: -3rem;
     & > .g-cell {
       padding-left: 3rem;
+    }
+  }
+  // Removes just the outer gutter
+  .g-#{$name}#{$sep}guttersRemoveOuter {
+    margin-left: 0;
+
+    & > .g-cell:first-child {
+      padding-left: 0;
     }
   }
 }

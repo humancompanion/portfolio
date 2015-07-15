@@ -4,30 +4,27 @@ body {
   background-color: $grey-medium;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .l-shell {
   position: relative;
-  @include display(flex);
-  @include flex-flow(row wrap);
-  @include flex-basis($base-font-size);
-  @include flex-direction(column);
-  min-height: 100vh;
-  height: 100%;
   max-width: $page--max-width;
   margin: 0 auto;
   padding: 0 $page--gutter-width-S;
-  background: $grey-lightest;
+  background: $white;
   border: solid $grey-medium;
   border-width: 8px 0 2px 0;
 
   @include breakpoint(ML) {
-    padding: 0 $page--gutter-width-ML;
+    padding: 0 $page--gutter-width-XL;
   }
 }
 
-.content-well {
-  @include flex(1);
-}
-
-.header,
-.footer {
+.l-site-nav {
+  margin-top: $size-ML;
+  padding: $size-M;
 }

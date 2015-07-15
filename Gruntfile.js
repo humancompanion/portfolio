@@ -89,6 +89,7 @@ module.exports = function(grunt) {
         files: {
           src : [
             '*.html',
+            'case-study/*.html',
             'components/*.html',
             'css/*.css',
             'css/*/*.css',

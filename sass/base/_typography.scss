@@ -101,3 +101,8 @@ blockquote {
   margin-bottom: 1em;
 }
 
+.enlarge {
+  @include type-4();
+  line-height: $base-line-height * 1.3;
+}
+

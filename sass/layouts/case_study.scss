@@ -1,0 +1,31 @@
+// ---------------------------------------------------------------------------
+// Layout: Case Study
+
+@import "util/util";
+
+.l-case_study {
+  .g-cell-content {
+    margin-bottom: 1rem;
+  }
+
+  .img--2x {
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.15);
+  }
+
+  .enlarge {
+    margin-top: 0;
+  }
+
+  .case-study-section__header-img {
+    @include breakpoint(M) {
+      text-align: center;
+    }
+    @include breakpoint(ML) {
+      text-align: right;
+    }
+  }
+
+  .case-study-section__header {
+    margin-top: 0;
+  }
+}

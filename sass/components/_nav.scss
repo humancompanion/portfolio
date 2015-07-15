@@ -40,12 +40,20 @@
   }
 }
 
-.home-nav__body {
+.home-nav__body,
+.case-study-nav__body {
   @include type-body($font_light);
   @include lineHeight($base-line-height + 2px);
 }
 
-.home-nav__header {
+.case-study-nav__title {
+  &.is-current {
+    padding-left: $size-base;
+  }
+}
+
+.home-nav__header,
+.case-study-nav__header {
   font-weight: bold;
 }
 

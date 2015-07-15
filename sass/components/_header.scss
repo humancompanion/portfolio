@@ -50,3 +50,23 @@
   }
 }
 
+.header-case-study {
+  @include flex(1);
+  @include flex-grow(inherit);
+
+  &__title {
+    margin-bottom: $size-S;
+  }
+
+  &__project {
+    margin-top: 0;
+  }
+
+  &__title,
+  &__project {
+    @include breakpoint(ML) {
+    }
+  }
+
+}
+
