@@ -2,7 +2,6 @@
 // Component: Navigation
 
 @import "util/util";
-@import "util/component-mixins";
 
 .primary-nav {
   display: none;
@@ -55,6 +54,11 @@
 .home-nav__header,
 .case-study-nav__header {
   font-weight: bold;
+}
+
+.site-nav {
+  margin-top: $size-L;
+  padding: 1rem;
 }
 
 

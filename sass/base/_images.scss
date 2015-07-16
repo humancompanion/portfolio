@@ -30,9 +30,23 @@ img {
     width: 284px;
   }
 
+  &__ML {
+    width: 384px;
+  }
+
   &__XL {
     width: 1024px;
   }
+}
+
+.img--reduce.img__XL {
+  width: (1024px / 2);
+}
+
+.figure-frame {
+  padding: 0.5rem;
+  background-color: $white;
+  text-align: center;
 }
 
 

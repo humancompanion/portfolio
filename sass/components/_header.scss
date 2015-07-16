@@ -62,15 +62,15 @@
     margin-top: 0;
   }
 
-  &__title,
-  &__project {
-    @include breakpoint(ML) {
-    }
-  }
-
   &__url {
-    @include type-body($font_light);
+    @include type-xsmall($font_light);
     text-transform: lowercase;
+
+    @include breakpoint(ML) {
+      @include type-body($font_light);
+      float: right;
+      margin-top: 1.2rem;
+    }
   }
 }
 

@@ -1,0 +1,12 @@
+// ---------------------------------------------------------------------------
+// Component: Footer
+
+@import "util/util";
+
+.footer {
+  @include clear();
+  margin: 2rem 0 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid $grey-light;
+}
+

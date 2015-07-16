@@ -269,8 +269,18 @@ img {
   width: 187.5px; }
 .img__M {
   width: 284px; }
+.img__ML {
+  width: 384px; }
 .img__XL {
   width: 1024px; }
+
+.img--reduce.img__XL {
+  width: 512px; }
+
+.figure-frame {
+  padding: 0.5rem;
+  background-color: #fff;
+  text-align: center; }
 
 .l-grid {
   display: table-cell;
