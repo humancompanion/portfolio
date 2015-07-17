@@ -5,13 +5,19 @@ a {
   line-height: inherit;
   text-decoration: none;
 
+  &:link {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   &:hover {
     color: $color_linkhover;
     text-decoration: underline;
   }
+
   &:active {
     color: $color_linkactive;
   }
+
   &:focus {
     color: $color_linkactive;
     outline-offset: 2px;

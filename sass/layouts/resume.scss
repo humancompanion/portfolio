@@ -29,7 +29,7 @@ ul {
 
 /* ----------------------------- Sections -----------------------------------*/
 section {
-  @include clear();
+  @include clearfix();
 }
 
 .section_title {
@@ -55,7 +55,7 @@ section {
 }
 
 .section_body {
-  @include clear();
+  @include clearfix();
   max-width: 850px;
 
   @include breakpoint(ML) {

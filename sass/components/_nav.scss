@@ -4,38 +4,32 @@
 @import "util/util";
 
 .primary-nav {
-  display: none;
-  padding: 2em 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  overflow: auto;
+  z-index: -1;
+  padding: 2rem 0 0.5rem;
+  background-color: $grey-medium;
 
   @include breakpoint(ML) {
     display: inherit;
   }
 
-  .primary-nav__item {
-    @include breakpoint(ML) {
-      display: inline-block;
-    }
-  }
-
-  .module-title {
+  .primary-nav__a {
     display: block;
     width: 100%;
-    @include type-3();
+    @include type-4();
     margin: 0;
-    padding: $size-M 0;
+    padding: $size-M;
+    color: $white;
+    border-bottom: 1px solid $grey-light;
 
-    @include breakpoint(ML) {
-      padding-bottom: $size-SM;
-      border-bottom: 4px solid $blue-light;
+    &:hover {
+      text-decoration: none;
+      background-color: $grey-light;
     }
-  }
-
-  .module-title__desc {
-    display: block;
-    @include type-small();
-    margin: 0;
-    padding-left: $size-base;
-    line-height: 1;
   }
 }
 

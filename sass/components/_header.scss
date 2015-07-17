@@ -4,15 +4,90 @@
 @import "util/util";
 
 .header {
-  @include bleed();
   border-bottom: 1px solid $red;
+
+  &__body {
+    padding: 0 $page--gutter-width-S;
+    background-color: $white;
+
+    @include breakpoint(XL) {
+      padding: 0 $page--gutter-width-XL;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+
+  &__nav-toggle {
+    display: block;
+    position: absolute;
+    top: $size-M;
+    right: 8px;
+    height: $size-L + 4px;
+    width: $size-L;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      height: $size-base;
+      width: 100%;
+      background: $grey-medium;
+      border-radius: $size-base;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: $size-base * 2;
+      }
+      &:nth-child(3) {
+        top: $size-base * 4;
+      }
+    }
+
+    .label {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      margin: 0 auto;
+      text-align: center;
+      @include type-xsmall($font_light);
+      font-size: 10px;
+      text-transform: uppercase;
+      color: $grey-medium;
+    }
+  }
+
+  &__nav-toggle.is-open .hamburger {
+    &:nth-child(1) {
+      top: $size-base * 2;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      left: -#{$size-L};
+    }
+    &:nth-child(3) {
+      top: $size-base * 2;
+      transform: rotate(-135deg);
+    }
+  }
 }
 
 .header-home {
-  &__title {
-    @include type-4();
-    margin: 2em 0 1em;
+  margin-bottom: $size-L;
 
+  &__title {
     @include breakpoint(ML) {
       padding-left: 15%;
     }
@@ -20,29 +95,10 @@
 }
 
 .header-resume {
-  @include clear();
+  @include clearfix();
 
   &__title {
-    @include breakpoint(M) {
-      float: left;
-      width: 60%;
-    }
-  }
-
-  &__body {
-    @include breakpoint(M) {
-      float: right;
-      width: 40%;
-    }
-  }
-
-  &__email {
-    display: block;
-    margin-top: calculateRem($base-line-height * 2);
-  }
-
-  &__footer {
-    @include clear();
+    margin-bottom: 0;
   }
 
   &__sub-title {
@@ -51,9 +107,6 @@
 }
 
 .header-case-study {
-  @include flex(1);
-  @include flex-grow(inherit);
-
   &__title {
     margin-bottom: $size-S;
   }

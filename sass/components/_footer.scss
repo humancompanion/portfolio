@@ -4,9 +4,17 @@
 @import "util/util";
 
 .footer {
-  @include clear();
+  @include clearfix();
   margin: 2rem 0 1rem;
   padding: 1rem 0;
   border-top: 1px solid $grey-light;
+
+  .contact-info {
+    padding: 0 $page--gutter-width-S;
+
+    @include breakpoint(XL) {
+      padding: 0 $page--gutter-width-XL;
+    }
+  }
 }
 

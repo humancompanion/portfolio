@@ -26,13 +26,10 @@ ol, ul {
   padding-right: 6.5em; }
 
 /* ----------------------------- Sections -----------------------------------*/
-section {
-  *zoom: 1; }
-  section:before, section:after {
-    content: "";
-    display: table; }
-  section:after {
-    clear: both; }
+section::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 .section_title {
   margin-bottom: .5em; }
@@ -52,13 +49,11 @@ section {
       padding-left: 10%; } }
 
 .section_body {
-  *zoom: 1;
   max-width: 850px; }
-  .section_body:before, .section_body:after {
+  .section_body::after {
+    clear: both;
     content: "";
     display: table; }
-  .section_body:after {
-    clear: both; }
   @media (min-width: 48em) {
     .section_body {
       float: right;
@@ -164,4 +159,5 @@ section {
 
 .notes {
   padding-bottom: 2px; }
+
 /*# sourceMappingURL=resume.css.map */

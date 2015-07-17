@@ -1,5 +1,10 @@
 // ---------------------------------------------------------------------------
 // Base: Shell
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: $grey-medium;
 }
@@ -11,17 +16,34 @@ body {
 }
 
 .l-shell {
-  position: relative;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
+  z-index: 1;
+  @include transition(all 0.23s ease-in-out);
   max-width: $page--max-width;
   margin: 0 auto;
-  padding: 0 $page--gutter-width-S;
+  padding: 0;
   background: $white;
   border: solid $grey-medium;
   border-width: 8px 0 2px 0;
+}
+
+.content-well {
+  padding: 0 $page--gutter-width-S;
 
   @include breakpoint(XL) {
     padding: 0 $page--gutter-width-XL;
   }
+}
+
+body.is-pushed .l-shell {
+  top: $primary-nav--height;
+  bottom: -#{$primary-nav--height};
+  overflow: visible;
 }
 
 .l-site-nav {

@@ -88,7 +88,7 @@
 @mixin type-xsmall($font_family: $font_regular) {
   font-family: $font_family;
   @include fontSize($type-XS);
-  @include lineHeight($type-S);
+  @include lineHeight($type-SM);
   letter-spacing: 0.008rem;
   margin: 0;
 }

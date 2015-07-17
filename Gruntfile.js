@@ -59,11 +59,16 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      js: {
+      js_base: {
         src: [
-          'bower_components/modernizr/modernizr.js'
+          'bower_components/modernizr/modernizr.js',
+          'bower_components/jquery/dist/jquery.min.js',
         ],
         dest: 'js/project.js'
+      },
+      js_components: {
+        src: 'js/components/*.js',
+        dest: 'js/components.js'
       }
     },
     cssmin: {
@@ -80,7 +85,7 @@ module.exports = function(grunt) {
       jshintrc: true,
       all: [
         'Gruntfile.js',
-        'js/app.js'
+        'js/components/*.js'
       ],
       gruntfile: 'Gruntfile.js'
     },
@@ -90,13 +95,10 @@ module.exports = function(grunt) {
           src : [
             '*.html',
             'case-study/*.html',
-            'components/*.html',
             'css/*.css',
             'css/*/*.css',
-            'components/css/*.css',
-            'config.json',
             'js/*.js',
-            'components/js/*.js'
+            'js/components/*.js'
           ]
         },
         options: {
@@ -119,9 +121,9 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: [
-          'js/*.js'
+          'js/components/*.js'
         ],
-        tasks: ['jshint:all'],
+        tasks: ['jshint:all', 'concat:js_components'],
         options: {
           debounceDelay: 250
         }
@@ -142,8 +144,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('dev', ['sass', 'autoprefixer', 'browserSync', 'watch']);
+  grunt.registerTask('dev', ['sass', 'autoprefixer', 'concat:js_components', 'browserSync', 'watch']);
   grunt.registerTask('css', ['cssmin']);
-  grunt.registerTask('js', ['jshint:all', 'concat:js']);
+  grunt.registerTask('js', ['jshint:all', 'concat:js_base']);
   grunt.registerTask('build', ['css', 'js']);
 };

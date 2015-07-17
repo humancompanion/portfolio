@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Heritage Case Study &bull; Matthew Dingee &bull; UX Designer</title>
+    <meta name="keywords" content="marriott, case study, portfolio, resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
+    <meta name="description" content="Heritage Constitution case study by Matthew Dingee, a User Experience designer." />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/layouts/case_study.css">
+    <!--[if IE]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="l-case_study">
+    <div class="l-shell">
+      <header class="header header-case-study" role="banner">
+        <div class="header__body">
+          <h1 class="header__title header-case-study__title">Case Study</h1>
+          <h2 class="header-case-study__project">
+            Heritage Constitution
+            <span class="header-case-study__url">
+              <a href="http://www.heritage.org/constitution/">
+                http://www.heritage.org/constitution/
+              </a>
+            </span>
+          </h2>
+        </div>
+      </header>
+      <main class="content-well" role="main" id="main" tabindex="0">
+        <div class="content-well__container">
+          <div class="l-grid g-row g-ML-guttersLarge g-XL-guttersRemoveOuter">
+            <div class="g-cell g-B--full g-ML--fit">
+              <div class="g-cell-content">
+                <p class="enlarge">
+                  My first project for EightShapes gave me a chance to immerse myself in JavaScript and contribute to a remarkable new way to experience the Constitution of the United States.
+                </p>
+                <p>
+                  EightShapes has already <a href="http://www.eightshapes.com/blog/2012/07/18/the-power-of-sketches-how-we-sold-a-huge-project-shift-with-5-index-cards/">told the story of how this project evolved</a>. What it doesn't cover however was the amount of work that went into actually building the design. My experience in creating and managing technical plans at Microsoft &amp; Tellme were critical to the success of the project.
+                </p>
+              </div>
+            </div>
+            <div class="g-cell g-B--full g-ML--fit">
+              <div class="g-cell-content">
+                <img alt="Heritage Constitution home page screenshot at wide viewport dimentions" src="../images/case-study/heritage/home-XL-2x.png" class="img--2x img__XL" />
+              </div>
+            </div>
+          </div>
+          <div class="l-grid g-row g-ML-guttersLarge">
+            <div class="g-cell g-B--full g-ML--fit">
+              <div class="g-cell-content case-study-section__header-img">
+                <img alt="Heritage Constitution essay medium viewport screenshot" src="../images/case-study/heritage/essay-ML-2x.png" class="img--2x img__ML" />
+              </div>
+              <div class="g-cell-content">
+                <p>
+                  The design boiled down to a one page application with a few states and transitions between those states. While we could (and perhaps should) have used an existing MVC-based JS framework all of those I evaluated seemed too heavy for the task at hand. I ended up writing my own lightweight framework to pull and process the JSON data, handle state changes, and provide a fast, seemless experience on all devices.
+                </p>
+              </div>
+            </div>
+            <div class="g-cell g-B--full g-ML--fit">
+              <div class="l-grid g-B-guttersLarge">
+                <div class="g-cell">
+                  <img alt="Heritage Constitution home page screenshot at narrow viewport dimentions" src="../images/case-study/heritage/home-SM-2x.png" class="img--2x img__SM" />
+                </div>
+                <div class="g-cell">
+                  <h3 class="case-study-section__header">On this project</h3>
+                  <ul class="list--bullet">
+                    <li>JavaScript</li>
+                    <li>Animation</li>
+                    <li>Production Build</li>
+                  </ul>
+                  <h3 class="case-study-section__header">Tools</h3>
+                  <ul class="list--bullet">
+                    <li><a href="https://github.com/mitsuhiko/classy">Class.js</a></li>
+                    <li><a href="http://labjs.com/">LAB.js</a></li>
+                    <li><a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/">iOS Simulator</a></li>
+                    <li><a href="https://www.browserstack.com">Browerstack</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-grid g-row g-B-guttersLarge">
+            <div class="g-cell g-B--full">
+              <p>
+                One of the challenges of the project that the design did not forsee was ordinal search. The Constitution is filled with numbers (Article 1 or I, Section 2, Amendment 21) and ordinal numbers (1st Article, Twenty-First Amendment). The autosuggest functionality needed to handle both across articles and amendments. Unfortunately for me there was not a JavaScript library to handle this. Thus I ended up porting parts of the <a href="http://deveiate.org/code/linguistics/Linguistics/EN.html#method-i-ordinate">Ruby Linguistics::EN</a> module to JS.
+              </p>
+              <p class="fine-print">
+                NOTE: I don't personally share the views or opinions of the Heritage Foundation.
+              </p>
+            </div>
+          </div>
+          <div class="l-grid g-row g-row--painted g-row--bleed g-B-guttersLarge g-bottom">
+            <div class="g-cell g-B--full">
+              <h4>Doing the numbers: Ordinal search</h4>
+            </div>
+            <div class="g-cell g-B--full g-ML--1of2">
+              <div class="g-cell-content">
+                <h5>I (1, first)<h5>
+                <img alt="Heritage Constitution ordinal search, I" src="../images/case-study/heritage/search-ordinal-I-ML-2x.png" class="img--2x img__ML" />
+              </div>
+            </div>
+            <div class="g-cell g-B--full g-ML--1of2">
+              <div class="g-cell-content">
+                <h5>Twenty</h5>
+                <img alt="Heritage Constitution ordinal search, Twenty" src="../images/case-study/heritage/search-ordinal-twenty-ML-2x.png" class="img--2x img__ML" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="site-nav">
+        <nav class="case-study-nav g-cell g-B--1of3">
+          <ul class="case-study-nav__body">
+            <li class="case-study-nav__header">Work</li>
+            <li class="case-study-nav__title"><a href="cisco.html">Cisco</a></li>
+            <li class="case-study-nav__title"><a href="marriott.html">Marriott</a></li>
+            <!-- li class="case-study-nav__title"><a href="ncarb.html">NCARB</a></li -->
+            <li class="case-study-nav__title is-current">Heritage</li>
+          </ul>
+        </nav>
+      </section>
+      <footer class="footer" role="footer">
+          <ul class="list--inline contact-info">
+            <li><a href="mailto:matthew.j.dingee@gmail.com">matthew.j.dingee@gmail.com</a></li>
+            <li><a href="tel://1-202-725-0202">202-725-0202</a></li>
+          </ul>
+      </footer>
+    </div>
+  </body>
+</html>

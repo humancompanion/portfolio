@@ -4,22 +4,7 @@
 @import "util/util";
 
 .l-portfolio {
-  .l-shell {
-    @include display(flex);
-    @include flex-flow(row wrap);
-    @include flex-basis($base-font-size);
-    @include flex-direction(column);
-    min-height: 100vh;
-    height: 100%;
-  }
-
-  .content-well {
-    @include flex(1);
-  }
-
   .home__body {
-    margin-top: 40%;
-
     @include breakpoint(ML) {
       padding-left: 15%;
     }

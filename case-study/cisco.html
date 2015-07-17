@@ -5,25 +5,44 @@
     <title>Cisco Case Study &bull; Matthew Dingee &bull; UX Designer</title>
     <meta name="keywords" content="cisco, case study, portfolio, resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
     <meta name="description" content="Cisco Support Home case study by Matthew Dingee, a User Experience designer." />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/layouts/case_study.css">
+    <script src="../js/project.js"></script>
     <!--[if IE]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body class="l-case_study">
     <div class="l-shell">
-      <header class="header header-case-study" role="banner">
-        <h1 class="header-case-study__title">Case Study: Cisco</h1>
-        <h2 class="header-case-study__project">
-          Support Home
-          <span class="header-case-study__url">
-            <a href="http://www.cisco.com/c/en/us/support/index.html">
-              http://www.cisco.com/support/
-            </a>
-          </span>
-        </h2>
+      <header class="header header-case-study" role="banner" data-object="header">
+        <div class="header__body">
+          <h1 class="header__title header-case-study__title">Case Study</h1>
+          <h2 class="header-case-study__project">
+            Cisco Support Home
+            <span class="header-case-study__url">
+              <a href="http://www.cisco.com/c/en/us/support/index.html">
+                http://www.cisco.com/support/
+              </a>
+            </span>
+          </h2>
+          <a href="#primary-nav" class="header__nav-toggle" data-behavior="header.toggle-nav" data-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="label">Menu</span>
+          </a>
+        </div>
+        <nav class="primary-nav" id="primary-nav" role="nav">
+          <ul class="primary-nav__body">
+            <li class="list-item"><a class="primary-nav__a" href="index.html">Work</a></li>
+            <li class="list-item"><a class="primary-nav__a" href="../resume.html">Experience</a></li>
+            <li class="list-item"><a class="primary-nav__a" href="../about.html">Skills</a></li>
+          </ul>
+        </nav>
       </header>
       <main class="content-well" role="main" id="main" tabindex="0">
         <div class="content-well__container">
@@ -116,17 +135,6 @@
           </div>
         </div>
       </main>
-      <section class="site-nav">
-        <nav class="case-study-nav g-cell g-B--1of3">
-          <ul class="case-study-nav__body">
-            <li class="case-study-nav__header">Work</li>
-            <li class="case-study-nav__title is-current">Cisco</li>
-            <li class="case-study-nav__title"><a href="marriott.html">Marriott</a></li>
-            <!-- li class="case-study-nav__title"><a href="ncarb.html">NCARB</a></li -->
-            <li class="case-study-nav__title"><a href="heritage.html">Heritage</a></li>
-          </ul>
-        </nav>
-      </section>
       <footer class="footer" role="footer">
           <ul class="list--inline contact-info">
             <li><a href="mailto:matthew.j.dingee@gmail.com">matthew.j.dingee@gmail.com</a></li>
@@ -134,5 +142,6 @@
           </ul>
       </footer>
     </div>
+    <script src="../js/components.js"></script>
   </body>
 </html>
