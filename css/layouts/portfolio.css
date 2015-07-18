@@ -14,11 +14,11 @@
   margin-top: 0;
   color: #e2202b; }
 .l-portfolio .footer {
-  margin: 2em 0 1em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
   text-align: right; }
-  @media (min-width: 48em) {
-    .l-portfolio .footer {
-      padding-right: 15%; } }
 .l-portfolio .list--inline.contact-info {
   font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -27,5 +27,4 @@
   line-height: 1.125rem;
   letter-spacing: 0.008rem;
   margin: 0; }
-
 /*# sourceMappingURL=portfolio.css.map */

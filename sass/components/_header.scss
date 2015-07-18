@@ -5,10 +5,11 @@
 
 .header {
   border-bottom: 1px solid $red;
+  background-color: $white;
 
   &__body {
     padding: 0 $page--gutter-width-S;
-    background-color: $white;
+    z-index: 1;
 
     @include breakpoint(XL) {
       padding: 0 $page--gutter-width-XL;
@@ -24,7 +25,7 @@
     display: block;
     position: absolute;
     top: $size-M;
-    right: 8px;
+    right: $size-SM;
     height: $size-L + 4px;
     width: $size-L;
     transform: rotate(0deg);
@@ -119,7 +120,7 @@
     @include type-xsmall($font_light);
     text-transform: lowercase;
 
-    @include breakpoint(ML) {
+    @include breakpoint(MLL) {
       @include type-body($font_light);
       float: right;
       margin-top: 1.2rem;

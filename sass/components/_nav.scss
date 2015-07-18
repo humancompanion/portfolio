@@ -4,17 +4,18 @@
 @import "util/util";
 
 .primary-nav {
-  position: fixed;
-  top: 0px;
-  right: 0px;
+  position: absolute;
+  top: -#{$primary-nav--width};
   left: 0px;
-  overflow: auto;
+  right: 0px;
+  width: 100%;
   z-index: -1;
-  padding: 2rem 0 0.5rem;
   background-color: $grey-medium;
+  transform: none;
+  transition: none;
 
-  @include breakpoint(ML) {
-    display: inherit;
+  &:focus {
+    outline: 0;
   }
 
   .primary-nav__a {

@@ -5,6 +5,10 @@ body {
   height: 100%;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $grey-medium;
 }
@@ -12,18 +16,15 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 .l-shell {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  overflow: auto;
+  height: 100%;
   z-index: 1;
-  @include transition(all 0.23s ease-in-out);
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+  transition: .3s ease all;
   max-width: $page--max-width;
   margin: 0 auto;
   padding: 0;
@@ -33,17 +34,19 @@ body {
 }
 
 .content-well {
-  padding: 0 $page--gutter-width-S;
+  padding: 0 $page--gutter-width-S 1rem;
+  background: $white;
 
   @include breakpoint(XL) {
     padding: 0 $page--gutter-width-XL;
   }
 }
 
-body.is-pushed .l-shell {
-  top: $primary-nav--height;
-  bottom: -#{$primary-nav--height};
-  overflow: visible;
+body.is-pushed {
+  .l-shell {
+    transform: translateY($primary-nav--width);
+    transform: translate3d(0, $primary-nav--width, 0);
+  }
 }
 
 .l-site-nav {
