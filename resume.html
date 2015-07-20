@@ -9,6 +9,7 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/portfolio.min.css" />
+    <script src="../js/project.js"></script>
     <!--[if IE]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -16,11 +17,25 @@
   <body class="l-resume">
     <div class="l-shell">
       <section class="name_title">
-        <header class="header header-resume" role="banner">
+        <header class="header header-resume" role="banner" data-object="header">
           <div class="header__body">
             <h1 class="header__title header-resume__title">Matthew Dingee</h1>
             <h4 class="header-resume__sub-title">User Experience Designer</h4>
+            <a href="#primary-nav" class="header__nav-toggle" data-behavior="header.toggle-nav" data-label="Menu">
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+              <span class="label">Menu</span>
+            </a>
           </div>
+          <nav class="primary-nav" id="primary-nav" role="nav">
+            <ul class="primary-nav__body">
+              <li class="list-item"><a class="primary-nav__a" href="../index.html">Home</a></li>
+              <li class="list-item"><a class="primary-nav__a" href="index.html">Work</a></li>
+              <li class="list-item"><a class="primary-nav__a" href="../resume.html">Experience</a></li>
+              <li class="list-item"><a class="primary-nav__a" href="../about.html">Skills</a></li>
+            </ul>
+          </nav>
       	</header>
   	  </section>
       <main class="content-well" role="main" id="main" tabindex="0">
@@ -304,5 +319,6 @@
         </ul>
       </footer>
     </div>
+    <script src="../js/components.js"></script>
   </body>
 </html>

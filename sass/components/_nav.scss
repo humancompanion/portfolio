@@ -18,7 +18,7 @@
     outline: 0;
   }
 
-  .primary-nav__a {
+  &__a {
     display: block;
     width: 100%;
     @include type-4();
@@ -30,6 +30,14 @@
     &:hover {
       text-decoration: none;
       background-color: $grey-light;
+    }
+  }
+
+  &__body {
+    padding: 0;
+
+    li {
+      margin: 0;
     }
   }
 }

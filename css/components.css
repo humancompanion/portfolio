@@ -126,7 +126,7 @@
   transition: none; }
   .primary-nav:focus {
     outline: 0; }
-  .primary-nav .primary-nav__a {
+  .primary-nav__a {
     display: block;
     width: 100%;
     font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -143,9 +143,13 @@
     padding: 16px;
     color: #fff;
     border-bottom: 1px solid #BEBFC5; }
-    .primary-nav .primary-nav__a:hover {
+    .primary-nav__a:hover {
       text-decoration: none;
       background-color: #BEBFC5; }
+  .primary-nav__body {
+    padding: 0; }
+    .primary-nav__body li {
+      margin: 0; }
 
 .home-nav__body, .case-study-nav__body {
   font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;

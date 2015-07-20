@@ -3,7 +3,11 @@
 
 .l-grid {
   display: table-cell;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-basis: $base-font-size;
   list-style: none;
@@ -21,12 +25,18 @@
 }
 
 .g-cell {
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .g-flex_cells {
   & > .g-cell {
     display: table-cell;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -34,11 +44,19 @@
 
 // Align grid cells
 .g-top {
-  align-items: flex-start;
+  -webkit-align-items: flex-start;
+     -moz-align-items: flex-start;
+      -ms-align-items: flex-start;
+          align-items: flex-start;
+       -ms-flex-align: start;
 }
 
 .g-bottom {
-  align-items: flex-end;
+  -webkit-align-items: flex-end;
+     -moz-align-items: flex-end;
+      -ms-align-items: flex-end;
+          align-items: flex-end;
+       -ms-flex-align: end;
 }
 
 .g-center {
@@ -89,27 +107,26 @@
   }
   .g-#{$name}#{$sep}-fit > .g-cell,
   .g-cell.g-#{$name}#{$sep}-fit {
-    flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   }
   .g-#{$name}#{$sep}-full > .g-cell,
   .g-cell.g-#{$name}#{$sep}-full {
-    width: 100% !important;
-    flex: none;
+    @include flex(0 0 100%);
   }
   .g-#{$name}#{$sep}-1of2 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of2 {
-    width: 50% !important;
-    flex: none;
+    @include flex(0 0 50%);
   }
   .g-#{$name}#{$sep}-1of3 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of3 {
-    width: 33.3333% !important;
-    flex: none;
+    @include flex(0 0 33.3333%);
   }
   .g-#{$name}#{$sep}-1of4 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of4 {
-    width: 25% !important;
-    flex: none;
+    @include flex(0 0 25%);
   }
 }
 

@@ -3,17 +3,15 @@
 
 @import "util/util";
 
+.l-case_studies,
 .l-case_study {
   .g-row--bleed {
     margin-left: -#{$page--gutter-width-S};
     margin-right: -#{$page--gutter-width-S};
-    padding-right: 1rem;
 
     @include breakpoint(XL) {
       margin-left: -#{$page--gutter-width-XL};
       margin-right: -#{$page--gutter-width-XL};
-      padding-left: 1.8rem;
-      padding-right: 1.8rem;
     }
   }
 
@@ -24,6 +22,61 @@
   .img--1x,
   .img--2x {
     box-shadow: 0 0 10px 1px rgba(0,0,0,.15);
+  }
+}
+
+.l-case_studies {
+  .t-cisco {
+    background-color: $color_cisco;
+  }
+  .t-marriott {
+    background-color: $color_marriott;
+  }
+  .t-heritage {
+    background-color: $color_heritage;
+  }
+
+  .case-study-spread {
+    margin-bottom: 0;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .list--media-object {
+      padding: 2.5rem 1.5rem;
+    }
+
+    &__title,
+    &__project-title {
+      color: $white;
+    }
+
+    &__title {
+      margin-bottom: 0;
+      text-transform: inherit;
+    }
+
+    &__project-title {
+      margin-top: .5rem;
+    }
+
+    &__feature-img {
+      @include breakpoint(SM) {
+        width: 128px;
+      }
+    }
+  }
+}
+
+.l-case_study {
+  .g-row--bleed {
+    padding-right: 1rem;
+
+    @include breakpoint(XL) {
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+    }
   }
 
   .enlarge {
