@@ -17,9 +17,7 @@
     right: 12px;
     height: 40px;
     width: 36px;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer; }
     .header__nav-toggle .hamburger {
@@ -31,9 +29,7 @@
       border-radius: 4px;
       opacity: 1;
       left: 0;
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
+      transform: rotate(0deg);
       transition: .25s ease-in-out; }
       .header__nav-toggle .hamburger:nth-child(1) {
         top: 0px; }
@@ -60,17 +56,13 @@
       color: #454958; }
   .header__nav-toggle.is-open .hamburger:nth-child(1) {
     top: 8px;
-    -webkit-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-            transform: rotate(135deg); }
+    transform: rotate(135deg); }
   .header__nav-toggle.is-open .hamburger:nth-child(2) {
     opacity: 0;
     left: -36px; }
   .header__nav-toggle.is-open .hamburger:nth-child(3) {
     top: 8px;
-    -webkit-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
-            transform: rotate(-135deg); }
+    transform: rotate(-135deg); }
 
 .header-home {
   margin-bottom: 36px; }
@@ -120,9 +112,7 @@
   width: 100%;
   z-index: -1;
   background-color: #454958;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  transform: none;
   transition: none; }
   .primary-nav:focus {
     outline: 0; }
@@ -138,13 +128,14 @@
     font-size: 1.3125rem;
     line-height: 24px;
     line-height: 1.5rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1.125rem;
     margin: 0;
     padding: 16px;
     color: #fff;
     border-bottom: 1px solid #BEBFC5; }
     .primary-nav__a:hover {
       text-decoration: none;
+      color: #fff;
       background-color: #BEBFC5; }
   .primary-nav__body {
     padding: 0; }
@@ -186,4 +177,5 @@
     @media (min-width: 64em) {
       .footer .contact-info {
         padding: 0 1.8rem; } }
+
 /*# sourceMappingURL=components.css.map */

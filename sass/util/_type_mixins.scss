@@ -45,14 +45,14 @@
   @include header();
   @include fontSize($type-L);
   @include lineHeight($base-line-height * 1.5);
-  margin: calculateRem($base-line-height) 0;
+  margin: calculateRem($base-line-height) 0 calculateRem($base-line-height - 4);
 }
 
 @mixin type-4 {
   @include header();
   @include fontSize($type-M);
   @include lineHeight($base-line-height);
-  margin: calculateRem($base-line-height) 0;
+  margin: calculateRem($base-line-height) 0 calculateRem($base-line-height - 6);
 }
 
 @mixin type-5($font_family: $font_light) {
@@ -60,7 +60,7 @@
   font-family: $font_family;
   @include fontSize($type-SM);
   @include lineHeight($base-line-height);
-  margin: calculateRem($base-line-height /2) 0;
+  margin: calculateRem($base-line-height /2) 0 calculateRem(($base-line-height /2) - 4) ;
 }
 
 @mixin type-6 {
@@ -68,7 +68,7 @@
   font-weight: 500;
   @include fontSize($type-S);
   @include lineHeight($base-line-height);
-  margin: calculateRem($base-line-height /2) 0;
+  margin: calculateRem($base-line-height /2) 0 calculateRem(($base-line-height /2) - 4) ;
 }
 
 @mixin type-small {

@@ -1,0 +1,83 @@
+/* ---------------------------------------------------------------------------*/
+/* BASE: BUTTONS                                                              */
+
+
+@mixin button() {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 16px 24px 14px;
+  @include font-smoothing(on);
+  user-select: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: $font_light;
+  font-size: $base-font-size;
+  line-height: 1;
+  border: 0;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 4px;
+}
+
+@mixin button-colors($bgcolor: $color_button-default, $color: $color_button-default-text) {
+  background-color: $bgcolor;
+  color: $color;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $color;
+  }
+
+  &:hover:not(.btn--disabled) {
+    color: $white;
+    background-color: darken($bgcolor, 4%);
+  }
+
+  &:focus:not(.btn--disabled),
+  &:active:not(.btn--disabled) {
+    color: $white;
+    outline: 0;
+    background-color: darken($bgcolor, 8%);
+  }
+}
+
+.btn {
+  @include button();
+  @include button-colors();
+
+
+  // -------------------------------------------------------------------------
+  // variations, modifiers
+
+  &--primary {
+    @include button();
+    @include button-colors($blue-light);
+  }
+
+  &--secondary {
+    @include button();
+    @include button-colors($grey-dark);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
