@@ -34,11 +34,11 @@ body {
 }
 
 .content-well {
-  padding: 0 $page--gutter-width-S 1rem;
+  padding: 0 $page--gutter-width-S 3rem;
   background: $white;
 
   @include breakpoint(XL) {
-    padding: 0 $page--gutter-width-XL;
+    padding: 0 $page--gutter-width-XL 3rem;
   }
 }
 

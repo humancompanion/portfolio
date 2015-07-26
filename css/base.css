@@ -1148,11 +1148,11 @@ body {
   border-width: 8px 0 2px 0; }
 
 .content-well {
-  padding: 0 0.8rem 1rem;
+  padding: 0 0.8rem 3rem;
   background: #fff; }
   @media (min-width: 64em) {
     .content-well {
-      padding: 0 1.8rem; } }
+      padding: 0 1.8rem 3rem; } }
 
 body.is-pushed .l-shell {
   transform: translateY(228px);
