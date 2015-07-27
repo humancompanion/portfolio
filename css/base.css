@@ -1088,11 +1088,11 @@ body {
       padding: 0 1.8rem 3rem; } }
 
 body.is-pushed .l-shell {
-  -webkit-transform: translateY(228px);
-      -ms-transform: translateY(228px);
-          transform: translateY(228px);
-  -webkit-transform: translate3d(0, 228px, 0);
-          transform: translate3d(0, 228px, 0); }
+  -webkit-transform: translateY(236px);
+      -ms-transform: translateY(236px);
+          transform: translateY(236px);
+  -webkit-transform: translate3d(0, 236px, 0);
+          transform: translate3d(0, 236px, 0); }
 
 .l-site-nav {
   margin-top: 24px;

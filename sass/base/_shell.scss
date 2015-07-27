@@ -44,8 +44,8 @@ body {
 
 body.is-pushed {
   .l-shell {
-    transform: translateY($primary-nav--width);
-    transform: translate3d(0, $primary-nav--width, 0);
+    transform: translateY($primary-nav--height);
+    transform: translate3d(0, $primary-nav--height, 0);
   }
 }
 

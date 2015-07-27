@@ -1,9 +1,15 @@
 .header {
   border-bottom: 1px solid #e2202b;
   background-color: #fff; }
+  @media (min-width: 54em) {
+    .header {
+      border-bottom: 0; } }
   .header__body {
     padding: 0 0.8rem;
     z-index: 1; }
+    @media (min-width: 54em) {
+      .header__body {
+        margin-top: 2rem; } }
     @media (min-width: 64em) {
       .header__body {
         padding: 0 1.8rem; } }
@@ -22,6 +28,9 @@
             transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer; }
+    @media (min-width: 54em) {
+      .header__nav-toggle {
+        display: none; } }
     .header__nav-toggle .hamburger {
       display: block;
       position: absolute;
@@ -114,7 +123,7 @@
 
 .primary-nav {
   position: absolute;
-  top: -228px;
+  top: -236px;
   left: 0px;
   right: 0px;
   width: 100%;
@@ -124,6 +133,11 @@
       -ms-transform: none;
           transform: none;
   transition: none; }
+  @media (min-width: 54em) {
+    .primary-nav {
+      top: 0;
+      z-index: 0;
+      background-color: #fff; } }
   .primary-nav:focus {
     outline: 0; }
   .primary-nav__a {
@@ -143,10 +157,36 @@
     padding: 16px;
     color: #fff;
     border-bottom: 1px solid #BEBFC5; }
+    @media (min-width: 54em) {
+      .primary-nav__a {
+        font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        padding: 0;
+        color: #333333;
+        font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 24px;
+        line-height: 1.5rem;
+        margin: 0.75rem 0 0.5rem;
+        margin: 0;
+        padding: 12px;
+        color: #454958;
+        border-bottom-color: #3079ed; } }
     .primary-nav__a:hover {
       text-decoration: none;
       color: #fff;
       background-color: #BEBFC5; }
+    .primary-nav__a.is-current {
+      opacity: 0.8; }
+      .primary-nav__a.is-current:hover {
+        color: #454958;
+        background-color: inherit; }
+  @media (min-width: 54em) {
+    .primary-nav .list-item {
+      display: inline-block;
+      width: 24%; } }
   .primary-nav__body {
     padding: 0; }
     .primary-nav__body li {

@@ -7,9 +7,17 @@
   border-bottom: 1px solid $red;
   background-color: $white;
 
+  @include breakpoint($layout-nav_switch) {
+    border-bottom: 0;
+  }
+
   &__body {
     padding: 0 $page--gutter-width-S;
     z-index: 1;
+
+    @include breakpoint($layout-nav_switch) {
+      margin-top: 2rem;
+    }
 
     @include breakpoint(XL) {
       padding: 0 $page--gutter-width-XL;
@@ -31,6 +39,10 @@
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
+
+    @include breakpoint($layout-nav_switch) {
+      display: none;
+    }
 
     .hamburger {
       display: block;
