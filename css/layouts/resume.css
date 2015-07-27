@@ -7,7 +7,7 @@ p, ol, ul {
   padding-bottom: 6px; }
 
 ol, ul {
-  padding-left: 20px; }
+  padding-left: 1rem; }
 
 /* ----------------------------- Header -----------------------------------*/
 .enlarge {
@@ -32,9 +32,6 @@ section::after {
       margin-top: 0;
       font-size: 28px;
       line-height: 1.4; } }
-  @media (min-width: 54em) {
-    .section_title h2 {
-      padding-left: 10%; } }
 
 .section_body {
   max-width: 850px; }
@@ -91,11 +88,11 @@ section::after {
 
 /* ----------------------------- Technical -----------------------------------*/
 .talent {
-  float: left;
-  width: 40%; }
-  @media (min-width: 35em) {
+  margin-bottom: 1rem; }
+  @media (min-width: 30em) {
     .talent {
-      width: 25%; } }
+      float: left;
+      width: 33%; } }
 
 .talent h2 {
   margin-bottom: 6px; }
@@ -130,7 +127,7 @@ section::after {
   margin-top: 0;
   padding-top: 0; }
 
-#experience ul li.accomplishment_desc {
+.accomplishment_desc {
   list-style-type: none;
   margin-left: -1em;
   margin-top: 1em;
@@ -148,4 +145,6 @@ section::after {
 .notes {
   padding-bottom: 2px; }
 
+.notes--extended {
+  padding: 1rem 0 0; }
 /*# sourceMappingURL=resume.css.map */
