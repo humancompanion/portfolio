@@ -7,7 +7,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
-    text-size-adjust: none; }
+    -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+            text-size-adjust: none; }
   body {
     color: #454958;
     font-family: 'Lora', 'Georgia', serif;
@@ -166,6 +168,10 @@
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 14px; }
+  .notes {
+    font-size: 10px; }
+    .notes--extended {
+      padding: 0; }
   .l-shell {
     border: 0; }
   .content-well {
@@ -258,5 +264,4 @@
       font-family: Roboto, sans-serif;
       font-weight: 300;
       line-height: 16px; } }
-
 /*# sourceMappingURL=resume-print.css.map */

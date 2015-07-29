@@ -17,6 +17,13 @@
     font-weight: 300;
     font-size: $base-font-size;
   }
+  .notes {
+    font-size: $type-XS;
+
+    &--extended {
+      padding: 0;
+    }
+  }
 
   .l-shell {
     border: 0;
