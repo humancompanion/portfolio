@@ -51,8 +51,12 @@
       opacity: 0.8;
 
       &:hover {
-        color: $color_base;
+        color: $white;
         background-color: inherit;
+
+        @include breakpoint($layout-nav_switch) {
+          color: $color_base;
+        }
       }
     }
   }
