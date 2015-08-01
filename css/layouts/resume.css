@@ -21,13 +21,13 @@ section::after {
 
 .section_title {
   margin-bottom: .5em; }
-  @media (min-width: 48em) {
+  @media (min-width: 48rem) {
     .section_title {
       float: left;
       width: 25%;
       margin-bottom: 2em;
       padding: 2em 0; } }
-  @media (min-width: 48em) {
+  @media (min-width: 48rem) {
     .section_title h2 {
       margin-top: 0;
       font-size: 28px;
@@ -39,7 +39,7 @@ section::after {
     clear: both;
     content: "";
     display: table; }
-  @media (min-width: 48em) {
+  @media (min-width: 48rem) {
     .section_body {
       float: right;
       width: 73%;
@@ -64,7 +64,7 @@ section::after {
 
 .skills div.section_body dl {
   margin-bottom: 1em; }
-  @media (min-width: 42em) {
+  @media (min-width: 42rem) {
     .skills div.section_body dl {
       float: left;
       width: 30%;
@@ -89,7 +89,7 @@ section::after {
 /* ----------------------------- Technical -----------------------------------*/
 .talent {
   margin-bottom: 1rem; }
-  @media (min-width: 30em) {
+  @media (min-width: 30rem) {
     .talent {
       float: left;
       width: 33%; } }
@@ -147,4 +147,5 @@ section::after {
 
 .notes--extended {
   padding: 1rem 0 0; }
+
 /*# sourceMappingURL=resume.css.map */

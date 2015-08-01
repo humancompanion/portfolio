@@ -1,16 +1,16 @@
 // -----------------------------------------------------------------------------
 // Breakpoints
 $breakpoints: (
-  "(min-width: 15em)" "XS",       //  240px at 16px base font
-  "(min-width: 20em)" "S",        //  320px at 16px base font
-  "(min-width: 30em)" "SM",       //  480px at 16px base font
-  "(min-width: 35em)" "M",        //  560px at 16px base font
-  "(min-width: 42em)" "MML",      //  672px at 16px base font
-  "(min-width: 48em)" "ML",       //  768px at 16px base font
-  "(min-width: 54em)" "MLL",      //  864px at 16px base font
-  "(min-width: 61.25em)" "L",     //  980px at 16px base font
-  "(min-width: 64em)" "XL",       // 1024px at 16px base font
-  "(min-width: 78.75em)" "XXL"    // 1260px at 16px base font
+  "(min-width: 15rem)" "XS",       //  240px at 16px base font
+  "(min-width: 20rem)" "S",        //  320px at 16px base font
+  "(min-width: 30rem)" "SM",       //  480px at 16px base font
+  "(min-width: 35rem)" "M",        //  560px at 16px base font
+  "(min-width: 42rem)" "MML",      //  672px at 16px base font
+  "(min-width: 48rem)" "ML",       //  768px at 16px base font
+  "(min-width: 54rem)" "MLL",      //  864px at 16px base font
+  "(min-width: 61.25rem)" "L",     //  980px at 16px base font
+  "(min-width: 64rem)" "XL",       // 1024px at 16px base font
+  "(min-width: 78.75rem)" "XXL"    // 1260px at 16px base font
 );
 
 // From HugoG: http://hugogiraudel.com/2014/01/13/sass-string-replacement-function/
