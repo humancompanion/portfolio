@@ -212,6 +212,10 @@
 .home-nav__header, .case-study-nav__header {
   font-weight: bold; }
 
+.home-nav__item a {
+  display: block;
+  padding: 4px 0 6px; }
+
 .site-nav {
   margin-top: 36px;
   padding: 1rem; }
