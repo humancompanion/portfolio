@@ -11,6 +11,11 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    jekyll: {
+      build: {
+        dest: '_site'
+      }
+    },
     sass: {
       dist: {
         options: {
@@ -27,14 +32,29 @@ module.exports = function(grunt) {
             dest: 'css/base.css'
           },
           {
+            src: 'sass/base.scss',
+            dest: '_site/css/base.css'
+          },
+          {
             src: 'sass/components.scss',
             dest: 'css/components.css'
+          },
+          {
+            src: 'sass/components.scss',
+            dest: '_site/css/components.css'
           },
           {
             expand: true,
             cwd: 'sass/layouts/',
             src: '*.scss',
             dest: 'css/layouts/',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'sass/layouts/',
+            src: '*.scss',
+            dest: '_site/css/layouts/',
             ext: '.css'
           }
         ]
@@ -64,21 +84,21 @@ module.exports = function(grunt) {
           'bower_components/modernizr/modernizr.js',
           'bower_components/jquery/dist/jquery.min.js',
         ],
-        dest: 'js/project.js'
+        dest: '_site/js/project.js'
       },
       js_components: {
         src: 'js/components/*.js',
-        dest: 'js/components.js'
+        dest: '_site/js/components.js'
       }
     },
     cssmin: {
       minify: {
         src: [
-          'css/base.css',
-          'css/components.css',
-          'css/layouts/*.css'
+          '_site/css/base.css',
+          '_site/css/components.css',
+          '_site/css/layouts/*.css'
         ],
-        dest: 'css/portfolio.min.css'
+        dest: '_site/css/portfolio.min.css'
       }
     },
     jshint: {
@@ -93,17 +113,18 @@ module.exports = function(grunt) {
       dev: {
         files: {
           src : [
-            '*.html',
-            'case-study/*.html',
-            'css/*.css',
-            'css/*/*.css',
-            'js/*.js',
-            'js/components/*.js'
+            '_site/*.html',
+            '_site/css/*.css',
+            '_site/css/*/*.css',
+            '_site/js/*.js',
+            '_site/js/components/*.js'
           ]
         },
         options: {
           watchTask: true,
-          server: './'
+          server: {
+            baseDir: '_site'
+          }
         }
       }
     },
@@ -128,24 +149,27 @@ module.exports = function(grunt) {
           debounceDelay: 250
         }
       },
-      base_files: {
+      jekyll: {
         files: [
-          '*.html'
+          '*.html',
+          '_layouts/*.html',
+          '_includes/*.md',
+          'case-study/*.html'
         ],
-        tasks: ['sass']
+        tasks: ['jekyll']
       },
       base_styles: {
         files: [
           'sass/*.scss',
           'sass/*/*.scss'
         ],
-        tasks: ['sass', 'cssmin', 'autoprefixer']
+        tasks: ['css']
       }
     }
   });
 
-  grunt.registerTask('dev', ['sass', 'autoprefixer', 'concat:js_components', 'browserSync', 'watch']);
-  grunt.registerTask('css', ['cssmin']);
-  grunt.registerTask('js', ['jshint:all', 'concat:js_base']);
-  grunt.registerTask('build', ['css', 'js']);
+  grunt.registerTask('dev', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('js', ['jshint:all', 'concat:js_components', 'concat:js_base']);
+  grunt.registerTask('build', ['css', 'js', 'jekyll']);
 };
