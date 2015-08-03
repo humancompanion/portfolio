@@ -78,27 +78,34 @@ module.exports = function(grunt) {
         dest: 'css/layouts/'
       }
     },
-    concat: {
-      js_base: {
-        src: [
-          'bower_components/modernizr/modernizr.js',
-          'bower_components/jquery/dist/jquery.min.js',
-        ],
-        dest: '_site/js/project.js'
+    uglify: {
+      options: {
+        mangle: false
       },
+      js_base: {
+        files: {
+          'js/project.min.js': [
+            'bower_components/modernizr/modernizr.js',
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/picturefill/dist/picturefill.js'
+          ]
+        }
+      }
+    },
+    concat: {
       js_components: {
         src: 'js/components/*.js',
-        dest: '_site/js/components.js'
+        dest: 'js/components.js'
       }
     },
     cssmin: {
       minify: {
         src: [
-          '_site/css/base.css',
-          '_site/css/components.css',
-          '_site/css/layouts/*.css'
+          'css/base.css',
+          'css/components.css',
+          'css/layouts/*.css'
         ],
-        dest: '_site/css/portfolio.min.css'
+        dest: 'css/portfolio.min.css'
       }
     },
     jshint: {
@@ -170,6 +177,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', ['build', 'browserSync', 'watch']);
   grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
-  grunt.registerTask('js', ['jshint:all', 'concat:js_components', 'concat:js_base']);
+  grunt.registerTask('js', ['jshint:all', 'concat:js_components', 'uglify:js_base']);
   grunt.registerTask('build', ['css', 'js', 'jekyll']);
 };
