@@ -368,6 +368,8 @@ img {
 
 .img--2x {
   background-size: 50%; }
+.img--box {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15); }
 .img--align-right {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
