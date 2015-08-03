@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  color: $color_base;
   @include type-body();
   margin-bottom: 0;
 }
