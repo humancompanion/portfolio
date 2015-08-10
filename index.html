@@ -18,15 +18,34 @@
   </head>
   <body class="l-portfolio">
     <div class="l-shell">
-      <header class="header header-card" role="banner">
-        <div class="header-card__body list--media-object">
-          <div class="header-card__photo list--media-object__figure">
-            <img src="/images/me-thumb.jpg" alt="Me in 2011" />
+      <header class="header header-card" role="banner" data-object="header">
+        <div class="header-card__body">
+          <div class="header-card__front list--media-object" data-behavior="header.flip">
+            <div class="header-card__photo list--media-object__figure">
+              <img src="/images/me-thumb.jpg" alt="Me in 2011" />
+            </div>
+            <div class="list--media-object__body">
+              <h1 class="header-card__title">
+                <span class="first">Matthew</span> <span class="last">Dingee</span>
+              </h1>
+            </div>
           </div>
-          <div class="list--media-object__body">
-            <h1 class="header-card__title">
-              <span class="first">Matthew</span> <span class="last">Dingee</span>
-            </h1>
+          <div class="header-card__back">
+            <ul class="header-card__profile-list">
+              <li>
+                <a href="https://github.com/humancompanion" class="header-card__button"><i class="fa fa-github-square"></i> GitHub</a>
+              </li>
+              <li>
+                <a class="header-card__button" href="https://www.linkedin.com/pub/matthew-dingee/1/448/947"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+              </li>
+              <li>
+                <a href="http://ueyes.tumblr.com" class="header-card__button"><i class="fa fa-tumblr-square"></i> Tumblr</a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/humancompanion" class="header-card__button"><i class="fa fa-twitter-square"></i> Twitter</a>
+              </li>
+            </ul>
+            <span class="header-card__flip fa fa-reply" data-behavior="header.flip-revert"></span>
           </div>
         </div>
       </header>
@@ -74,5 +93,7 @@
         </ul>
       </footer>
     </div>
+    <script src="/js/project.js"></script>
+    <script src="/js/components.js"></script>
   </body>
 </html>

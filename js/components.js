@@ -28,3 +28,11 @@ $header.on('header.toggle-nav', function (event, opts) {
   opts.el.toggleClass('is-open');
 });
 
+$header.on('header.flip', function (event, opts) {
+  opts.object.addClass('is-flipped');
+});
+
+$header.on('header.flip-revert', function (event, opts) {
+  opts.object.removeClass('is-flipped');
+});
+
