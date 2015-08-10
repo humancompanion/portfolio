@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-@import "util/reset";
-@import "util/util";
+@import 'util/reset';
+@import 'util/util';
+
+@import '../bower_components/font-awesome/scss/font-awesome.scss';
 
 @import 'base/typography';
 @import 'base/links';
@@ -12,4 +14,4 @@
 @import 'base/lists';
 
 // Handy dev helper
-// @import "util/grid-breakpointbar";
+// @import 'util/grid-breakpointbar';

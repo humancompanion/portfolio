@@ -8,19 +8,26 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/layouts/portfolio.css" -->
-    <link rel="stylesheet" href="/css/portfolio.min.css" />
+    <link rel="stylesheet" href="css/layouts/portfolio.css">
+    <!-- link rel="stylesheet" href="/css/portfolio.min.css" --/>
     <!--[if IE]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body class="l-portfolio">
     <div class="l-shell">
-      <header class="header header-home" role="banner">
-        <div class="header__body">
-          <h1 class="header-home__title">Matthew Dingee</h1>
+      <header class="header header-card" role="banner">
+        <div class="header-card__body list--media-object">
+          <div class="header-card__photo list--media-object__figure">
+            <img src="/images/me-thumb.jpg" alt="Me in 2011" />
+          </div>
+          <div class="list--media-object__body">
+            <h1 class="header-card__title">
+              <span class="first">Matthew</span> <span class="last">Dingee</span>
+            </h1>
+          </div>
         </div>
       </header>
       <main class="content-well" role="main" id="main" tabindex="0">
@@ -52,8 +59,18 @@
       </main>
       <footer class="footer" role="footer">
         <ul class="list--inline contact-info--buttons">
-          <li><a class="btn--primary" href="mailto:matthew.j.dingee@gmail.com">Email</a></li>
-          <li><a class="btn" href="tel://1-202-725-0202">Call</a></li>
+          <li>
+            <a class="btn--primary" href="mailto:matthew.j.dingee@gmail.com">
+              <i class="fa fa-envelope"></i>
+              matthew.j.dingee@gmail.com
+            </a>
+          </li>
+          <li>
+            <a class="btn" href="tel://1-202-725-0202">
+              <i class="fa fa-phone"></i>
+              202-725-0202
+            </a>
+          </li>
         </ul>
       </footer>
     </div>

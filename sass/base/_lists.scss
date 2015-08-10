@@ -90,11 +90,34 @@ ol {
 }
 
 .list--inline.contact-info--buttons {
-  padding: 0 1rem;
+  padding: 0 $page--gutter-width-S;
 
   li {
-    display: inline;
-    padding: 0.5rem;
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 0;
+
+    @include breakpoint(SM) {
+      display: inline;
+      width: auto;
+    }
+
+    &:first-child {
+      @include breakpoint(SM) {
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  .btn,
+  .btn--primary {
+    font-size: $type-XS;
+    width: 100%;
+
+    @include breakpoint(SM) {
+      width: auto;
+    }
   }
 }
 
