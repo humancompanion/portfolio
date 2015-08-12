@@ -1,0 +1,188 @@
+// ---------------------------------------------------------------------------
+// Component: Contact Card
+
+@import "util/util";
+
+.contact-card {
+  $header-card-height: 136px;
+
+  height: $header-card-height;
+  min-width: 295px;
+  max-width: 400px;
+  margin-left: $page--gutter-width-S;
+  margin-right: $page--gutter-width-S;
+  -webkit-perspective: 1000;
+     -moz-perspective: 1000;
+      -ms-perspective: 1000;
+          perspective: 1000;
+  border-radius: 2px;
+
+  @include breakpoint(SM) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.is-flipped .contact-card__body {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+
+  &__body {
+    position: relative;
+    height: $header-card-height;
+    // flip speed
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+  }
+
+  &__front,
+  &__back {
+    height: $header-card-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: $white;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+
+  &__front {
+    z-index: 2;
+  }
+
+  &__back {
+    padding: 0 0.5rem 0.5rem 2rem;
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+
+    @include breakpoint(SM) {
+      padding-left: 4rem;
+    }
+  }
+
+  &__profile-list {
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+
+      &:nth-child(2n) {
+        float: right;
+      }
+
+      &.full-width {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 100%;
+    @include type-body($font_light);
+    font-size: $type-XS;
+    color: $color_link;
+    padding: 0.25rem 0.25rem;
+    margin-bottom: 0;
+  }
+
+  &__flip,
+  &__flip-revert {
+    position: absolute;
+    top: 0;
+    color: $grey;
+  }
+
+  &__flip {
+    right: 0;
+    padding: 0.5rem;
+  }
+
+  &__flip-dots {
+    width: 5px;
+    height: 23px;
+  }
+
+  &__flip-revert {
+    left: 0;
+    padding: 0.8rem 0.5rem;
+  }
+
+  &__photo {
+    width: 100px;
+    margin-right: 0.5rem;
+
+    img {
+      border-left: 4px solid $red;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: $size-base;
+    line-height: 1.6rem;
+
+    @include breakpoint(SM) {
+      padding-top: 1rem;
+      font-size: $type-ML;
+    }
+
+    .first {
+      display: block;
+      font-size: $type-M;
+    }
+    .last {
+      display: block;
+      text-transform: uppercase;
+
+      @include breakpoint(SM) {
+        text-transform: inherit;
+      }
+    }
+
+    .first,
+    .last {
+      @include breakpoint(SM) {
+        display: inline;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0.25rem 0 0.75rem;
+    color: $red;
+  }
+
+  &__info {
+    li {
+      display: inline-block;
+    }
+  }
+
+  &__email,
+  &__phone {
+    padding: 4px 8px 6px;
+
+    @include breakpoint(SM) {
+      padding: 8px 16px 10px;
+    }
+  }
+
+  &__email {
+    margin-right: 0.5rem;
+  }
+}

@@ -18,35 +18,11 @@
   </head>
   <body class="l-portfolio">
     <div class="l-shell">
-      <header class="header header-card" role="banner" data-object="header">
-        <div class="header-card__body">
-          <div class="header-card__front list--media-object" data-behavior="header.flip">
-            <div class="header-card__photo list--media-object__figure">
-              <img src="/images/me-thumb.jpg" alt="Me in 2011" />
-            </div>
-            <div class="list--media-object__body">
-              <h1 class="header-card__title">
-                <span class="first">Matthew</span> <span class="last">Dingee</span>
-              </h1>
-            </div>
-          </div>
-          <div class="header-card__back">
-            <ul class="header-card__profile-list">
-              <li>
-                <a href="https://github.com/humancompanion" class="header-card__button"><i class="fa fa-github-square"></i> GitHub</a>
-              </li>
-              <li>
-                <a class="header-card__button" href="https://www.linkedin.com/pub/matthew-dingee/1/448/947"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
-              </li>
-              <li>
-                <a href="http://ueyes.tumblr.com" class="header-card__button"><i class="fa fa-tumblr-square"></i> Tumblr</a>
-              </li>
-              <li>
-                <a href="https://www.twitter.com/humancompanion" class="header-card__button"><i class="fa fa-twitter-square"></i> Twitter</a>
-              </li>
-            </ul>
-            <span class="header-card__flip fa fa-reply" data-behavior="header.flip-revert"></span>
-          </div>
+      <header class="header header-home" role="banner" data-object="header">
+        <div class="header__body">
+          <h1 class="header-home__title">
+            <span class="first">Matthew</span> <span class="last">Dingee</span>
+          </h1>
         </div>
       </header>
       <main class="content-well" role="main" id="main" tabindex="0">
@@ -77,20 +53,55 @@
         </section>
       </main>
       <footer class="footer" role="footer">
-        <ul class="list--inline contact-info--buttons">
-          <li>
-            <a class="btn--primary" href="mailto:matthew.j.dingee@gmail.com">
-              <i class="fa fa-envelope"></i>
-              matthew.j.dingee@gmail.com
-            </a>
-          </li>
-          <li>
-            <a class="btn" href="tel://1-202-725-0202">
-              <i class="fa fa-phone"></i>
-              202-725-0202
-            </a>
-          </li>
-        </ul>
+        <div class="contact-card" data-object="contact-card">
+          <div class="contact-card__body">
+            <div class="contact-card__front list--media-object" data-behavior="contact-card.flip">
+              <div class="contact-card__photo list--media-object__figure">
+                <img src="/images/me-thumb.jpg" alt="Me in 2011" />
+              </div>
+              <div class="list--media-object__body">
+                <h4 class="contact-card__title">
+                  <span class="first">Matthew</span> <span class="last">Dingee</span>
+                </h4>
+                <h5 class="contact-card__subtitle">UX Designer</h5>
+                <ul class="contact-card__info">
+                  <li>
+                    <a class="btn--primary contact-card__email" href="mailto:matthew.j.dingee@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+                  </li>
+                  <li>
+                    <a class="btn contact-card__phone" href="tel://1-202-725-0202"><i class="fa fa-phone"></i> Call</a>
+                  </li>
+                </ul>
+              </div>
+              <span class="contact-card__flip" data-behavior="contact-card.flip">
+                <img class="contact-card__flip-dots" src="/images/dots.svg" draggable="false" />
+              </span>
+            </div>
+            <div class="contact-card__back">
+              <span class="contact-card__flip-revert fa fa-arrow-left" data-behavior="contact-card.flip-revert"></span>
+              <ul class="contact-card__profile-list">
+                <li class="full-width">
+                  <a class="contact-card__button" href="mailto:matthew.j.dingee@gmail.com"><i class="fa fa-envelope"></i> matthew.j.dingee@gmail.com</a>
+                </li>
+                <li class="full-width">
+                    <a class="contact-card__button" href="tel://1-202-725-0202"><i class="fa fa-phone"></i> 202-725-0202</a>
+                </li>
+                <li>
+                  <a href="https://github.com/humancompanion" class="contact-card__button"><i class="fa fa-github-square"></i> GitHub</a>
+                </li>
+                <li>
+                  <a class="contact-card__button" href="https://www.linkedin.com/pub/matthew-dingee/1/448/947"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+                </li>
+                <li>
+                  <a href="http://ueyes.tumblr.com" class="contact-card__button"><i class="fa fa-tumblr-square"></i> Tumblr</a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/humancompanion" class="contact-card__button"><i class="fa fa-twitter-square"></i> Twitter</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="/js/project.js"></script>

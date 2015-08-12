@@ -37,10 +37,6 @@
         </nav>
       </header>
       <main class="content-well" role="main" id="main" tabindex="0">
-        <div class="photo-spread">
-          <img src="images/me.jpg" alt="A picture of me with glasses that have since broken. I miss those glasses." />
-        </div>
-
         <h2>Skills</h2>
         <h3 id="ux">UX Design</h3>
         <p class="enlarge">
@@ -96,20 +92,57 @@
         <p>
           I played in a band for many years on <a href="http://www.slumberlandrecords.com/artists/show/12">Slumberland Records</a>. I'm scheming rather than playing at the moment but hope to return to the studio soon. Scheming sometimes morphs into art. <a href="http://www.theartstory.org/movement-fluxus.htm">Fluxus</a> is another passion. Ask me about the conceptual art piece I organized to take place at a wedding without the knowledge of the bride or groom.
         </p>
-
-        <h3>Get in touch</h3>
-        <ul>
-          <li>Email <a href="mailto:matthew.j.dingee@gmail.com">matthew.j.dingee@gmail.com</a></li>
-          <li>Call <a href="tel://12027250505">202-725-0202</a></li>
-          <li><a href="https://twitter.com/humancompanion">Tweet me</a></li>
-        </ul>
-
       </main>
       <footer class="footer" role="footer">
-        <ul class="list--inline contact-info--buttons">
-          <li><a class="btn--primary" href="mailto:matthew.j.dingee@gmail.com">Email</a></li>
-          <li><a class="btn" href="tel://1-202-725-0202">Call</a></li>
-        </ul>
+        <div class="contact-card" data-object="contact-card">
+          <div class="contact-card__body">
+            <div class="contact-card__front list--media-object" data-behavior="contact-card.flip">
+              <div class="contact-card__photo list--media-object__figure">
+                <img src="/images/me-thumb.jpg" alt="Me in 2011" />
+              </div>
+              <div class="list--media-object__body">
+                <h4 class="contact-card__title">
+                  <span class="first">Matthew</span> <span class="last">Dingee</span>
+                </h4>
+                <h5 class="contact-card__subtitle">UX Designer</h5>
+                <ul class="contact-card__info">
+                  <li>
+                    <a class="btn--primary contact-card__email" href="mailto:matthew.j.dingee@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+                  </li>
+                  <li>
+                    <a class="btn contact-card__phone" href="tel://1-202-725-0202"><i class="fa fa-phone"></i> Call</a>
+                  </li>
+                </ul>
+              </div>
+              <span class="contact-card__flip" data-behavior="contact-card.flip">
+                <img class="contact-card__flip-dots" src="/images/dots.svg" draggable="false" />
+              </span>
+            </div>
+            <div class="contact-card__back">
+              <span class="contact-card__flip-revert fa fa-arrow-left" data-behavior="contact-card.flip-revert"></span>
+              <ul class="contact-card__profile-list">
+                <li class="full-width">
+                  <a class="contact-card__button" href="mailto:matthew.j.dingee@gmail.com"><i class="fa fa-envelope"></i> matthew.j.dingee@gmail.com</a>
+                </li>
+                <li class="full-width">
+                    <a class="contact-card__button" href="tel://1-202-725-0202"><i class="fa fa-phone"></i> 202-725-0202</a>
+                </li>
+                <li>
+                  <a href="https://github.com/humancompanion" class="contact-card__button"><i class="fa fa-github-square"></i> GitHub</a>
+                </li>
+                <li>
+                  <a class="contact-card__button" href="https://www.linkedin.com/pub/matthew-dingee/1/448/947"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+                </li>
+                <li>
+                  <a href="http://ueyes.tumblr.com" class="contact-card__button"><i class="fa fa-tumblr-square"></i> Tumblr</a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/humancompanion" class="contact-card__button"><i class="fa fa-twitter-square"></i> Twitter</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="/js/project.min.js"></script>
