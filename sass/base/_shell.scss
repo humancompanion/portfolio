@@ -20,17 +20,17 @@ body {
 }
 
 .l-shell {
-  height: 100%;
   z-index: 1;
-  transform: translateX(0);
-  transform: translate3d(0, 0, 0);
-  transition: .3s ease all;
   max-width: $page--max-width;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   background: $white;
   border: solid $grey-medium;
   border-width: 8px 0 2px 0;
+  transition: 0.3s ease all;
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .content-well {
