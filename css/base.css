@@ -2993,20 +2993,20 @@ body {
   box-sizing: inherit; }
 
 .l-shell {
-  height: 100%;
   z-index: 1;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  transition: .3s ease all;
   max-width: 75em;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   background: #fff;
   border: solid #454958;
-  border-width: 8px 0 2px 0; }
+  border-width: 8px 0 2px 0;
+  transition: 0.3s ease all;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
 
 .content-well {
   padding: 0 0.8rem 3rem;
