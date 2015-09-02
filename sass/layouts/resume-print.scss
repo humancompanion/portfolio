@@ -33,8 +33,59 @@
     padding-bottom: 0.5rem;
   }
 
+  #profile {
+    .section_title {
+      display: none;
+    }
+    .section_body {
+      padding-top: 0.5rem;
+    }
+  }
+
   .footer {
     padding: 0;
+
+    .contact-card {
+      height: auto;
+      min-width: inherit;
+      max-width: inherit;
+      border-radius: 0;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+    }
+
+    .contact-card__body {
+      height: auto;
+      box-shadow: none;
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    }
+
+    .contact-card__front {
+      display: none;
+    }
+
+    .contact-card__back {
+      height: auto;
+      padding-top: .5rem;
+      padding-left: 0;
+    }
+
+    .contact-card__flip-revert {
+      display: none;
+    }
+
+    .contact-card__profile-list li.full-width {
+      display: inline-block;
+      float: left;
+      width: 50%;
+    }
+
+    .contact-card__profile-list li {
+      display: none;
+    }
 
     .contact-info {
       margin-bottom: 0;
@@ -78,6 +129,10 @@
     margin-bottom: 0;
   }
 
+  .section_body {
+    @include clearfix();
+  }
+
   p {
     max-width: inherit;
     margin-bottom: 0.5rem;
@@ -93,24 +148,9 @@
     display: none;
   }
 
-  // Shove Skills around
-  .skills .section_title {
+  // Hide Skills
+  .skills {
     display: none;
-  }
-
-  .skills div.section_body dl {
-    float: left;
-    width: 33%;
-    margin-bottom: 0;
-    padding-left: 1rem;
-
-    dt {
-      margin: 0;
-    }
-
-    dd {
-      display: none;
-    }
   }
 
   .job {
@@ -157,15 +197,21 @@
 
     li {
       display: none;
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      @include lineHeight($base-line-height);
+      list-style-type: disc;
+      margin-left: 1.25rem;
+      margin-bottom: $size-S;
     }
 
     li.accomplishment_desc {
       display: inherit;
+      margin-top: .5rem;
+      list-style-type: none;
+      margin-left: 0;
       margin-top: 0;
-      margin-bottom: 0;
-      font-family: Roboto, sans-serif;
-      font-weight: 300;
-      line-height: $type-M;
+      margin-bottom: $size-base;
     }
   }
 }

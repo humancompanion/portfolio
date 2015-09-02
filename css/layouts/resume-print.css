@@ -175,8 +175,39 @@
     border: 0; }
   .content-well {
     padding-bottom: 0.5rem; }
+  #profile .section_title {
+    display: none; }
+  #profile .section_body {
+    padding-top: 0.5rem; }
   .footer {
     padding: 0; }
+    .footer .contact-card {
+      height: auto;
+      min-width: inherit;
+      max-width: inherit;
+      border-radius: 0;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem; }
+    .footer .contact-card__body {
+      height: auto;
+      box-shadow: none;
+      -webkit-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+    .footer .contact-card__front {
+      display: none; }
+    .footer .contact-card__back {
+      height: auto;
+      padding-top: .5rem;
+      padding-left: 0; }
+    .footer .contact-card__flip-revert {
+      display: none; }
+    .footer .contact-card__profile-list li.full-width {
+      display: inline-block;
+      float: left;
+      width: 50%; }
+    .footer .contact-card__profile-list li {
+      display: none; }
     .footer .contact-info {
       margin-bottom: 0;
       font-family: Roboto, sans-serif;
@@ -197,6 +228,10 @@
   .section_title {
     margin-top: 1rem;
     margin-bottom: 0; }
+  .section_body::after {
+    clear: both;
+    content: "";
+    display: table; }
   p {
     max-width: inherit;
     margin-bottom: 0.5rem; }
@@ -216,17 +251,8 @@
     line-height: 19.8px; }
   #technical {
     display: none; }
-  .skills .section_title {
+  .skills {
     display: none; }
-  .skills div.section_body dl {
-    float: left;
-    width: 33%;
-    margin-bottom: 0;
-    padding-left: 1rem; }
-    .skills div.section_body dl dt {
-      margin: 0; }
-    .skills div.section_body dl dd {
-      display: none; }
   .job {
     margin-bottom: 0.8rem; }
     .job::after {
@@ -255,12 +281,19 @@
     width: 65%;
     margin-left: 2%; }
     .accomplishments li {
-      display: none; }
-    .accomplishments li.accomplishment_desc {
-      display: inherit;
-      margin-top: 0;
-      margin-bottom: 0;
+      display: none;
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      line-height: 16px; } }
+      line-height: 18px;
+      line-height: 1.2857142857rem;
+      list-style-type: disc;
+      margin-left: 1.25rem;
+      margin-bottom: 8px; }
+    .accomplishments li.accomplishment_desc {
+      display: inherit;
+      margin-top: .5rem;
+      list-style-type: none;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 4px; } }
 /*# sourceMappingURL=resume-print.css.map */
