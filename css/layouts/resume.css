@@ -5,9 +5,12 @@
   /* ----------------------------- Skills -----------------------------------*/
   /* ----------------------------- Technical -----------------------------------*/
   /* ----------------------------- Experience -----------------------------------*/ }
-  .l-resume .content-well ol, .l-resume .content-well ul {
+  .l-resume .content-well ol,
+  .l-resume .content-well ul {
     padding-left: 1rem; }
-  .l-resume .content-well p, .l-resume .content-well ol, .l-resume .content-well ul {
+  .l-resume .content-well p,
+  .l-resume .content-well ol,
+  .l-resume .content-well ul {
     padding-bottom: 6px; }
   .l-resume .content-well ul li {
     margin-left: 10px;
@@ -66,12 +69,12 @@
   .l-resume .skills div.section_body dl:first-child {
     padding-left: 0; }
   .l-resume .skills div.section_body dl dt {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
     color: #333333;
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 24px;
@@ -89,7 +92,7 @@
     position: relative;
     margin-bottom: 1.5em; }
   .l-resume .job .location {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -117,8 +120,9 @@
     margin-bottom: 0.75rem; }
   .l-resume #experience ul li ol li {
     list-style-type: disc; }
-  .l-resume .notes, .l-resume ol.notes li {
-    font-family: 'Lora', 'Georgia', serif;
+  .l-resume .notes,
+  .l-resume ol.notes li {
+    font-family: "Lora", "Georgia", serif;
     font-size: 14px;
     font-size: 0.875rem;
     margin: 0; }

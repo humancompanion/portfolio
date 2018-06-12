@@ -11,9 +11,12 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    jekyll: {
-      build: {
-        dest: '_site'
+    shell: {
+      jekyllBuild: {
+        command: 'bundle exec jekyll build'
+      },
+      jekyllServe: {
+        command: "bundle exec jekyll serve --baseurl ''"
       }
     },
     sass: {
@@ -172,11 +175,25 @@ module.exports = function(grunt) {
         ],
         tasks: ['css']
       }
+    },
+    // run tasks in parallel
+    concurrent: {
+      serve: [
+        'css',
+        'watch',
+        'shell:jekyllServe'
+      ],
+      options: {
+        logConcurrentOutput: true
+      }
     }
   });
 
-  grunt.registerTask('dev', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('serve', ['browserSync', 'concurrent:serve']);
+  grunt.registerTask('build', ['shell:jekyllBuild', 'css', 'js']);
   grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('js', ['jshint:all', 'concat:js_components', 'uglify:js_base']);
-  grunt.registerTask('build', ['css', 'js', 'jekyll']);
+
+  // Register build as the default task fallback
+  grunt.registerTask('default', 'serve');
 };

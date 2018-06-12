@@ -23,9 +23,8 @@
     right: 12px;
     height: 40px;
     width: 36px;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer; }
     @media (min-width: 54rem) {
@@ -40,9 +39,8 @@
       border-radius: 4px;
       opacity: 1;
       left: 0;
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
       transition: .25s ease-in-out; }
       .header__nav-toggle .hamburger:nth-child(1) {
         top: 0px; }
@@ -57,7 +55,7 @@
       bottom: 0;
       margin: 0 auto;
       text-align: center;
-      font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+      font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 18px;
@@ -69,17 +67,15 @@
       color: #454958; }
   .header__nav-toggle.is-open .hamburger:nth-child(1) {
     top: 8px;
-    -webkit-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-            transform: rotate(135deg); }
+    -ms-transform: rotate(135deg);
+        transform: rotate(135deg); }
   .header__nav-toggle.is-open .hamburger:nth-child(2) {
     opacity: 0;
     left: -36px; }
   .header__nav-toggle.is-open .hamburger:nth-child(3) {
     top: 8px;
-    -webkit-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
-            transform: rotate(-135deg); }
+    -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg); }
 
 .header-home {
   margin-bottom: 36px; }
@@ -94,17 +90,21 @@
   clear: both;
   content: "";
   display: table; }
+
 .header-resume__title {
   margin-bottom: 0; }
+
 .header-resume__sub-title {
   font-style: italic; }
 
 .header-case-study__title {
   margin-bottom: 8px; }
+
 .header-case-study__project {
   margin-top: 0; }
+
 .header-case-study__url {
-  font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 18px;
@@ -114,7 +114,7 @@
   text-transform: lowercase; }
   @media (min-width: 54rem) {
     .header-case-study__url {
-      font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+      font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
       font-size: 16px;
       font-size: 1rem;
       line-height: 24px;
@@ -132,9 +132,8 @@
   width: 100%;
   z-index: -1;
   background-color: #454958;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+      transform: none;
   transition: none; }
   @media (min-width: 54rem) {
     .primary-nav {
@@ -146,7 +145,7 @@
   .primary-nav__a {
     display: block;
     width: 100%;
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -162,12 +161,12 @@
     border-bottom: 1px solid #BEBFC5; }
     @media (min-width: 54rem) {
       .primary-nav__a {
-        font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
         font-style: normal;
         font-weight: normal;
         padding: 0;
         color: #333333;
-        font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
         font-size: 18px;
         font-size: 1.125rem;
         line-height: 24px;
@@ -198,8 +197,9 @@
     .primary-nav__body li {
       margin: 0; }
 
-.home-nav__body, .case-study-nav__body {
-  font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+.home-nav__body,
+.case-study-nav__body {
+  font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
@@ -212,7 +212,8 @@
 .case-study-nav__title.is-current {
   padding-left: 4px; }
 
-.home-nav__header, .case-study-nav__header {
+.home-nav__header,
+.case-study-nav__header {
   font-weight: bold; }
 
 .home-nav__item a {
@@ -244,7 +245,6 @@
   max-width: 400px;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
-  -webkit-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
   border-radius: 2px; }
@@ -253,14 +253,12 @@
       margin-left: auto;
       margin-right: auto; } }
   .contact-card.is-flipped .contact-card__body {
-    -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   .contact-card__body {
     position: relative;
     height: 136px;
     transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
@@ -272,14 +270,12 @@
     right: 0;
     padding: 0;
     background-color: #fff;
-    -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden; }
   .contact-card__front {
     z-index: 2; }
   .contact-card__back {
     padding: 0 0.5rem 0.5rem 2rem;
-    -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg); }
     @media (min-width: 30rem) {
@@ -297,7 +293,7 @@
   .contact-card__button {
     display: inline-block;
     width: 100%;
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 24px;
@@ -344,7 +340,8 @@
         .contact-card__title .last {
           text-transform: inherit; } }
     @media (min-width: 30rem) {
-      .contact-card__title .first, .contact-card__title .last {
+      .contact-card__title .first,
+      .contact-card__title .last {
         display: inline;
         font-size: inherit; } }
   .contact-card__subtitle {

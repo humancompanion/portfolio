@@ -1,4 +1,4 @@
 source: .
 destination: ./_site
 layouts: ./_layouts
-exclude: ["npm-debug.log", "*.sublime-*", "README.md", "Gruntfile.js"]
+exclude: ["npm-debug.log", "README.md", "Gruntfile.js"]

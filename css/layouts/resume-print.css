@@ -1,8 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto:300');
+@import url("http://fonts.googleapis.com/css?family=Roboto:300");
 @import url(http://fonts.googleapis.com/css?family=Lora|Montserrat);
 @media print {
-  
-  
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -11,7 +9,7 @@
         -ms-text-size-adjust: none;
             text-size-adjust: none; }
   body {
-    font-family: 'Lora', 'Georgia', serif;
+    font-family: "Lora", "Georgia", serif;
     font-size: 12px;
     font-size: 0.8571428571rem;
     line-height: 18px;
@@ -32,7 +30,7 @@
     direction: rtl;
     unicode-bidi: bidi-override; }
   h1 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -44,7 +42,7 @@
     line-height: 3.2142857143rem;
     margin: 2.5714285714rem 0; }
   h2 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -56,7 +54,7 @@
     margin: 2.5714285714rem 0 1.2857142857rem;
     text-transform: uppercase; }
   h3 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -67,7 +65,7 @@
     line-height: 1.9285714286rem;
     margin: 1.2857142857rem 0 1rem; }
   h4 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -78,19 +76,19 @@
     line-height: 1.2857142857rem;
     margin: 1.2857142857rem 0 0.8571428571rem; }
   h5 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
     color: #333333;
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-size: 1rem;
     line-height: 18px;
     line-height: 1.2857142857rem;
     margin: 0.6428571429rem 0 0.3571428571rem; }
   h6 {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -101,11 +99,16 @@
     line-height: 18px;
     line-height: 1.2857142857rem;
     margin: 0.6428571429rem 0 0.3571428571rem; }
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
     font-weight: inherit;
     text-decoration: none; }
   p {
-    font-family: 'Lora', 'Georgia', serif;
+    font-family: "Lora", "Georgia", serif;
     font-size: 12px;
     font-size: 0.8571428571rem;
     line-height: 18px;
@@ -114,28 +117,30 @@
     margin-bottom: 0.6428571429rem;
     max-width: 48rem; }
   .small {
-    font-family: 'Lora', 'Georgia', serif;
+    font-family: "Lora", "Georgia", serif;
     font-size: 10px;
     font-size: 0.7142857143rem;
     margin: 0; }
   .fine-print {
-    font-family: 'Lora', 'Georgia', serif;
+    font-family: "Lora", "Georgia", serif;
     font-size: 10px;
     font-size: 0.7142857143rem;
     line-height: 14px;
     line-height: 1rem;
     letter-spacing: 0.008rem;
     margin: 0; }
-  em, i {
+  em,
+  i {
     font-style: italic; }
-  strong, b {
+  strong,
+  b {
     font-weight: bold; }
   hr {
     margin: 0.5rem 0;
     height: 1px;
     border: 1px solid #454958; }
   blockquote {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -150,7 +155,7 @@
     padding-left: 1.8rem;
     margin: 2rem auto; }
   .enlarge {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -163,7 +168,9 @@
     line-height: 23.4px; }
   body {
     background-color: #fff; }
-  p, .section_body, .notes {
+  p,
+  .section_body,
+  .notes {
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 14px; }
@@ -191,7 +198,6 @@
     .footer .contact-card__body {
       height: auto;
       box-shadow: none;
-      -webkit-transform: rotateY(180deg);
       -ms-transform: rotateY(180deg);
       transform: rotateY(180deg); }
     .footer .contact-card__front {
@@ -212,7 +218,10 @@
       margin-bottom: 0;
       font-family: Roboto, sans-serif;
       font-weight: 300; }
-  h2, h3, h4, h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     margin: 0; }
   h4 {
     line-height: 1.8rem; }
@@ -236,7 +245,7 @@
     max-width: inherit;
     margin-bottom: 0.5rem; }
   .enlarge {
-    font-family: 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     padding: 0;
@@ -264,7 +273,8 @@
     .job h3 {
       padding-top: 0;
       border-top: 0; }
-    .job h4, .job h5 {
+    .job h4,
+    .job h5 {
       font-family: Roboto, sans-serif;
       font-weight: 300; }
     .job__details {
