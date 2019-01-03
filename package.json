@@ -57,6 +57,7 @@
     "build": "gulp build",
     "build:css": "gulp sass",
     "build:jekyll": "gulp jekyll",
+    "deploy": "git subtree push --prefix _dist origin gh-pages",
     "lint": "eslint src/js/**/*.js",
     "test": "bundle exec htmlproof ./_dist",
     "open:repo": "opener https://github.com/humancompanion/portfolio/",
