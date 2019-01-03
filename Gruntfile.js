@@ -166,7 +166,7 @@ module.exports = function(grunt) {
           '_includes/*.md',
           'case-study/*.html'
         ],
-        tasks: ['jekyll']
+        tasks: ['shell:jekyllBuild']
       },
       base_styles: {
         files: [

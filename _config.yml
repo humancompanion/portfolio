@@ -1,4 +1,3 @@
-source: .
-destination: ./_site
-layouts: ./_layouts
-exclude: ["npm-debug.log", "README.md", "Gruntfile.js"]
+source: src
+destination: ./_dist
+layouts_dir: src/_layouts
