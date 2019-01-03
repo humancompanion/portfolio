@@ -11,12 +11,18 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+<<<<<<< HEAD
     shell: {
       jekyllBuild: {
         command: 'bundle exec jekyll build'
       },
       jekyllServe: {
         command: "bundle exec jekyll serve --baseurl ''"
+=======
+    jekyll: {
+      build: {
+        dest: '_site'
+>>>>>>> master
       }
     },
     sass: {
@@ -81,9 +87,19 @@ module.exports = function(grunt) {
         dest: 'css/layouts/'
       }
     },
+<<<<<<< HEAD
     uglify: {
       options: {
         mangle: false
+=======
+    concat: {
+      js_base: {
+        src: [
+          'bower_components/modernizr/modernizr.js',
+          'bower_components/jquery/dist/jquery.min.js',
+        ],
+        dest: '_site/js/project.js'
+>>>>>>> master
       },
       js_base: {
         files: {
@@ -98,17 +114,17 @@ module.exports = function(grunt) {
     concat: {
       js_components: {
         src: 'js/components/*.js',
-        dest: 'js/components.js'
+        dest: '_site/js/components.js'
       }
     },
     cssmin: {
       minify: {
         src: [
-          'css/base.css',
-          'css/components.css',
-          'css/layouts/*.css'
+          '_site/css/base.css',
+          '_site/css/components.css',
+          '_site/css/layouts/*.css'
         ],
-        dest: 'css/portfolio.min.css'
+        dest: '_site/css/portfolio.min.css'
       }
     },
     jshint: {
@@ -166,7 +182,11 @@ module.exports = function(grunt) {
           '_includes/*.md',
           'case-study/*.html'
         ],
+<<<<<<< HEAD
         tasks: ['shell:jekyllBuild']
+=======
+        tasks: ['jekyll']
+>>>>>>> master
       },
       base_styles: {
         files: [
@@ -174,6 +194,7 @@ module.exports = function(grunt) {
           'sass/*/*.scss'
         ],
         tasks: ['css']
+<<<<<<< HEAD
       }
     },
     // run tasks in parallel
@@ -185,10 +206,13 @@ module.exports = function(grunt) {
       ],
       options: {
         logConcurrentOutput: true
+=======
+>>>>>>> master
       }
     }
   });
 
+<<<<<<< HEAD
   grunt.registerTask('serve', ['browserSync', 'concurrent:serve']);
   grunt.registerTask('build', ['shell:jekyllBuild', 'css', 'js']);
   grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
@@ -196,4 +220,10 @@ module.exports = function(grunt) {
 
   // Register build as the default task fallback
   grunt.registerTask('default', 'serve');
+=======
+  grunt.registerTask('dev', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('js', ['jshint:all', 'concat:js_components', 'concat:js_base']);
+  grunt.registerTask('build', ['css', 'js', 'jekyll']);
+>>>>>>> master
 };

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{page.client}} Case Study &bull; Matthew Dingee &bull; UX Designer</title>
+    <meta name="keywords" content="case study, portfolio, resume, user experience designer, interaction designer, design, information architect, UI, UX, developer" />
+    <meta name="description" content="Case study by Matthew Dingee, a User Experience designer." />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/base.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/components.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/layouts/case_study.css">
+    <script src="{{ site.baseurl }}/js/project.js"></script>
+    <!--[if IE]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="l-case_study">
+    <div class="l-shell">
+      <header class="header header-case-study" role="banner" data-object="header">
+        <div class="header__body">
+          <h1 class="header__title header-case-study__title">Case Study</h1>
+          <h2 class="header-case-study__project">
+            {{ page.project_title }}
+            {% if page.project_url %}
+            <span class="header-case-study__url">
+              <a href="{{page.project_url}}">
+                {{page.project_url_display}}
+              </a>
+            </span>
+            {% endif %}
+          </h2>
+          {% include hamburger.html %}
+        </div>
+        <nav class="primary-nav" id="primary-nav" role="nav">
+          <ul class="primary-nav__body">
+            <li class="list-item"><a class="primary-nav__a" href="../index.html">Home</a></li>
+            <li class="list-item"><a class="primary-nav__a" href="index.html">Work</a></li>
+            <li class="list-item"><a class="primary-nav__a" href="../resume.html">Experience</a></li>
+            <li class="list-item"><a class="primary-nav__a" href="../about.html">Skills</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="content-well" role="main" id="main" tabindex="0">
+        <div class="content-well__container">
+        {{ content }}
+        </div>
+      </main>
+      {% include footer.html %}
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

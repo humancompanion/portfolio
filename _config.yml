@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 source: src
 destination: ./_dist
 layouts_dir: src/_layouts
+=======
+source: .
+destination: ./_site
+layouts: ./_layouts
+exclude: ["npm-debug.log", "*.sublime-*", "README.md", "Gruntfile.js"]
+>>>>>>> master
