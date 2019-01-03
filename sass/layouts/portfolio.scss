@@ -1,0 +1,44 @@
+// ---------------------------------------------------------------------------
+// Layout: Portfolio
+
+@import "util/util";
+
+.l-portfolio {
+  .home__body {
+    @include breakpoint(ML) {
+      padding-left: 15%;
+    }
+  }
+
+  .home__body-left {
+    margin-right: 1em;
+    padding-right: $size-S;
+    border-right: 1px solid $black;
+
+    @include breakpoint(SM) {
+      margin-right: 1.5em;
+    }
+  }
+
+  .home__body-right {
+    min-width: 110px;
+  }
+
+  .home__title {
+    margin-top: 0;
+    color: $red;
+  }
+
+  .footer {
+    @include breakpoint(ML) {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  .list--inline.contact-info {
+    @include type-xsmall($font_light);
+  }
+}
