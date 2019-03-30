@@ -8,19 +8,19 @@
 @import "lib/normalize";
 // @import 'font-awesome/font-awesome.scss';
 
-@import 'util/util';
+@import "util/util";
 // Handy dev helper
 // @import 'util/grid-breakpointbar';
 
 // ---------------------------------------------------------------------------
 // Base
-@import 'base/typography';
-@import 'base/links';
-@import 'base/buttons';
-@import 'base/images';
-@import 'base/grid';
-@import 'base/shell';
-@import 'base/lists';
+@import "base/typography";
+@import "base/links";
+@import "base/buttons";
+@import "base/images";
+@import "base/grid";
+@import "base/shell";
+@import "base/lists";
 
 // ---------------------------------------------------------------------------
 // Components
@@ -32,6 +32,7 @@
 // ---------------------------------------------------------------------------
 // Layouts
 @import "layouts/portfolio";
+@import "layouts/home";
 @import "layouts/case_study";
 @import "layouts/resume";
-@import "layouts/resume-print";
+@import "layouts/resume-print-media";

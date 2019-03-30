@@ -1,0 +1,91 @@
+// ---------------------------------------------------------------------------
+// Layout: Home
+
+@import "util/util";
+
+.l-home,
+.l-home-content-well {
+  background-color: $grey-cover;
+
+  :focus {
+    outline: 0px;
+  }
+}
+
+.l-home {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: solid $grey-cover;
+  border-width: 8px 0 2px 0;
+}
+
+.l-home-content-well {
+  &__photo {
+    position: relative;
+    max-height: 80vh;
+    max-width: $page--max-width;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__callout {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(38, 38, 38, 0.6);
+  }
+
+  &__callout-text {
+    font-family: $font_cover2;
+    @include fontSize($type-SM);
+    @include lineHeight($base-line-height * 1.4);
+    margin: calculateRem($base-line-height) 0
+      calculateRem($base-line-height - 4);
+    padding: 0 $page--gutter-width-S;
+    width: 100%;
+    max-width: 66ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: $white;
+
+    @include breakpoint(SM) {
+      @include fontSize($type-M);
+    }
+
+    @include breakpoint(ML) {
+      width: 45%;
+    }
+  }
+}
+
+.l-home-case-studies,
+.l-home-experience,
+.l-home-skills {
+  padding: $size-M $page--gutter-width-S 3rem;
+
+  @include breakpoint(XL) {
+    padding: $size-M ($page--gutter-width-XL * 2) 3rem;
+  }
+}
+
+.l-home-experience {
+  background-color: $grey-lightest;
+
+  @include breakpoint(XL) {
+    background-image: url("../images/experience/background-XL-2x.png");
+    background-repeat: no-repeat;
+  }
+
+  .home-nav__header {
+    color: $grey-cover;
+
+    @include breakpoint(XL) {
+      color: $grey-medium;
+    }
+  }
+}
