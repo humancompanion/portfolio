@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  {% include head.html %}
-  <body class="{{ page.body-class }}">
-    <div class="l-shell">
-      <header class="header header-case-study" role="banner" data-object="header">
-        <div class="header__body">
-          <h1 class="header__title">Matthew Dingee</h1>
-          {% include hamburger.html %}
-        </div>
-        {% include nav.html %}
-      </header>
-      <main class="content-well" role="main" id="main" tabindex="0">
-        <div class="content-well__container">
+{% include head.html %}
+
+<body class="{{ page.body-class }}">
+  <div class="l-shell">
+    {% include nav.html %}
+    <header class="header header-case-study" role="banner" data-object="header">
+      <div class="header__body">
+        <a href="{{ site.baseurl }}/" class="header__sub-title">
+          <span class="title">Portfolio</span>
+          <span class="first">Matthew</span> <span class="last">Dingee</span>
+        </a>
+        <h2 class="header__page-title">{{ page.title }}</h2>
+      </div>
+    </header>
+    <main class="content-well" role="main" id="main" tabindex="0">
+      <div class="content-well__container">
         {{ content }}
-        </div>
-      </main>
-      {% include footer.html %}
-    </div>
-    {% include scripts.html %}
-  </body>
+      </div>
+    </main>
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
+
 </html>

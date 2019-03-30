@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  {% include head.html %}
-  <body class="l-case_study">
-    <div class="l-shell">
-      <header class="header header-case-study" role="banner" data-object="header">
-        <div class="header__body">
-          <h1 class="header__title header-case-study__title">Case Study</h1>
-          <h2 class="header-case-study__project">
-            {{ page.project_title }}
-            {% if page.project_url %}
-            <span class="header-case-study__url">
-              <a href="{{page.project_url}}">
-                {{page.project_url_display}}
-              </a>
-            </span>
-            {% endif %}
-          </h2>
-          {% include hamburger.html %}
-        </div>
-        {% include nav.html %}
-      </header>
-      <main class="content-well" role="main" id="main" tabindex="0">
-        <div class="content-well__container">
+{% include head.html %}
+
+<body class="l-case_study">
+  <div class="l-shell">
+    {% include nav.html %}
+    <header class="header header-case-study" role="banner" data-object="header">
+      <div class="header__body">
+        <h1 class="header__title header-case-study__title">Case Study</h1>
+        <h2 class="header-case-study__project">
+          {{ page.project_title }}
+          {% if page.project_url %}
+          <span class="header-case-study__url">
+            <a href="{{page.project_url}}">
+              {{page.project_url_display}}
+            </a>
+          </span>
+          {% endif %}
+        </h2>
+      </div>
+    </header>
+    <main class="content-well" role="main" id="main" tabindex="0">
+      <div class="content-well__container">
         {{ content }}
-        </div>
-      </main>
-      {% include footer.html %}
-    </div>
-    {% include scripts.html %}
-  </body>
+      </div>
+    </main>
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
+
 </html>

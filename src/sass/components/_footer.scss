@@ -10,7 +10,7 @@
   border-top: 1px solid $grey-light;
   background-color: $white;
 
-  .contact-info {
+  .contact-card {
     padding: 0 $page--gutter-width-S;
 
     @include breakpoint(XL) {

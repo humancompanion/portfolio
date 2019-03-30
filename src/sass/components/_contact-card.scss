@@ -9,24 +9,17 @@
   height: $header-card-height;
   min-width: 295px;
   max-width: 400px;
-  margin-left: $page--gutter-width-S;
-  margin-right: $page--gutter-width-S;
   -webkit-perspective: 1000;
-     -moz-perspective: 1000;
-      -ms-perspective: 1000;
-          perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
   border-radius: 2px;
-
-  @include breakpoint(SM) {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   &.is-flipped .contact-card__body {
     -webkit-transform: rotateY(180deg);
-       -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   &__body {
@@ -35,10 +28,10 @@
     // flip speed
     transition: 0.6s;
     -webkit-transform-style: preserve-3d;
-       -moz-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   &__front,
@@ -51,9 +44,9 @@
     padding: 0;
     background-color: $white;
     -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-            backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   &__front {
@@ -63,9 +56,9 @@
   &__back {
     padding: 0 0.5rem 0.5rem 2rem;
     -webkit-transform: rotateY(180deg);
-       -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 
     @include breakpoint(SM) {
       padding-left: 4rem;

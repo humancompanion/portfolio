@@ -1,0 +1,9 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<nav class="primary-nav--home" id="primary-nav" role="nav">
+  <ul class="primary-nav--home__body">
+    <li class="list-item"><a class="primary-nav--home__a is-first {% if current[1] == 'case-study' %}is-current{% endif %}" href="{{ site.baseurl }}/case-study/">work</a></li>
+    <li class="list-item"><a class="primary-nav--home__a {% if current[1] == 'resume' %}is-current{% endif %}" href="{{ site.baseurl }}/resume/">experience</a></li>
+    <li class="list-item"><a class="primary-nav--home__a {% if current[1] == 'about' %}is-current{% endif %}" href="{{ site.baseurl }}/about/">skills</a></li>
+  </ul>
+</nav>

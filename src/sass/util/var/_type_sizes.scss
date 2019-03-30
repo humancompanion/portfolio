@@ -1,22 +1,24 @@
 // ---------------------------------------------------------------------------
 // Font Variables
 
-$font_regular  : 'Lora', 'Georgia', serif;
-$font_base     : $font_regular;
-$font_light    : 'Montserrat', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+$font_regular: "Lora", "Georgia", serif;
+$font_base: $font_regular;
+$font_light: "Montserrat", "HelveticaNeue", Helvetica, Arial, sans-serif;
+$font_cover: "Libre Franklin", $font_light;
+$font_cover2: "Domine", $font_regular;
 
 // ---------------------------------------------------------------------------
 // Type Sizes
 
-$type-XS  : 14px;
-$type-S   : 16px;
-$type-SM  : 18px;
-$type-M   : 21px;
-$type-ML  : 24px;
-$type-L   : 28px;
-$type-XL  : 38px;
-$type-XXL : 51px;
+$type-XS: 14px;
+$type-S: 16px;
+$type-SM: 18px;
+$type-M: 21px;
+$type-ML: 24px;
+$type-L: 28px;
+$type-XL: 38px;
+$type-XXL: 51px;
 
-$base-font-size   : $type-S;
-$base-font-weight : normal;
-$base-line-height : $type-ML;
+$base-font-size: $type-S;
+$base-font-weight: normal;
+$base-line-height: $type-ML;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% include print-head.html %}
+
+<body class="{{ page.body-class }}">
+  <div class="l-shell">
+    <header class="header header-resume" role="banner" data-object="header">
+      <div class="header__body">
+        <h1 class="header__title">Matthew Dingee</h1>
+        <span class="header__portfolio">
+          Portfolio: <a href="https://www.abarrelofthis.com/">https://www.abarrelofthis.com/</a>
+        </span>
+      </div>
+    </header>
+    <main class="content-well" role="main" id="main" tabindex="0">
+      <div class="content-well__container">
+        {{ content }}
+      </div>
+    </main>
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
+
+</html>

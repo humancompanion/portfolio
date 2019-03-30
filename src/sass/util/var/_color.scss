@@ -1,29 +1,30 @@
 // ---------------------------------------------------------------------------
 // Base: Color
 
-$white          : #fff;
-$black          : #000;
-$blue           : rgb(48,121,237);
-$blue-light     : #57A3E8;
-$red            : rgb(226,32,43);
-$grey-darkest   : #333333;
-$grey-dark      : #666666;
-$grey-medium    : #454958;
-$grey           : #939393;
-$grey-light     : #BEBFC5;
-$grey-lightest  : #fafafc;
-$white-off      : rgb(243,240,227);
+$white: #fff;
+$black: #000;
+$blue: rgb(48, 121, 237);
+$blue-light: #57a3e8;
+$red: rgb(226, 32, 43);
+$grey-darkest: #333333;
+$grey-dark: #666666;
+$grey-medium: #454958;
+$grey: #939393;
+$grey-light: #bebfc5;
+$grey-lightest: #fafafc;
+$grey-cover: #262626;
+$white-off: rgb(243, 240, 227);
 
 // by Type
-$color_base       : $grey-medium;
-$color_link       : $blue;
-$color_linkhover  : darken($blue, 10%);
-$color_linkactive : darken($blue, 15%);
+$color_base: $grey-medium;
+$color_link: $blue;
+$color_linkhover: darken($blue, 10%);
+$color_linkactive: darken($blue, 15%);
 
-$color_button-default           : $grey-medium;
-$color_button-default-text      : $white;
+$color_button-default: $grey-medium;
+$color_button-default-text: $white;
 
 // by Client
-$color_cisco      : #007fc5;
-$color_marriott   : $black;
-$color_heritage   : #002b51;
+$color_cisco: #007fc5;
+$color_marriott: $black;
+$color_heritage: #002b51;

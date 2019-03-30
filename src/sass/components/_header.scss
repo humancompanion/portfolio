@@ -3,116 +3,91 @@
 
 @import "util/util";
 
-.header {
-  border-bottom: 1px solid $red;
-  background-color: $white;
-
-  @include breakpoint($layout-nav_switch) {
-    border-bottom: 0;
-  }
+.header,
+.header--home {
+  margin-bottom: $size-L;
+  border-top: 16px solid $red;
 
   &__body {
     padding: 0 $page--gutter-width-S;
-    z-index: 1;
-
-    @include breakpoint($layout-nav_switch) {
-      margin-top: 2rem;
-    }
 
     @include breakpoint(XL) {
       padding: 0 $page--gutter-width-XL;
     }
   }
+}
+
+.header {
+  border-bottom: 1px solid $red;
+  background-color: $white;
 
   &__title {
     margin-top: 0;
     padding-top: 3rem;
   }
 
-  &__nav-toggle {
+  &__sub-title {
     display: block;
-    position: absolute;
-    top: $size-M;
-    right: $size-SM;
-    height: $size-L + 4px;
-    width: $size-L;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
+    margin: 0;
+    font-family: $font_cover2;
+    font-style: normal;
+    font-weight: bold;
+    padding: $size-base 0;
+    color: $red;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 
-    @include breakpoint($layout-nav_switch) {
-      display: none;
+    &:hover {
+      color: $red;
+      text-decoration: none;
+      font-weight: 700;
     }
 
-    .hamburger {
-      display: block;
-      position: absolute;
-      height: $size-base;
-      width: 100%;
-      background: $grey-medium;
-      border-radius: $size-base;
-      opacity: 1;
-      left: 0;
-      transform: rotate(0deg);
-      transition: .25s ease-in-out;
-
-      &:nth-child(1) {
-        top: 0px;
-      }
-      &:nth-child(2) {
-        top: $size-base * 2;
-      }
-      &:nth-child(3) {
-        top: $size-base * 4;
-      }
+    &:focus {
+      color: $red;
     }
 
-    .label {
-      display: block;
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      margin: 0 auto;
-      text-align: center;
-      @include type-xsmall($font_light);
-      font-size: 10px;
-      text-transform: uppercase;
-      color: $grey-medium;
-    }
-  }
-
-  &__nav-toggle.is-open .hamburger {
-    &:nth-child(1) {
-      top: $size-base * 2;
-      transform: rotate(135deg);
-    }
-    &:nth-child(2) {
-      opacity: 0;
-      left: -#{$size-L};
-    }
-    &:nth-child(3) {
-      top: $size-base * 2;
-      transform: rotate(-135deg);
+    .title {
+      color: $grey-cover;
     }
   }
 }
 
-.header-home {
-  margin-bottom: $size-L;
-
-  @include breakpoint($layout-nav_switch) {
-    border-bottom: 1px solid $red;
+.header--home {
+  &__body {
+    max-width: $page--max-width;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__title {
-    @include breakpoint(ML) {
-      padding-left: 15%;
+    margin: 0;
+    font-family: $font_cover2;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0;
+    color: $red;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    @include breakpoint(L) {
+      font-size: $type-XXL;
     }
+  }
+
+  .title {
+    color: $white;
   }
 }
 
 .header-resume {
   @include clearfix();
+  vertical-align: baseline;
+
+  .header__body {
+    display: flex;
+    align-items: baseline;
+  }
 
   &__title {
     margin-bottom: 0;
@@ -120,6 +95,18 @@
 
   &__sub-title {
     font-style: italic;
+  }
+
+  .header__title,
+  .header__portfolio {
+    display: inline-block;
+    width: 50%;
+    flex: 1 1 0;
+  }
+
+  .header__portfolio {
+    @include type-body($font_light);
+    margin: 0;
   }
 }
 
@@ -143,5 +130,3 @@
     }
   }
 }
-
-

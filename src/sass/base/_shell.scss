@@ -10,7 +10,12 @@ html {
 }
 
 body {
-  background-color: $grey-medium;
+  background-color: $grey-cover;
+
+  :focus {
+    outline: 2px dotted $grey-light;
+    outline-offset: 3px;
+  }
 }
 
 *,
@@ -26,7 +31,7 @@ body {
   margin: 0 auto;
   padding: 0;
   background: $white;
-  border: solid $grey-medium;
+  border: solid $grey-cover;
   border-width: 8px 0 2px 0;
   transition: 0.3s ease all;
   transform: translateX(0);
