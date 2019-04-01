@@ -19,6 +19,10 @@
     margin-bottom: 1rem;
   }
 
+  .g-B--full {
+    margin-bottom: $size-L;
+  }
+
   .img--1x,
   .img--2x {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
@@ -26,6 +30,9 @@
 }
 
 .l-case_studies {
+  .t-usajobs {
+    background-color: $color_usajobs;
+  }
   .t-cisco {
     background-color: $color_cisco;
   }
