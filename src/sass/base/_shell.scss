@@ -45,6 +45,10 @@ body {
   @include breakpoint(XL) {
     padding: 0 $page--gutter-width-XL 3rem;
   }
+
+  :focus {
+    outline: 0;
+  }
 }
 
 body.is-pushed {
