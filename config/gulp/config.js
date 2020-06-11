@@ -1,10 +1,9 @@
 // Paths
 //
-var src               = 'src';
-var build             = '_dist';
+var build             = '_site';
 
 module.exports = {
-
+  browsers: ["> 2%", "Last 2 versions"],
   // BrowserSync
   browsersync: {
     development: {
@@ -20,26 +19,22 @@ module.exports = {
   watch: {
     jekyll: [
       '_config.yml',
-      src + '/_data/**/*.{json,yml,csv}',
-      src + '/_includes/**/*.{html}',
-      src + '/_layouts/*.html',
-      src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
-      src + '/*'
+      '_data/**/*.{json,yml,csv}',
+      '_includes/**/*.html',
+      '_layouts/*.html',
+      'pages/**/*.{html,markdown,md,yml,json,txt,xml}'
     ],
     styles: [
-      src + '/**/*.scss',
-      src + '/components/*.scss',
-      src + '/layouts/*.scss'
+      '_scss/*.scss',
+      '_scss/components/*.scss',
+      '_scss/layouts/*.scss'
     ]
   },
 
   // Jekyll
   jekyll: {
     development: {
-      src:    src,
-      dest:   build,
-      config: '_config.yml'
+      config: '_config.yml,_config-dev.yml'
     }
-  },
-
+  }
 };

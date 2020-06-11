@@ -1,0 +1,31 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% capture url_path %}{{site.domain}}{{site.baseurl}}{{page.url}}{% endcapture %}
+  {% capture page_title %}{%if page.title %}{{ page.title }} | {{ site.title }}{% endif %}{% endcapture %}
+  {% capture page_description %}{% if page.description %}{{ page.description }}{% else %}{{ content | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip | truncatewords: 30 }}{% endif %}{% endcapture %}
+
+  <title>{{ page_title }}</title>
+
+  <link rel="canonical" href="{{ url_path }}" />
+  <meta name="description" content="{{ page_description }}" />
+  <meta name="keywords" content="matthew dingee, portfolio, resume, user experience designer, service designer, UX design, service design, interaction designer, interaction design, design, information architect, UI, UX, architect, developer" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:description" content="{{ page_description }}" />
+  <meta property="og:url" content="{{ url_path }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:type" content="article" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/{{ site.styles }}">
+  </link>
+  <link rel="stylesheet" media="print" href="{{ site.baseurl }}/assets/css/{{ site.print-styles }}">
+  </link>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
