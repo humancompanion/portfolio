@@ -34,7 +34,7 @@
     "sass": "^1.26.3",
     "stylelint": "^13.6.0",
     "stylelint-scss": "^3.17.2",
-    "tar": "^6.0.1"
+    "tar": "^6.1.9"
   },
   "scripts": {
     "build": "gulp build",
