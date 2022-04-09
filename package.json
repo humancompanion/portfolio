@@ -24,7 +24,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8",
     "jquery": "^3.5.1",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "normalize.css": "^8.0.1",
     "opener": "^1.5.1",
     "path": "^0.12.7",
