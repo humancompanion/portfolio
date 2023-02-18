@@ -1,0 +1,100 @@
+jobs:
+  - name: U.S. Digital Service
+    location: Washington, DC
+    title: Digital Service Expert
+    grade: GS-343-14, Promoted to GS-343-15
+    work-schedule: Full-time
+    appointment-type: term appointment
+    hours-per-week: 40
+    start-date: June 2019
+    end-date: Current
+    timespan: 3 years, 7 months
+    accomplishments:
+      - accomplishment: 'Current Product Owner of the <a href="https://design.va.gov">VA Design System</a> which delivers design and code solutions for designers and developers working on the VA Platform to provide quality products and services to VA customers.'
+        descriptions:
+          - desc: 'Led the Design System Council since April 2022 which evaluates design work to solve customer problems and improve the customer experience of <a href="https://va.gov">VA.gov</a> using data and sound judgement to make decisions.'
+          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Design System in improving customer experience of VA.gov.
+          - desc: Created and revised 26 thoroughly detailed design patterns which describe best practices to teams working on VA.gov on how to provide exceptional customer service by providing quality products and services to Veterans using these patterns to satisfy customer expectations.
+          - desc: Created or revised over 40 components to improve VA products and processes, document best practices, and provide quality service to designers and developers working on the VA Platform.
+      - accomplishment: Current lead designer of the VA Collaboration Cycle, leading design activities and design problem-solving with designers across the VA, evaluating design alternatives and gaining alignment.
+        descriptions:
+          - desc: Provided sound judgement and assessment of designs presented by designers to resolve customer problems based on research with customers.
+          - desc: Gave conscientious critique and judgement after thorough review of design assets presented by  teams at different stages of development in order to evaluate design alternatives and help resolve customer problems.
+          - desc: Generated design alternatives to resolve customer problems raised by teams coming through the Collaboration Cycle in order to improve VA products and services.
+      - accomplishment: Current Product Owner for the Veteran-facing Forms project which improves the customer experience for Veterans and their families by moving paper forms online in an expedited manner.
+        descriptions:
+          - desc: Improved VA products, processes, and best practices related to bringing paper forms online to improve customer experience of applying to benefits and services.
+          - desc: Conducted a thorough and conscientious audit of all Veteran-facing forms to assess form requirements and prepare for resolving customer problems with paper forms.
+          - desc: Resolved accessibility issues and customer problems related to completing PDF forms on mobile devices by refining VA processes for moving forms online in order to satisfy customer expectations.
+          - desc: Gave oral presentations to VA clients who own and maintain VA paper forms.
+          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Veteran-facing Forms project in improving customer experience of VA.gov.
+      - accomplishment: 'Contributed to the completion of the first pilots of the <a href="https://smeqa.usds.gov/">Subject Matter Expert Qualification Assessments (SME-QA) process</a> with USDS teammates and the Office of Personnel Management.'
+        descriptions:
+          - desc: 'Researched and redesigned the <a href="https://usajobs.github.io/design-system/job-announcement/v7.0/">job announcement template</a>, which was verified in testing to provide an exceptional customer experience for job applicants, and is now used on usajobs.gov for all positions.'
+          - desc: 'Co-designed and built <a href="https://smeqa.usds.gov/">smeqa.usds.gov</a> which is a thorough guide for Human Resource specialists through the details of the SME-QA process.'
+          - desc: Conducted multiple rounds of design research with subject-matter-experts, hiring managers, and job applicants to assess their needs, build team understanding of the experience of the SME-QA process from the context of both the front and back stage participants, and to resolve problems identified.
+          - desc: Helped procure a scheduling tool for scheduling applicant interviews.
+          - desc: Helped evangelize the SME-QA process within the federal government by giving oral presentations twice at the Partnership for Public Service and AIGA.
+          - desc: 'The SME-QA process pilots contributed towards the <a href="https://www.performance.gov/CAP/workforce/">Developing a Workforce for the 21st Century</a> CAP Goal and culminated in a <a href="https://www.chcoc.gov/sites/default/files/OPM%20Memo%20Improving%20Federal%20Hiring%20through%20the%20Use%20of%20Effective%20Assessment%20Strategies%20to%20Advance%20Mission%20Outcomes.pdf">memo allowing and encouraging all agencies to use the process</a> as well as an additional round of pilots.'
+      - accomplishment: Led a 6-person research effort on behalf of the CDC to assess the expectations of U.S. citizens searching for information on COVID-19 and to generate recommendations on how to satisfy those expectations.
+        descriptions:
+          - desc: Participated in the 24-hour effort to redesign coronvirus.gov that improved the page by satisfying customer expectations and led to earning trust with the CDC to initiate the follow-on project.
+          - desc: Co-led the follow-on project helping to scope, define, and execute the research and design recommendations to the CDC on their COVID-19 focused web site.
+          - desc: Operationalized a research pipeline that allowed us to speak with 41 people in 18 calendar days by combining multiple tools for recruitment, scheduling, and conducting interviews. Conducted oral presentations of this research methodology to the Design Community of Practice within the U.S. Digital Service.
+      - accomplishment: 'Co-designed and built a page to assist states in applying CDC technical guidance as part of the "Opening Up America Again" guidelines.'
+        descriptions:
+          - desc: Planned and executed research with residents of Georgia to understand questions they had with how their state was evaluating reopening of their communities.
+          - desc: Generated and evaluated design alternatives collaboratively with the Georgia Department of Public Health in order to problem-solve ways to satisfy citizen expectations for public health information.
+          - desc: Designed and built key visualization components to thoroughly and conscientiously explain trends of COVID-19 cases and COVID-19-like illnesses in order to improve and share best practices among states.
+  - name: The Lab at OPM
+    location: Washington, DC
+    title: Management Program Analyst - Lead Designer USAJOBS Project
+    grade: GS-343-13, Promoted to GS-343-14
+    work-schedule: Full-time
+    appointment-type: term appointment
+    hours-per-week: 40
+    start-date: October 2015
+    end-date: June 2019
+    timespan: 3 years, 8 months
+    accomplishments:
+      - accomplishment: 'Planned, managed, and performed the design and development across multiple phases of a project that <a href="https://www.performance.gov/CAP/action_plans/FY2018_Q1_People_Workforce_for_the_21st_Century.pdf">demonstrates the initial capability of an automated hiring advisor for managers</a>, a key milestone of <a href="https://www.performance.gov/CAP/CAP_goal_3.html">CAP goal 3 (Developing a Workforce for the 21st Century)</a> of the President’s Management Agenda.'
+        descriptions:
+          - desc: Performed ethnographic research with over 60 individuals to understand the scope and depth of the needs of hiring managers face with the Federal hiring process.
+          - desc: Conducted co-design sessions with end-users and stakeholders using Human-Centered Design methodology such as building a journey map, paper prototyping, and how-might-we exercises.
+          - desc: Designed and built a fully functional web application prototype under 90 days in 3 phases, iterating after each round of usability testing and feedback from OPM and OMB leadership.
+          - desc: Created and provided oral presentations of a 68-page report to senior OPM and OMB leadership detailing the research insights, usability test findings, and user interface improvements made to the hiring advisor prototype.
+      - accomplishment: "Lead designer on OPM's USAJOBS project responsible for digital transformation of federal hiring. Also responsible for the design strategy and user experience of usajobs.gov, openopps.usajobs.gov, and agencyportal.usajobs.gov."
+        descriptions:
+          - desc: 'Created the "American Discovery Trail" concept along with a strategic and operational project plan, which included writing and visuals, to streamline the process by which users of USAJOBS find and apply to jobs.'
+          - desc: Co-created a journey map of the front and backstage experience of job seekers, job applicants, human resources specialists, and hiring managers which elevated hiring problems to OPM leadership including the director.
+          - desc: Executed the project plan, leading a team of 2 expert designers in designing, prototyping, and delivering 6 key releases in 2016 that improved the user experience including reducing the exit rate during job applications from 7.3% to 5% in 2016.
+          - desc: Developed, planned, and conducted competitive analysis of multiple talent acquisition systems for the USAJOBS Program Office.
+          - desc: Developed, planned, and conducted 20 usability (qualitative research) tests over 2017 and 2018 on usajobs.gov which allowed us to speak with over 130 people.
+          - desc: Developed a usability test results template for the design team conducting tests on usajobs.gov, openopps.usajobs.gov, and agencyportal.usajobs.gov.
+          - desc: Developed, planned, and conducted 9 co-design sessions (qualitative research) with usajobs.gov users, federal employees, HR Specialists, hiring managers, and Chief Human Capital Officers over 2017 and 2018.
+          - desc: Developed, planned, and conducted multiple card sorting and tree testing activities (quantitative research) using Optimal Workshop for ends users of usajobs.gov on various aspects of the site over 2016 and 2017 such as help site navigation and job announcement content priorities.
+          - desc: Developed, planned, and conducted a Cloze reading comprehension test on job announcements on usajobs.gov in 2017 which informed our job announcement playbook (https://usajobs.github.io/ATP-Support/job-announcement-playbook/).
+          - desc: "Pushed for integration with GSA's login.gov to improve authentication, the top user complaint, and designed the user experience which has led to the lowest level of help desk tickets in the history of the usajobs.gov site."
+          - desc: Worked with Program Director and product owners to develop multiple key performance indicator metrics for each of the 20 releases of usajobs.gov from 2016 to 2018.
+          - desc: Held weekly, design led, product owner meetings with all members of the USAJOBS Program Office from 2016 to 2018.
+          - desc: Analyzed existing design methods including Human Centered Design, Design Thinking, Lean UX, Agile development, and design sprint frameworks in order to revise team models which resulted in a 1 week reduction in the design and development cycle of all releases.
+          - desc: 'Built and maintained the <a href="https://usajobs.github.io/design-system/" target="_blank">USAJOBS Design System</a>, a fork of the US Web Design System, that governs 3 products managed by the USAJOBS Program Office (usajobs.gov, openopps.usajobs.gov, and agencyportal.usajobs.gov).'
+      - accomplishment: Provided Human-Centered Design services to Lab customers in the development and delivery of Design Education offerings.
+        descriptions:
+          - desc: Developed and delivered a design education offering on Information Architecture for the Spring Design School session in 2017.
+          - desc: Developed a design education module on Problem Framing for upcoming delivery in the Summer Design School session of 2018.
+      - accomplishment: Identified and analyzed existing design methods including Human-Centered Design, Design Thinking, Lean UX, Agile development, and design sprint frameworks in order to create a new initiative to improve the quality of the design and development of the USAJOBS web site.
+        descriptions:
+          - desc: Analyzed and synthesized existing design methods and frameworks into a new framework marrying Human-Centered Design with Lean UX in order to better integrate design and development efforts.
+          - desc: Helped the Program Officer of USAJOBS analyze and evaluate methods of assessing her program's effectiveness and suggested the new framework as a process improvement that would allow us to ship a higher quality user experience on usajobs.gov thereby improving program operations, procedures, and performance.
+          - desc: Reviewed the new framework with the USAJOBS Program Office and fellow designers in The Lab at OPM, revising it based on their feedback.
+          - desc: Developed new SCRUM Agile team models in order to build capacity for Human-Centered Design within the USAJOBS Program Office.
+          - desc: The adoption of the revised team model resulted in a 1 week reduction in the design and agile development cycle of all software releases and allowed one team to deliver a full re-write of their application, openopps.usajobs.gov, in 3 cycles of 8 weeks.
+      - accomplishment: Monitored, managed, and supervised 2-4 expert designers who utilized software applications for graphic design and illustrations.
+        descriptions:
+          - desc: Held monthly one on one meetings with design team members providing critique of their work, developing their abilities to perform and contribute to the organization, and providing them opportunities to learn at conferences and via online channels I introduced to The Lab.
+          - desc: Reviewed timesheets for design team members and managed work load via daily stand-up meetings.
+          - desc: Instituted regularly scheduled design critique for design team member design work on the USAJOBS product.
+      - accomplishment: "Became expert in the use of software intended to create visual (graphic) and interaction design including: Adobe Creative Cloud, Sketch, and InVision."
+        descriptions:
+          - desc: Proficient in the creation of fully functional HTML, CSS, and Javascript prototypes to demonstrate the full end-to-end user experience.
