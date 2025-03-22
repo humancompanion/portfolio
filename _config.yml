@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: ""
 styles: portfolio.min.css
 print-styles: portfolio-print.min.css
 

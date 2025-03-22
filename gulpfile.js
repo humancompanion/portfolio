@@ -5,13 +5,13 @@ const autoprefixer = require("autoprefixer");
 const browsersync = require("browser-sync");
 const cp = require("child_process");
 const csso = require("postcss-csso");
-const del = require("del");
+// Import del as ESM using dynamic import
 const discardComments = require("postcss-discard-comments");
 const gulp = require("gulp");
 const log = require("fancy-log");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 
 const env = process.env.NODE_ENV || "prod";
@@ -19,10 +19,7 @@ const config = require("./config/gulp/config");
 
 const autoprefixerOptions = config.browsers;
 const browserSyncConfig = config.browsersync.development;
-const task = "sass";
 const watchConfig = config.watch;
-
-sass.compiler = require("sass");
 
 function browserSync(done) {
   browsersync.init(browserSyncConfig);
@@ -35,9 +32,18 @@ function browserSyncReload(done) {
   done();
 }
 
-// Clean assets
+// Clean assets - using rimraf instead of del for CommonJS compatibility
 function clean() {
-  return del(["./_site/assets/"]);
+  const rimraf = require("rimraf");
+  return new Promise((resolve, reject) => {
+    rimraf("./_site/assets/", err => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
+  });
 }
 
 function css() {
@@ -52,12 +58,10 @@ function css() {
     .src(["_scss/portfolio.scss", "_scss/portfolio-print.scss"])
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(
-      sass
-        .sync({
-          includePaths: ["_scss"],
-          outputStyle: "expanded",
-        })
-        .on("error", sass.logError)
+      sass({
+        includePaths: ["_scss"],
+        outputStyle: "expanded",
+      }).on("error", sass.logError)
     )
     .pipe(postcss(pluginsProcess))
     .pipe(gulp.dest("assets/css"))
@@ -98,7 +102,7 @@ function watchFiles() {
   gulp.watch(watchConfig.styles, gulp.series(css, browserSyncReload));
 }
 
-// Define complext tasks
+// Define complex tasks
 const build = gulp.series(clean, gulp.parallel(css, jekyll));
 const watch = gulp.parallel(watchFiles, browserSync);
 
