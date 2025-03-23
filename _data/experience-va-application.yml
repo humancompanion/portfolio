@@ -1,4 +1,33 @@
 jobs:
+  - name: Department of Veterans Affairs
+    location: Washington, DC
+    title: Crew Lead, Platform services and governance
+    grade: GS-2210-15
+    work-schedule: Full-time
+    appointment-type: permanent
+    hours-per-week: 40
+    start-date: June 2023
+    end-date: Current
+    timespan: 1 year, 10 months
+    accomplishments:
+      - accomplishment: 'Product Owner of the <a href="https://design.va.gov">VA Design System</a> which delivers design and code solutions for designers and developers working on the VA Platform to provide quality products and services to VA customers.'
+        descriptions:
+          - desc: 'Design System Council lead since April 2022 which evaluates design work to solve customer problems and improve the customer experience of <a href="https://va.gov">VA.gov</a> using data and sound judgement to make decisions.'
+          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Design System in improving customer experience of VA.gov.
+          - desc: Created and revised 26 thoroughly detailed design patterns which describe best practices to teams working on VA.gov on how to provide exceptional customer service by providing quality products and services to Veterans using these patterns to satisfy customer expectations.
+          - desc: Created or revised over 40 components to improve VA products and processes, document best practices, and provide quality service to designers and developers working on the VA Platform.
+      - accomplishment: Product Owner and lead designer of the VA Collaboration Cycle, leading design activities and design problem-solving with designers across the VA, evaluating design alternatives and gaining alignment.
+        descriptions:
+          - desc: Provided sound judgement and assessment of designs presented by designers to resolve customer problems based on research with customers.
+          - desc: Gave conscientious critique and judgement after thorough review of design assets presented by  teams at different stages of development in order to evaluate design alternatives and help resolve customer problems.
+          - desc: Generated design alternatives to resolve customer problems raised by teams coming through the Collaboration Cycle in order to improve VA products and services.
+      - accomplishment: Product Owner for the Veteran-facing Forms project which improves the customer experience for Veterans and their families by moving paper forms online in an expedited manner.
+        descriptions:
+          - desc: Improved VA products, processes, and best practices related to bringing paper forms online to improve customer experience of applying to benefits and services.
+          - desc: Conducted a thorough and conscientious audit of all Veteran-facing forms to assess form requirements and prepare for resolving customer problems with paper forms.
+          - desc: Resolved accessibility issues and customer problems related to completing PDF forms on mobile devices by refining VA processes for moving forms online in order to satisfy customer expectations.
+          - desc: Gave oral presentations to VA clients who own and maintain VA paper forms.
+          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Veteran-facing Forms project in improving customer experience of VA.gov.
   - name: U.S. Digital Service
     location: Washington, DC
     title: Digital Service Expert
@@ -7,27 +36,13 @@ jobs:
     appointment-type: term appointment
     hours-per-week: 40
     start-date: June 2019
-    end-date: Current
-    timespan: 3 years, 7 months
+    end-date: June 2023
+    timespan: 4 years
     accomplishments:
-      - accomplishment: 'Current Product Owner of the <a href="https://design.va.gov">VA Design System</a> which delivers design and code solutions for designers and developers working on the VA Platform to provide quality products and services to VA customers.'
+      - accomplishment: Team lead on USDS support of the Treasury Department Emergency Rental Assistance program to distribute government funds to state and local rent relief programs.
         descriptions:
-          - desc: 'Led the Design System Council since April 2022 which evaluates design work to solve customer problems and improve the customer experience of <a href="https://va.gov">VA.gov</a> using data and sound judgement to make decisions.'
-          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Design System in improving customer experience of VA.gov.
-          - desc: Created and revised 26 thoroughly detailed design patterns which describe best practices to teams working on VA.gov on how to provide exceptional customer service by providing quality products and services to Veterans using these patterns to satisfy customer expectations.
-          - desc: Created or revised over 40 components to improve VA products and processes, document best practices, and provide quality service to designers and developers working on the VA Platform.
-      - accomplishment: Current lead designer of the VA Collaboration Cycle, leading design activities and design problem-solving with designers across the VA, evaluating design alternatives and gaining alignment.
-        descriptions:
-          - desc: Provided sound judgement and assessment of designs presented by designers to resolve customer problems based on research with customers.
-          - desc: Gave conscientious critique and judgement after thorough review of design assets presented by  teams at different stages of development in order to evaluate design alternatives and help resolve customer problems.
-          - desc: Generated design alternatives to resolve customer problems raised by teams coming through the Collaboration Cycle in order to improve VA products and services.
-      - accomplishment: Current Product Owner for the Veteran-facing Forms project which improves the customer experience for Veterans and their families by moving paper forms online in an expedited manner.
-        descriptions:
-          - desc: Improved VA products, processes, and best practices related to bringing paper forms online to improve customer experience of applying to benefits and services.
-          - desc: Conducted a thorough and conscientious audit of all Veteran-facing forms to assess form requirements and prepare for resolving customer problems with paper forms.
-          - desc: Resolved accessibility issues and customer problems related to completing PDF forms on mobile devices by refining VA processes for moving forms online in order to satisfy customer expectations.
-          - desc: Gave oral presentations to VA clients who own and maintain VA paper forms.
-          - desc: Gave oral presentations to VA staff on the Digital Modernization Council on progress of the Veteran-facing Forms project in improving customer experience of VA.gov.
+          - desc: Team lead of a team of three and liaison to Treasury leadership.
+          - desc: Designed and coded the web site for the Emergency Rental Assistance program including determining the information architecture, interaction, and visual design.
       - accomplishment: 'Contributed to the completion of the first pilots of the <a href="https://smeqa.usds.gov/">Subject Matter Expert Qualification Assessments (SME-QA) process</a> with USDS teammates and the Office of Personnel Management.'
         descriptions:
           - desc: 'Researched and redesigned the <a href="https://usajobs.github.io/design-system/job-announcement/v7.0/">job announcement template</a>, which was verified in testing to provide an exceptional customer experience for job applicants, and is now used on usajobs.gov for all positions.'

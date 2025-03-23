@@ -1,7 +1,8 @@
 {
   "arrowParens": "avoid",
-  "htmlWhitespaceSensitivity": "strict",
-  "printWidth": 80,
+  "htmlWhitespaceSensitivity": "css",
+  "printWidth": 100,
+  "proseWrap": "always",
   "requirePragma": false,
   "tabWidth": 2,
   "useTabs": false,
