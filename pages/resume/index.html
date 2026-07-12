@@ -28,24 +28,12 @@ body-class: l-resume
     <h2>Skills</h2>
   </div>
   <div class="section_body">
+    {% for group in site.data.skills.skills %}
     <dl>
-      <dt>Design discovery</dt>
-      <dd>Co-creation workshops</dd>
-      <dd>Interviews</dd>
-      <dd>Content inventory</dd>
+      <dt>{{ group.category }}</dt>
+      {% for item in group.items %}<dd>{{ item }}</dd>{% endfor %}
     </dl>
-    <dl>
-      <dt>Service design</dt>
-      <dd>Journey maps</dd>
-      <dd>Service blueprints</dd>
-      <dd>Project plans</dd>
-    </dl>
-    <dl>
-      <dt>UX design</dt>
-      <dd>Information architecture</dd>
-      <dd>Prototypes &amp; usability tests</dd>
-      <dd>Design Systems</dd>
-    </dl>
+    {% endfor %}
   </div>
 </section>
 
@@ -54,27 +42,15 @@ body-class: l-resume
     <h2>Technical</h2>
   </div>
   <div class="section_body">
+    {% for group in site.data.skills.technical %}
     <ul class="talent">
-      <li>HTML5</li>
-      <li>Javascript</li>
-      <li>Sass &amp; CSS</li>
+      {% for item in group.items %}<li>{{ item }}</li>{% endfor %}
     </ul>
-
-    <ul class="talent">
-      <li>Figma</li>
-      <li>Mural</li>
-      <li>Adobe Creative Cloud</li>
-    </ul>
-
-    <ul class="talent">
-      <li>Git &amp; GitHub</li>
-      <li>AI tools: Chat GPT, GitHub Copilot, Cline</li>
-      <li>Ruby &amp; Rails</li>
-    </ul>
+    {% endfor %}
   </div>
 </section>
 
-{% assign experience = site.data.experience.jobs %}
+{% assign experience = site.data.experience-va-application.jobs %}
 <section id="experience">
   <div class="section_title">
     <h2>Experience</h2>
