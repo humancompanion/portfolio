@@ -2,6 +2,7 @@
 permalink: resume/
 layout: default
 body-class: l-resume
+profile: v2
 ---
 
 <section id="profile">
@@ -9,17 +10,10 @@ body-class: l-resume
     <h2>Profile</h2>
   </div>
   <div class="section_body first">
-    <p class="enlarge">
-      I am a human-centered designer with the ability to think and act on the surface to the core of a product or
-      service. I focus on problem framing and continual discovery, including research and co-design with users, to
-      creatively solve problems and make solutions real via rapid prototyping. I have over twenty five years of
-      experience designing and building software.
-    </p>
-    <p class="enlarge">
-      I have been focused on digital transformation in the public sector for the last nine years. I continue to believe
-      that eventually the federal government, infused with human-centered design, will one day consistently make
-      evidenced-based policy decisions informed by qualitative and quantitative research done with citizens.
-    </p>
+    {% assign profile = site.data.profiles[page.profile] | default: site.data.profiles.v2 %}
+    {% for paragraph in profile.paragraphs %}
+    <p class="enlarge">{{ paragraph }}</p>
+    {% endfor %}
   </div>
 </section>
 
