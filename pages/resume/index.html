@@ -2,6 +2,7 @@
 permalink: resume/
 layout: default
 body-class: l-resume
+profile: v2
 ---
 
 <section id="profile">
@@ -9,17 +10,10 @@ body-class: l-resume
     <h2>Profile</h2>
   </div>
   <div class="section_body first">
-    <p class="enlarge">
-      I am a human-centered designer with the ability to think and act on the surface to the core of a product or
-      service. I focus on problem framing and continual discovery, including research and co-design with users, to
-      creatively solve problems and make solutions real via rapid prototyping. I have over twenty five years of
-      experience designing and building software.
-    </p>
-    <p class="enlarge">
-      I have been focused on digital transformation in the public sector for the last nine years. I continue to believe
-      that eventually the federal government, infused with human-centered design, will one day consistently make
-      evidenced-based policy decisions informed by qualitative and quantitative research done with citizens.
-    </p>
+    {% assign profile = site.data.profiles[page.profile] | default: site.data.profiles.v2 %}
+    {% for paragraph in profile.paragraphs %}
+    <p class="enlarge">{{ paragraph }}</p>
+    {% endfor %}
   </div>
 </section>
 
@@ -28,24 +22,12 @@ body-class: l-resume
     <h2>Skills</h2>
   </div>
   <div class="section_body">
+    {% for group in site.data.skills.skills %}
     <dl>
-      <dt>Design discovery</dt>
-      <dd>Co-creation workshops</dd>
-      <dd>Interviews</dd>
-      <dd>Content inventory</dd>
+      <dt>{{ group.category }}</dt>
+      {% for item in group.items %}<dd>{{ item }}</dd>{% endfor %}
     </dl>
-    <dl>
-      <dt>Service design</dt>
-      <dd>Journey maps</dd>
-      <dd>Service blueprints</dd>
-      <dd>Project plans</dd>
-    </dl>
-    <dl>
-      <dt>UX design</dt>
-      <dd>Information architecture</dd>
-      <dd>Prototypes &amp; usability tests</dd>
-      <dd>Design Systems</dd>
-    </dl>
+    {% endfor %}
   </div>
 </section>
 
@@ -54,23 +36,11 @@ body-class: l-resume
     <h2>Technical</h2>
   </div>
   <div class="section_body">
+    {% for group in site.data.skills.technical %}
     <ul class="talent">
-      <li>HTML5</li>
-      <li>Javascript</li>
-      <li>Sass &amp; CSS</li>
+      {% for item in group.items %}<li>{{ item }}</li>{% endfor %}
     </ul>
-
-    <ul class="talent">
-      <li>Figma</li>
-      <li>Mural</li>
-      <li>Adobe Creative Cloud</li>
-    </ul>
-
-    <ul class="talent">
-      <li>Git &amp; GitHub</li>
-      <li>AI tools: Chat GPT, GitHub Copilot, Cline</li>
-      <li>Ruby &amp; Rails</li>
-    </ul>
+    {% endfor %}
   </div>
 </section>
 

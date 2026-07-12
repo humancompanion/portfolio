@@ -1,0 +1,69 @@
+# _data/skills.yml
+# Drives the Skills and Technical sections of pages/resume/index.html,
+# replacing the hardcoded <dl> and <ul class="talent"> markup.
+#
+# Suggested Liquid (preserves existing classes and markup structure):
+#
+#   <section class="skills">
+#     <div class="section_title"><h2>Skills</h2></div>
+#     <div class="section_body">
+#       {% for group in site.data.skills.skills %}
+#       <dl>
+#         <dt>{{ group.category }}</dt>
+#         {% for item in group.items %}<dd>{{ item }}</dd>{% endfor %}
+#       </dl>
+#       {% endfor %}
+#     </div>
+#   </section>
+#
+#   <section id="technical">
+#     <div class="section_title"><h2>Technical</h2></div>
+#     <div class="section_body">
+#       {% for group in site.data.skills.technical %}
+#       <ul class="talent">
+#         {% for item in group.items %}<li>{{ item }}</li>{% endfor %}
+#       </ul>
+#       {% endfor %}
+#     </div>
+#   </section>
+
+skills:
+  - category: Design discovery
+    items:
+      - Problem framing
+      - Co-creation workshops
+      - Interviews & usability research
+
+  - category: Service design
+    items:
+      - Journey maps & service blueprints
+      - Design governance & operations
+      - UX/CX measurement
+
+  - category: Design systems
+    items:
+      - Component libraries & design tokens
+      - Accessibility (Section 508, WCAG 2.2 AA)
+      - Contribution models & governance
+
+  - category: AI-assisted design
+    items:
+      - Agentic prototyping workflows
+      - AI enablement & designer training
+      - Design systems as AI infrastructure
+
+technical:
+  - items:
+      - HTML5
+      - JavaScript
+      - Sass & CSS
+
+  - items:
+      - Ruby & Rails
+      - Jekyll
+      - Git & GitHub
+
+  - items:
+      - Claude, Claude Code & agentic tools
+      - MCP server development
+      - Figma & Mural

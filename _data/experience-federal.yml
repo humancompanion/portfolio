@@ -167,24 +167,71 @@ jobs:
   - name: EightShapes, LLC
     location: Washington, DC
     title: Senior Interaction Designer
+    work-schedule: Full-time
+    hours-per-week: 40
     start-date: November 2011
     end-date: July 2015
     timespan: 3 years, 9 months
     accomplishments:
-      - accomplishment: 'Contributed to the design system that enabled <a href="http://responsivewebdesign.com/podcast/marriott.html">Marriott to make their site responsive</a> and drive reservations on mobile devices — designing and coding accessible search and reservation forms and the documentation used by all Marriott designers and developers.'
-        descriptions: []
-      - accomplishment: 'Designed and built many of the <a href="http://eightshapes.com/work/cisco-responsive-product-pages-case-study/">responsive components</a> behind Cisco''s Unified Computing Servers product category, seeding a reusable responsive prototyping toolkit adopted across their site.'
-        descriptions: []
+      - accomplishment: 'Used Human-Centered Design to qualitatively understand and assess customer needs in order to contribute to the creation and management of the design system that allowed <a href="http://responsivewebdesign.com/podcast/marriott.html">Marriott to make their site responsive</a>, increase reservations on mobile devices, and satisfy customer expectations.'
+        descriptions:
+          - desc: 'Used Human-Centered Design to qualitatively understand customer needs in order to create Section 508 Standard accessible forms for advance search and portions of the reservation path.'
+          - desc: 'Conducted contextual inquiry of stakeholders to inform design decisions and code the documentation for the design system used by all designers and developers at Marriott to improve Marriott products, processes, and best practices.'
+          - desc: 'Provided support to Marriott development team in understanding and evaluating design alternatives for new responsive design concepts and tools such as responsive images, breakpoints, and performance budgets for mobile devices.'
+          - desc: 'Led collaborative co-design workshops and gave oral presentations to key stakeholders to make hotel restaurant, spa, and golf sites responsive.'
+      - accomplishment: 'Led qualitative prototyping sessions to understand customer needs and used ethnographic research to gather user and stakeholder feedback on design ideas related to the membership renewal process for <a href="http://www.ncarb.org/">NCARB</a>.'
+        descriptions:
+          - desc: 'Conducted extensive ethnographic user interviews to determine the qualitative value of the design to NCARB customers, generating and evaluating alternative designs to resolve customer problems.'
+          - desc: 'Managed the project, including an expert designer, and had responsibility for budget and time tracking.'
+      - accomplishment: 'Used Human-Centered Design and project management skills with Customer Service stakeholders to scope, plan, co-design, and manage the redesign of <a href="https://www.cisco.com/c/en/us/support/index.html">Cisco''s Support page</a>.'
+        descriptions:
+          - desc: 'Co-developed a project plan, co-designed and prototyped functional variations in HTML, CSS, and Javascript.'
+          - desc: 'Became proficient in the use of software intended to create graphic and interaction design including Adobe Creative Cloud.'
+      - accomplishment: 'Used Human-Centered Design to qualitatively understand customer needs while building many of the <a href="http://eightshapes.com/work/cisco-responsive-product-pages-case-study/">responsive components</a> behind Cisco''s Unified Computing Servers product category in order to improve Cisco''s products, processes, and best practices.'
+        descriptions:
+          - desc: 'Seeded a responsive prototyping toolkit which provided Cisco with many responsive and reusable components that have been used throughout their site.'
 
-  - name: Microsoft
+  - name: Microsoft Corporation
     location: Mountain View, CA
     title: Senior Software Engineer
     org: Business Solutions Engineering/Network &amp; Cloud
+    work-schedule: Full-time
+    hours-per-week: 40
     start-date: November 2008
     end-date: May 2011
     timespan: 2 years, 7 months
     accomplishments:
-      - accomplishment: 'Interaction designer and lead software engineer for Tellme Platform Central — designing the VoIP SIP URI provisioning experience and building the user interface infrastructure in Ruby on Rails.'
+      - accomplishment: 'Interaction designer for VoIP SIP URI provisioning in the Tellme Platform Central product.'
         descriptions:
-          - desc: 'Contributed to ten on-time releases, including the general availability launch in 2010.'
-          - desc: 'Provided technical leadership — mentoring junior developers, creating code review guidelines, and standing up a continuous integration system for the code base.'
+          - desc: 'Led collaborative sessions to assess customer needs and problems, balancing them with system requirements in order to create an innovative solution that allowed customers to self-provision toll-free numbers in bulk.'
+          - desc: 'Conducted ethnographic research to qualitatively understand user needs and wrote a functional specification defining the interaction for several user roles in provisioning SIP URIs with each telephony service provider.'
+      - accomplishment: 'Lead software engineer responsible for implementing the Tellme Platform Central product.'
+        descriptions:
+          - desc: 'Designed, documented, and prototyped the user interface infrastructure using Ruby on Rails.'
+          - desc: 'Contributed to the on-time execution of ten releases starting in 2009 and including shipping the general availability release in 2010.'
+          - desc: 'Provided technical leadership for the development team including mentoring junior developers, creating code review guidelines, and implementing a continuous integration system for testing our code base.'
+
+  - name: Tellme Networks
+    location: Mountain View, CA 94041
+    title: Senior Software Engineer
+    org: Platform Engineering
+    work-schedule: Full-time
+    hours-per-week: 40
+    start-date: October 2001
+    end-date: October 2008
+    timespan: 7 years
+    accomplishments:
+      - accomplishment: 'Interaction designer creating and building quality internal products and processes for internal VoIP traffic management.'
+        descriptions:
+          - desc: 'Used Human-Centered Design to understand customer needs and collaboratively design all VoIP related systems to resolve customer problems.'
+          - desc: 'Conducted contextual inquiry interviews with users observing their behavior in context of the operations center in order to create use cases scenarios.'
+      - accomplishment: 'Co-designed, built, and deployed an internal web application for viewing call traffic on the Tellme Network.'
+        descriptions:
+          - desc: 'Conducted ethnographic research to determine operations staff needs.'
+      - accomplishment: 'Co-designed, built, and deployed an internal web application for the provisioning of all phone numbers used on the Tellme Network.'
+        descriptions:
+          - desc: 'Used Human-Centered Design to define the procedure for provisioning new SIP URIs and reduced the steps required in the interface to three.'
+          - desc: 'Enhanced application with personalization features, which reduced navigation, guided new users, and improved workflow.'
+          - desc: 'Successfully pushed management for more design resources and a refocus on user needs as a way to improve the productivity of operations center personnel.'
+      - accomplishment: 'Responsible for leading a specialized team of three in addressing complex and critical engineering endeavors.'
+        descriptions: []

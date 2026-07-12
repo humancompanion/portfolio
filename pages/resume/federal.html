@@ -24,7 +24,7 @@ body-class: l-federal-resume
   </div>
 </section>
 
-{% assign experience = site.data.experience-va-application.jobs %}
+{% assign experience = site.data.experience-federal.jobs %}
 <section id="experience">
   <div class="section_title">
     <h2>Experience</h2>
@@ -35,13 +35,17 @@ body-class: l-federal-resume
       <div class="job__details">
         <h3>{{ job.name }}</h3>
         <p class="location">{{ job.location }}</p>
-        <h4>{{ job.title }}</h4>
+        <h4>{{ job.title }}{% if job.org %}, {{ job.org }}{% endif %}</h4>
+        {% if job.grade %}
         <h5>{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}; {{ job.hours-per-week }} hours per
           week</h5>
-        <h5>{{ job.start-date }} - {{ job.end-date }} <span class="job__timespan">{{ job.timespan }}</span></h5>
+        {% else %}
+        <h5>{{ job.work-schedule }}, {{ job.hours-per-week }} hours per week</h5>
+        {% endif %}
+        <h5>{{ job.start-date }} - {{ job.end-date }} <span class="job__timespan">({{ job.timespan }})</span></h5>
       </div>
+      {% for accomplishment in job.accomplishments %}
       <ul class="accomplishments">
-        {% for accomplishment in job.accomplishments %}
         <li class="accomplishment_desc">
           {{ accomplishment.accomplishment }}
         </li>
@@ -50,186 +54,10 @@ body-class: l-federal-resume
           {{ description.desc }}
         </li>
         {% endfor %}
-        {% endfor %}
       </ul>
+      {% endfor %}
     </div>
     {% endfor %}
-    <div class="job" id="eightshapes">
-      <div class="job__details">
-        <h3>EightShapes, LLC</h3>
-        <p class="location">Washington, DC</p>
-        <h4>Senior Interaction Designer</h4>
-        <h5>Full-time, 40 hours per week</h5>
-        <h5>November 2011 - July 2015 <span class="job__timespan">(3 years, 9 months)</span></h5>
-      </div>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Used Human-Centered Design to qualitatively understand and assess customer needs in order to contribute to the
-          creation and management of the design system that allowed <a
-            href="http://responsivewebdesign.com/podcast/marriott.html">Marriott to make their site responsive</a>,
-          increase reservations on mobile devices, and satisfy customer expectations.
-        </li>
-        <li>
-          Used Human-Centered Design to qualitatively understand customer needs in order to create Section 508 Standard
-          accessible forms for advance search and portions of the reservation path.
-        </li>
-        <li>
-          Conducted contextual inquiry of stakeholders to inform design decisions and code the documentation for the
-          design system used by all designers and developers at Marriott to improve Marriott products, processes, and
-          best practices.
-        </li>
-        <li>
-          Provided support to Marriott development team in understanding and evaluating design alternatives for new
-          responsive design concepts and tools such
-          as responsive images, breakpoints, and performance budgets for mobile devices.
-        <li>
-          Led collaborative co-design workshops and gave oral presentations to key stakeholders to make hotel
-          restaurant, spa, and golf sites responsive.
-        </li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Led qualitative prototyping sessions to understand customer needs and used ethnographic research to gather
-          user
-          and stakeholder feedback on design ideas related to the membership renewal process for <a
-            href="http://www.ncarb.org/">NCARB</a>.
-        </li>
-        <li>Conducted extensive ethnographic user interviews to determine the qualitative value of the design to NCARB
-          customers, generating and evaluating alternative designs to resolve customer problems.</li>
-        <li>Managed the project, including an expert designer, and had responsibility for budget and time tracking.</li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Used Human-Centered Design and project management skills with Customer Service stakeholders to scope, plan,
-          co-design, and manage the redesign of <a href="https://www.cisco.com/c/en/us/support/index.html">Cisco's
-            Support page</a>.
-        </li>
-        <li>
-          Co-developed a project plan, co-designed and prototyped functional variations in HTML, CSS, and Javascript.
-        </li>
-        <li>
-          Became proficient in the use of software intended to create graphic and interaction design including Adobe
-          Creative Cloud.
-        </li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Used Human-Centered Design to qualitatively understand customer needs while building many of the <a
-            href="http://eightshapes.com/work/cisco-responsive-product-pages-case-study/">responsive components</a>
-          behind Cisco's Unified Computing Servers product category in order to improve Cisco's products, processes, and
-          best practices.
-        </li>
-        <li>
-          Seeded a responsive prototyping toolkit which provided Cisco with many responsive and reusable components that
-          have been used throughout their site.
-        </li>
-      </ul>
-    </div>
-
-    <div class="job" id="microsoft">
-      <div class="job__details">
-        <h3>Microsoft Corporation</h3>
-        <p class="location">Mountain View, CA</p>
-        <h4>Senior Software Engineer, Business Solutions Engineering/Network & Cloud</h4>
-        <h5>Full-time, 40 hours per week</h5>
-        <h5>November 2008 - May 2011 <span class="job__timespan">(2 years, 7 months)</span></h5>
-      </div>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Interaction designer for VoIP SIP URI provisioning in the Tellme Platform Central product.
-        </li>
-        <li>
-          Led collaborative sessions to assess customer needs and problems, balancing them with system requirements in
-          order to create an innovative solution that allowed customers to self-provision toll-free numbers in bulk.
-        </li>
-        <li>
-          Conducted ethnographic research to qualitatively understand user needs and wrote a functional specification
-          defining the interaction for several user roles in provisioning SIP URIs with each telephony service provider.
-        </li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Lead software engineer responsible for implementing the Tellme
-          Platform Central product.
-        </li>
-        <li>
-          Designed, documented, and prototyped the user interface infrastructure
-          using Ruby on Rails.
-        </li>
-        <li>
-          Contributed to the on-time execution of ten releases starting in 2009
-          and including shipping the general availability release in 2010.
-        </li>
-        <li>
-          Provided technical leadership for the development team including
-          mentoring junior developers, creating code review guidelines, and
-          implementing a continuous integration system for testing our code base.
-        </li>
-      </ul>
-    </div>
-
-    <div class="job" id="tellme">
-      <div class="job__details">
-        <h3>Tellme Networks</h3>
-        <p class="location">Mountain View, CA 94041</p>
-        <h4>Senior Software Engineer, Platform Engineering</h4>
-        <h5>Full-time, 40 hours per week</h5>
-        <h5>October 2001 - October 2008 <span class="job__timespan">(7 years)</span></h5>
-      </div>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Interaction designer creating and building quality internal products and processes for internal VoIP traffic
-          management.
-        </li>
-        <li>
-          Used Human-Centered Design to understand customer needs and collaboratively design all VoIP related
-          systems to resolve customer problems.
-        </li>
-        <li>
-          Conducted contextual inquiry interviews with users observing their behavior in context of the operations
-          center in order to create use cases scenarios.
-        </li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Co-designed, built, and deployed an internal web application for viewing
-          call traffic on the Tellme Network.
-        </li>
-        <li>
-          Conducted ethnographic research to determine operations staff needs.
-        </li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Co-designed, built, and deployed an internal web application for
-          the provisioning of all phone numbers used on the Tellme Network.
-        </li>
-        <li>
-          Used Human-Centered Design to define the procedure for provisioning new SIP URIs and reduced the steps
-          required in the interface to three.
-        </li>
-        <li>Enhanced application with personalization features, which reduced navigation, guided new users, and improved
-          workflow.</li>
-        <li>Successfully pushed management for more design resources and a refocus on user needs as a way to improve the
-          productivity of operations center personnel.</li>
-      </ul>
-
-      <ul class="accomplishments">
-        <li class="accomplishment_desc">
-          Responsible for leading a specialized team of three in addressing
-          complex and critical engineering endeavors.
-        </li>
-      </ul>
-    </div>
   </div>
 </section>
 
