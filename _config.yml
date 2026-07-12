@@ -3,11 +3,10 @@ styles: portfolio.min.css
 print-styles: portfolio-print.min.css
 
 url: "https://www.barrelofthis.com"
+title: "Matthew Dingee — Portfolio"
 author: Matthew Dingee
 repository: humancompanion/portfolio
 github_url: https://github.com/humancompanion/portfolio
-
-github: [metadata]
 
 # Exclude from processing.
 exclude:
