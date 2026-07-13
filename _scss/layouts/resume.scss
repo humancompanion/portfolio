@@ -87,17 +87,18 @@
     padding: 0;
   }
 
-  .skills div.section_body dl {
+  .skills div.section_body {
+    // 2 x 2 grid of skill categories at the MML breakpoint (640px) and up.
     @include breakpoint(MML) {
-      float: left;
-      width: 33%;
-      margin: 0;
-      padding-left: 15px;
-    }
-  }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+      row-gap: 1.5em;
 
-  .skills div.section_body dl:first-child {
-    padding-left: 0;
+      dl {
+        margin: 0;
+      }
+    }
   }
 
   .skills div.section_body dl dt {
