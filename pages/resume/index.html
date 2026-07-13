@@ -52,6 +52,35 @@ profile: v2
   <div class="section_body">
     {% for job in experience %}
     <div class="job" id="{{ job.name | slugify }}">
+      {% if job.roles %}
+      <div class="job__header">
+        <h3>{{ job.name }}</h3>
+        <p class="location">{{ job.location }}</p>
+        {% if job.grade %}
+        <h5>{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</h5>
+        {% endif %}
+      </div>
+      {% for role in job.roles %}
+      <div class="job__role">
+        <div class="job__details">
+          <h4>{{ role.title }}</h4>
+          <h5>{{ role.dates }} (<span class="job__timespan">{{ role.timespan }}</span>)</h5>
+        </div>
+        <ul class="accomplishments">
+          {% for accomplishment in role.accomplishments %}
+          <li class="accomplishment_desc">
+            {{ accomplishment.accomplishment }}
+          </li>
+          {% for description in accomplishment.descriptions %}
+          <li>
+            {{ description.desc }}
+          </li>
+          {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      {% else %}
       <div class="job__details">
         <h3>{{ job.name }}</h3>
         <p class="location">{{ job.location }}</p>
@@ -73,6 +102,7 @@ profile: v2
         {% endfor %}
         {% endfor %}
       </ul>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
