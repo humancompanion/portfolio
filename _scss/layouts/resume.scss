@@ -145,6 +145,24 @@
     padding-top: 0;
   }
 
+  // At the ML breakpoint the section body already draws its own top border, so
+  // drop the first employer's soft h3 divider to avoid a double line.
+  @include breakpoint(ML) {
+    #experience .job:first-of-type h3 {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  // Multiple roles under a single employer (e.g. VA), grouped below one h3.
+  .job__role {
+    margin-top: 1.25em;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
   .content-well .accomplishment_desc {
     list-style-type: none;
     margin-left: -1em;

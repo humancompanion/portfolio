@@ -198,6 +198,15 @@
       float: left;
       width: 33%;
     }
+    // Each role keeps its own two-column (details / accomplishments) row.
+    &__role {
+      @include clearfix();
+      margin-bottom: 0.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     &__timespan {
       display: block;
     }

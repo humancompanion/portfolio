@@ -2706,6 +2706,18 @@ ol > li{
   margin-top:0;
   padding-top:0;
 }
+@media (min-width: 48rem){
+  .l-resume #experience .job:first-of-type h3{
+    border-top:0;
+    padding-top:0;
+  }
+}
+.l-resume .job__role{
+  margin-top:1.25em;
+}
+.l-resume .job__role h4{
+  margin-bottom:0;
+}
 .l-resume .content-well .accomplishment_desc{
   list-style-type:none;
   margin-left:-1em;
@@ -3168,6 +3180,20 @@ ol > li{
   .l-federal-resume .job__details{
     float:left;
     width:33%;
+  }
+  .l-resume .job__role,
+  .l-federal-resume .job__role{
+    margin-bottom:0.6rem;
+  }
+  .l-resume .job__role::after,
+  .l-federal-resume .job__role::after{
+    clear:both;
+    content:"";
+    display:table;
+  }
+  .l-resume .job__role:last-child,
+  .l-federal-resume .job__role:last-child{
+    margin-bottom:0;
   }
   .l-resume .job__timespan,
   .l-federal-resume .job__timespan{
