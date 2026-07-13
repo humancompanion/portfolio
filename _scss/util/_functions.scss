@@ -1,16 +1,32 @@
 // -----------------------------------------------------------------------------
 // Breakpoints
+//
+// Single source of truth: each breakpoint value is defined once as a Sass
+// variable, then the $breakpoints map (consumed by the breakpoint() mixin) is
+// built from them. Reference $breakpoint-* directly wherever a raw value is
+// needed. (Sass, not CSS custom properties: var() can't be used in @media.)
+$breakpoint-XS:   15rem;      //  240px at 16px base font
+$breakpoint-S:    20rem;      //  320px at 16px base font
+$breakpoint-SM:   30rem;      //  480px at 16px base font
+$breakpoint-M:    35rem;      //  560px at 16px base font
+$breakpoint-MML:  40rem;      //  640px at 16px base font
+$breakpoint-ML:   48rem;      //  768px at 16px base font
+$breakpoint-MLL:  54rem;      //  864px at 16px base font
+$breakpoint-L:    61.25rem;   //  980px at 16px base font
+$breakpoint-XL:   64rem;      // 1024px at 16px base font
+$breakpoint-XXL:  78.75rem;   // 1260px at 16px base font
+
 $breakpoints: (
-  "(min-width: 15rem)" "XS",       //  240px at 16px base font
-  "(min-width: 20rem)" "S",        //  320px at 16px base font
-  "(min-width: 30rem)" "SM",       //  480px at 16px base font
-  "(min-width: 35rem)" "M",        //  560px at 16px base font
-  "(min-width: 40rem)" "MML",      //  640px at 16px base font
-  "(min-width: 48rem)" "ML",       //  768px at 16px base font
-  "(min-width: 54rem)" "MLL",      //  864px at 16px base font
-  "(min-width: 61.25rem)" "L",     //  980px at 16px base font
-  "(min-width: 64rem)" "XL",       // 1024px at 16px base font
-  "(min-width: 78.75rem)" "XXL"    // 1260px at 16px base font
+  "(min-width: #{$breakpoint-XS})"  "XS",
+  "(min-width: #{$breakpoint-S})"   "S",
+  "(min-width: #{$breakpoint-SM})"  "SM",
+  "(min-width: #{$breakpoint-M})"   "M",
+  "(min-width: #{$breakpoint-MML})" "MML",
+  "(min-width: #{$breakpoint-ML})"  "ML",
+  "(min-width: #{$breakpoint-MLL})" "MLL",
+  "(min-width: #{$breakpoint-L})"   "L",
+  "(min-width: #{$breakpoint-XL})"  "XL",
+  "(min-width: #{$breakpoint-XXL})" "XXL"
 );
 
 // From HugoG: http://hugogiraudel.com/2014/01/13/sass-string-replacement-function/
