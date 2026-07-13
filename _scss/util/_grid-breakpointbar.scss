@@ -84,14 +84,14 @@ body::before {
 
 @include breakpoint(M) {
   body::before {
-    content: "M: 560px - 671px";
+    content: "M: 560px - 639px";
     background: rgba(255,204,0, 0.8);
   }
 }
 
 @include breakpoint(MML) {
   body::before {
-    content: "MML: 672px - 767px";
+    content: "MML: 640px - 767px";
     background: rgba(255,2,0, 0.8);
     padding:5px;
   }
