@@ -101,6 +101,14 @@
     margin-bottom: 0.4rem;
   }
 
+  .header__contact {
+    display: block;
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
   .section_title {
     margin-top: 0;
     margin-bottom: 0;
@@ -225,5 +233,24 @@
     li {
       display: none;
     }
+  }
+}
+
+// Tightens end-of-document spacing so the closing note stays on the last page
+.l-compact-resume {
+  .content-well {
+    padding-bottom: 0;
+  }
+
+  .education__list {
+    margin-bottom: 0;
+
+    dd {
+      margin-bottom: 0;
+    }
+  }
+
+  .notes--extended {
+    margin: 0.2rem 0 0;
   }
 }
