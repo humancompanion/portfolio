@@ -132,6 +132,11 @@
     margin-top: 0;
   }
 
+  // Job metadata (grade, dates) — paragraphs styled like the h5s they replaced
+  .job__meta {
+    @include type-5();
+  }
+
   .job h3 {
     text-transform: inherit;
     border-top: 1px solid #ccc;
