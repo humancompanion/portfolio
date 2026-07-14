@@ -13,8 +13,8 @@ body {
   background-color: $grey-cover;
 
   :focus {
-    outline: 2px dotted $grey-light;
-    outline-offset: 3px;
+    outline: 2px solid $grey-cover;
+    outline-offset: 2px;
   }
 }
 
@@ -44,10 +44,6 @@ body {
 
   @include breakpoint(XL) {
     padding: 0 $page--gutter-width-XL 3rem;
-  }
-
-  :focus {
-    outline: 0;
   }
 }
 
