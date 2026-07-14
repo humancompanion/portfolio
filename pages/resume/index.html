@@ -1,6 +1,7 @@
 ---
 permalink: resume/
 layout: default
+title: Resume
 body-class: l-resume
 profile: v2
 ---
@@ -57,14 +58,14 @@ profile: v2
         <h3>{{ job.name }}</h3>
         <p class="location">{{ job.location }}</p>
         {% if job.grade %}
-        <h5>{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</h5>
+        <p class="job__meta">{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</p>
         {% endif %}
       </div>
       {% for role in job.roles %}
       <div class="job__role">
         <div class="job__details">
           <h4>{{ role.title }}</h4>
-          <h5>{{ role.dates }} (<span class="job__timespan">{{ role.timespan }}</span>)</h5>
+          <p class="job__meta">{{ role.dates }} (<span class="job__timespan">{{ role.timespan }}</span>)</p>
         </div>
         <ul class="accomplishments">
           {% for accomplishment in role.accomplishments %}
@@ -86,9 +87,9 @@ profile: v2
         <p class="location">{{ job.location }}</p>
         <h4>{{ job.title }} {% if job.org %}<span class="job__org">, {{ job.org }}{% endif %}</span></h4>
         {% if job.grade %}
-        <h5>{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</h5>
+        <p class="job__meta">{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</p>
         {% endif %}
-        <h5>{{ job.start-date }} - {{ job.end-date }} (<span class="job__timespan">{{ job.timespan }}</span>)</h5>
+        <p class="job__meta">{{ job.start-date }} - {{ job.end-date }} (<span class="job__timespan">{{ job.timespan }}</span>)</p>
       </div>
       <ul class="accomplishments">
         {% for accomplishment in job.accomplishments %}

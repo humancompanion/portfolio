@@ -52,6 +52,11 @@
       color: $grey-cover;
     }
   }
+
+  // Keep type-2 sizing now that the page title is the h1 (one h1 per page)
+  &__page-title {
+    @include type-2();
+  }
 }
 
 .header--home {

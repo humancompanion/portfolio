@@ -134,7 +134,10 @@
 
 .home-nav__header,
 .case-study-nav__header {
+  // Keep type-3 sizing now that these are h2s (one h1 per page)
+  @include type-3();
   font-weight: bold;
+  text-transform: none;
 }
 
 // home-nav

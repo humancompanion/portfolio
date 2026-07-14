@@ -29,6 +29,12 @@
   }
 }
 
+// Eyebrow label above expectation headings; keeps its former h6 (type-6)
+// styling now that it's a <p>
+.l-case_study__sub-title {
+  @include type-6();
+}
+
 .l-case_studies {
   .t-usajobs {
     background-color: $color_usajobs;
