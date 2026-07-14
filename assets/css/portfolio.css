@@ -1719,6 +1719,21 @@ ol > li{
   color:rgb(18.72, 94.64, 215.28);
 }
 
+.skip-link{
+  position:absolute;
+  top:-100%;
+  left:50%;
+  z-index:10;
+  padding:8px 16px;
+  color:#262626;
+  background:#fff;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
+}
+.skip-link:focus{
+  top:0;
+}
+
 .header,
 .header--home{
   margin-bottom:36px;

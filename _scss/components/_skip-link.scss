@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------
+// Component: Skip link
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  z-index: 10;
+  padding: $size-S $size-M;
+  color: $grey-cover;
+  background: $white;
+  transform: translateX(-50%);
+
+  &:focus {
+    top: 0;
+  }
+}
