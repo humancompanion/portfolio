@@ -38,7 +38,6 @@
   &:focus:not(.btn--disabled),
   &:active:not(.btn--disabled) {
     color: $white;
-    outline: 0;
     background-color: darken($bgcolor, 8%);
   }
 }
@@ -69,11 +68,6 @@
   &--disabled {
     opacity: 0.5;
     cursor: not-allowed;
-
-    &:focus,
-    &:active {
-      outline: 0;
-    }
 
     &:hover {
       cursor: not-allowed;

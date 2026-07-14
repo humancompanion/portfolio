@@ -8,7 +8,8 @@
   background-color: $grey-cover;
 
   :focus {
-    outline: 0px;
+    outline: 2px solid $white;
+    outline-offset: 2px;
   }
 }
 
