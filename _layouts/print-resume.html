@@ -8,7 +8,16 @@
         <div class="header__body">
           <h1 class="header__title">Matthew Dingee</h1>
           <span class="header__portfolio">
-            Portfolio:
+            {% if page.contact %}
+            <span class="header__contact">
+              <a href="mailto:matthew.j.dingee@gmail.com"
+                >matthew.j.dingee@gmail.com</a
+              >
+            </span>
+            <span class="header__contact">
+              <a href="tel:+12027250202">(202) 725-0202</a>
+            </span>
+            {% endif %} Portfolio:
             <a href="https://www.abarrelofthis.com/"
               >https://www.abarrelofthis.com/</a
             >

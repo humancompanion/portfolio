@@ -2978,6 +2978,14 @@ ol > li{
   .l-federal-resume .header-resume__sub-title{
     margin-bottom:0.4rem;
   }
+  .l-resume .header__contact,
+  .l-federal-resume .header__contact{
+    display:block;
+  }
+  .l-resume .header__contact a,
+  .l-federal-resume .header__contact a{
+    white-space:nowrap;
+  }
   .l-resume .section_title,
   .l-federal-resume .section_title{
     margin-top:0;
@@ -3122,5 +3130,17 @@ ol > li{
   }
   .l-resume .accomplishments li{
     display:none;
+  }
+  .l-compact-resume .content-well{
+    padding-bottom:0;
+  }
+  .l-compact-resume .education__list{
+    margin-bottom:0;
+  }
+  .l-compact-resume .education__list dd{
+    margin-bottom:0;
+  }
+  .l-compact-resume .notes--extended{
+    margin:0.2rem 0 0;
   }
 }
