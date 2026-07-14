@@ -53,47 +53,6 @@
   .footer {
     padding: 0;
 
-    .contact-card {
-      height: auto;
-      min-width: inherit;
-      max-width: inherit;
-      border-radius: 0;
-      margin-left: 0.8rem;
-      margin-right: 0.8rem;
-    }
-
-    .contact-card__body {
-      height: auto;
-      box-shadow: none;
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-    }
-
-    .contact-card__front {
-      display: none;
-    }
-
-    .contact-card__back {
-      height: auto;
-      padding: 0.5rem 0 0 0;
-    }
-
-    .contact-card__flip-revert {
-      display: none;
-    }
-
-    .contact-card__profile-list li.full-width {
-      display: inline-block;
-      float: left;
-      width: 50%;
-    }
-
-    .contact-card__profile-list li {
-      display: none;
-    }
-
     .contact-info {
       margin-bottom: 0;
       font-family: Roboto, sans-serif;

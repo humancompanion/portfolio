@@ -5,16 +5,66 @@
 
 .footer {
   @include clearfix();
-  margin: 0;
-  padding: 1rem 0;
-  border-top: 1px solid $grey-light;
+  margin: $size-XL 0 0;
+  padding: $size-ML 0;
+  border-top: 16px solid $red;
   background-color: $white;
 
-  .contact-card {
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
     padding: 0 $page--gutter-width-S;
 
     @include breakpoint(XL) {
       padding: 0 $page--gutter-width-XL;
+    }
+  }
+
+  &__identity {
+    margin-right: $size-ML;
+  }
+
+  &__name {
+    display: block;
+    font-family: $font_cover2;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $red;
+  }
+
+  &__title {
+    display: block;
+    @include type-body($font_light);
+    color: $grey-cover;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: $size-S 0 0 $size-ML;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      @include type-body($font_light);
+      color: $grey-cover;
+
+      &:hover,
+      &:focus {
+        color: $red;
+        text-decoration: none;
+      }
     }
   }
 }
