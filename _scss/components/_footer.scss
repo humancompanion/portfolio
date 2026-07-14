@@ -59,6 +59,7 @@
     a {
       @include type-body($font_light);
       color: $grey-cover;
+      text-decoration: none;
 
       &:hover,
       &:focus {
