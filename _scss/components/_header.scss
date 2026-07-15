@@ -123,6 +123,9 @@
 
   &__project {
     margin-top: 0;
+    // Let long project URLs and words break instead of forcing horizontal
+    // scroll at narrow viewports (WCAG 1.4.10); inherits to the URL link
+    overflow-wrap: anywhere;
   }
 
   &__url {

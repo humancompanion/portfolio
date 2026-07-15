@@ -58,6 +58,9 @@
 
     a {
       @include type-body($font_light);
+      display: inline-block;
+      // Meet the 24px minimum target size (WCAG 2.5.8)
+      padding: $size-base 0;
       color: $grey-cover;
       text-decoration: none;
 

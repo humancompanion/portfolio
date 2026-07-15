@@ -214,7 +214,9 @@ $home-nav-item-margin-L: $size-L;
     width: 100%;
     height: 48px;
     padding: 0 16px;
-    background: rgba(38, 38, 38, 0.6);
+    // 0.7 alpha keeps white 16px text >= 4.5:1 even over pure-white image
+    // pixels (WCAG 1.4.3); 0.6 dipped to 4.13:1 on light screenshots
+    background: rgba(38, 38, 38, 0.7);
     color: $white;
     font-family: $font_cover;
   }

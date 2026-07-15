@@ -60,11 +60,18 @@
     }
   }
 
+  // Job metadata (grade, dates) — paragraphs styled like the h5s they
+  // replaced; margin overrides below must stay after this rule
+  .job__meta {
+    @include type-5();
+  }
+
   // Have to get everything onto a page so remove header margins
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  .job__meta {
     margin: 0;
   }
 
@@ -72,7 +79,8 @@
     line-height: 1.3rem;
   }
 
-  h5 {
+  h5,
+  .job__meta {
     margin-bottom: 0;
     line-height: 1.2rem;
   }
@@ -156,7 +164,8 @@
     }
 
     h4,
-    h5 {
+    h5,
+    .job__meta {
       font-family: Roboto, sans-serif;
       font-weight: 300;
     }
