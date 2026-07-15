@@ -9,3 +9,5 @@ Gemfile.lock
 resume-*.pdf
 _archive
 _site
+test-results
+playwright-report

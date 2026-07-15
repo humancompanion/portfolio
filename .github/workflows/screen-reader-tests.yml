@@ -1,0 +1,109 @@
+name: Screen reader tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-site:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          bundle install
+          npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+
+  voiceover:
+    name: VoiceOver (macOS)
+    needs: build-site
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install WebKit
+        run: npx playwright install --with-deps webkit
+
+      - name: Set up VoiceOver automation
+        uses: guidepup/setup-action@0.21.0
+
+      - name: Run VoiceOver tests
+        run: npm run test:sr:voiceover
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: voiceover-report
+          path: playwright-report
+
+  nvda:
+    name: NVDA (Windows)
+    needs: build-site
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Firefox
+        run: npx playwright install --with-deps firefox
+
+      - name: Set up NVDA automation
+        uses: guidepup/setup-action@0.21.0
+
+      - name: Run NVDA tests
+        run: npm run test:sr:nvda
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: nvda-report
+          path: playwright-report
