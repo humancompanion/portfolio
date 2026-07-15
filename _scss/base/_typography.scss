@@ -33,6 +33,17 @@ bdo[dir="rtl"] {
   unicode-bidi: bidi-override;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Break long words rather than overflow at narrow widths / wide text
+  // spacing (WCAG 1.4.10, 1.4.12)
+  overflow-wrap: anywhere;
+}
+
 h1 {
   @include type-1();
 }

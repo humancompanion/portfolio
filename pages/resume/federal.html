@@ -1,5 +1,6 @@
 ---
 permalink: resume/federal/
+title: Matthew Dingee - Federal Resume
 layout: print-resume
 body-class: l-federal-resume
 ---
@@ -37,12 +38,12 @@ body-class: l-federal-resume
         <p class="location">{{ job.location }}</p>
         <h4>{{ job.title }}{% if job.org %}, {{ job.org }}{% endif %}</h4>
         {% if job.grade %}
-        <h5>{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}; {{ job.hours-per-week }} hours per
-          week</h5>
+        <p class="job__meta">{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}; {{ job.hours-per-week }} hours per
+          week</p>
         {% else %}
-        <h5>{{ job.work-schedule }}, {{ job.hours-per-week }} hours per week</h5>
+        <p class="job__meta">{{ job.work-schedule }}, {{ job.hours-per-week }} hours per week</p>
         {% endif %}
-        <h5>{{ job.start-date }} - {{ job.end-date }} <span class="job__timespan">({{ job.timespan }})</span></h5>
+        <p class="job__meta">{{ job.start-date }} - {{ job.end-date }} <span class="job__timespan">({{ job.timespan }})</span></p>
       </div>
       {% for accomplishment in job.accomplishments %}
       <ul class="accomplishments">

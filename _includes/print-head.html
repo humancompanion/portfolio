@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8" />
-  <title>{{ page.title }}</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta
     name="keywords"
     content="matthew dingee, portfolio, resume, user experience designer, service designer, UX design, service design, interaction designer, interaction design, design, information architect, UI, UX, architect, developer"
