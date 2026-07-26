@@ -1,0 +1,493 @@
+---
+permalink: resume/nava/
+layout: print-resume
+body-class: l-federal-resume l-compact-resume l-tight-headings
+title: Matthew Dingee - Resume
+contact: true
+---
+
+{% comment %}
+Application snapshot — Nava PBC, Director of Design, Strategy & Growth. Created 2026-07-25.
+Ordered for this role: design practice leadership first, then AI leadership, then civic tech
+impact. Analysis in the job-search vault: roles/nava-director-design-strategy-growth.md.
+Every claim traces to _data/experience.yml or the verified bullet library — no new content.
+
+SCREEN vs PRINT — rules in _scss/layouts/_resume-screen-print-split.scss:
+  class="print-hide"   visible on screen, dropped from the PDF
+  class="screen-hide"  hidden on screen, appears only in the PDF
+The profile uses both: two full paragraphs on screen, one condensed paragraph in print,
+since the cover letter carries that narrative.
+
+Body class `l-tight-headings` shrinks print headings (h2/h3/h4 = 18/16/13px, down from
+38/28/21) and closes up their margins. Opt-in — other resume pages are unaffected.
+Tune the values at the top of the @media print block in the SCSS partial.
+
+PDF target is 2 pages. Currently 17 bullets: VA 11, USDS 2, OPM 2, EightShapes 1,
+Earlier Experience 1. Federal appointment boilerplate ("Full-time, term appointment")
+is dropped from the meta lines — Nava doesn't need it and it cost a wrapped line each.
+
+  If it still spills, add print-hide in this order:
+    1. "Led the team that digitized and shipped 10 Veteran-facing VA forms" (240)
+    2. "Design systems consultancy delivering billable client engagements" (97 —
+       but then EightShapes has no bullets; consider hiding that whole block instead)
+    3. "Wrote a Product Requirements Document and then built the VA Prototype Kit"
+       (291 — note this orphans "both tools" in the bullet below it, so also reword
+       or hide that one)
+  If there's room left over, remove print-hide from:
+    1. "The system now avoids hundreds of silent failures per month" (198, ZSF proof)
+    2. "Co-presented to the Technology Modernization Fund board" (145, BD proof)
+    3. "Pivoted the form creation workstream" (300, 80% cost reduction / $384K)
+{% endcomment %}
+
+<p class="print-note notes">
+  <em>This on-screen version includes full detail. The printed and PDF version is
+  abridged to two pages.</em>
+</p>
+
+<section id="profile">
+  <div class="section_title">
+    <h2>Profile</h2>
+  </div>
+  <div class="section_body first">
+    {% comment %}Full version — screen only. The cover letter carries this narrative,
+    so print gets the condensed version below.{% endcomment %}
+    <p class="enlarge print-hide">
+      I'm a human-centered designer and front-end developer with nearly 30 years
+      of experience building software that improves people's lives. I specialize
+      in the hardest design problems — the ones that take years, not sprints, to
+      move — and I stay with them until they change.
+    </p>
+    <p class="enlarge print-hide">
+      For the last decade in public service I've led design practices, design
+      systems, and the governance that holds quality in place on a platform
+      serving millions of Veterans. I currently lead the VA's Design Community of
+      Practice, guiding a design discipline through a major reorganization while
+      sustaining delivery. As AI has reshaped how designers work, I've focused
+      less on whether it threatens the craft and more on building the tools and
+      infrastructure that help designers use it well — an open-source MCP server
+      and prototyping toolchain now in active use by VA designers.
+    </p>
+
+    {% comment %}Condensed version — print only. Same sentences, redundancy removed.{% endcomment %}
+    <p class="enlarge screen-hide">
+      Human-centered designer and front-end developer with nearly 30 years of
+      experience. I specialize in the hardest design problems — the ones that take
+      years, not sprints, to move. For the last decade in public service I've led
+      design practices, design systems, and the governance that holds quality in
+      place on a platform serving millions of Veterans, while building the tools
+      that help designers work well with AI.
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section_title first">
+    <h2>Experience</h2>
+  </div>
+  <div class="section_body">
+
+    <div class="job first" id="department-of-veterans-affairs">
+      <div class="job__header">
+        <h3>Department of Veterans Affairs</h3>
+        <p class="job__meta">GS-2210-15</p>
+      </div>
+
+      <div class="job__role">
+        <div class="job__details">
+          <h4>Design Community of Practice Lead</h4>
+          <p class="job__meta">June 2026 - Current</p>
+        </div>
+        <ul class="accomplishments">
+          <li class="accomplishment_desc">
+            Lead the VA-wide Design Community of Practice, guiding the design
+            discipline through a major organizational restructuring while
+            sustaining design quality, governance, and delivery across
+            Veteran-facing products.
+          </li>
+          <li>
+            Conduct performance evaluations and monthly one-on-one mentoring for
+            design leads spanning research, accessibility, and design system
+            functions.
+          </li>
+          <li>
+            Lead the AI prototyping enablement program — training, AI Skills,
+            prompt libraries, and standards for agentic tooling — supporting 10+
+            VA designers actively producing accessible, testable Veteran-facing
+            prototypes.
+          </li>
+          <li class="print-hide">
+            Facilitate the forums that coordinate designers across VA product
+            teams — the weekly Design Sync, the Design Leads coordination
+            meeting, and the Design Community of Practice — and set the vision
+            for the future of design practice at the VA.
+          </li>
+          <li class="print-hide">
+            Manage the portfolio of design contract acquisitions — Design System,
+            Figma for Government, accessibility, and design research — that
+            sustains design capability across the VA platform.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job__role">
+        <div class="job__details">
+          <h4>Platform Services &amp; Governance Crew Lead</h4>
+          <p class="job__meta">June 2024 - March 2026 (1 year, 9 months)</p>
+        </div>
+        <ul class="accomplishments">
+          <li class="accomplishment_desc">
+            Crew Lead for Platform Services and Governance, managing a team of 4
+            designers across UX/CX measurement, accessibility, and design
+            governance functions — and Product Owner of the VA Collaboration
+            Cycle, the design governance process for a platform supporting 60
+            product teams.
+          </li>
+          <li>
+            Scaled the Collaboration Cycle from 22 touchpoints per quarter in
+            2023 to a peak of 84 — nearly tripling throughput as platform
+            adoption expanded — while maintaining consistent quality review
+            across design, accessibility, engineering, and security tracks.
+          </li>
+          <li class="print-hide">
+            Led revision and launch of updated VA.gov Experience Standards,
+            restructuring them around user experience outcomes, piloting with
+            teams, and publishing to design.va.gov.
+          </li>
+          <li class="accomplishment_desc">
+            Served as Functional Lead on a $7.4M Technology Modernization Fund
+            investment from GSA — co-authored with OCTO Design Director Kevin
+            Hoffman and Budget Lead Joshua Cohen — to modernize the VA Design
+            System and improve form creation, authenticated experiences, and data
+            visualization for Veterans and VA clinicians.
+          </li>
+          <li class="print-hide">
+            Co-presented to the Technology Modernization Fund board alongside the
+            Design Director, answering the board's technical questions on the
+            proposal.
+          </li>
+          <li class="print-hide">
+            Pivoted the form creation workstream from low/no-code tooling to
+            AI-assisted development, reducing form prototyping from 5 sprints
+            with a team of 8 to 4 sprints with a team of 4 — an 80% reduction in
+            cost per form, with estimated savings of $384,000 per form across 228
+            remaining Veteran-facing forms.
+          </li>
+          <li>
+            Led the team that digitized and shipped 10 Veteran-facing VA forms,
+            including the 21-4138 Statement in Support of Claim, saving an
+            estimated 2,385 years of cumulative burden time for approximately
+            350,000 Veterans.
+          </li>
+          <li class=" accomplishment_desc">
+            Led the VA-wide Zero Silent Failures initiative as Goal Champion —
+            charged by the OCTO Chief Technology Officer following two
+            Congressional testimonies — to eliminate a class of failures in which
+            VA.gov accepted a Veteran's form submission that then failed silently
+            in handoff to downstream systems, with no notification to the Veteran.
+          </li>
+          <li class="print-hide">
+            Led a 9-person cross-functional tiger team over 3 months, cataloguing
+            143 known Veteran-facing products for silent failure risk, holding
+            20+ meetings with Product Owners across the platform, and producing a
+            comprehensive report of findings and recommendations to OCTO
+            leadership.
+          </li>
+          <li class="print-hide">
+            Briefed the Chief Technology Officer and OCTO leadership on findings
+            and recommendations multiple times over the course of the initiative,
+            and presented the project to the full OCTO organization.
+          </li>
+          <li class="print-hide">
+            The system now avoids hundreds of silent failures per month — 584 in
+            January 2025, 314 in February, 448 in March, 509 in April —
+            protecting Veterans from losing benefits claims without notification.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job__role">
+        <div class="job__details">
+          <h4>Design &amp; Forms Systems Product Owner</h4>
+          <p class="job__meta">April 2022 - Current (4 years, 3 months)</p>
+        </div>
+        <ul class="accomplishments">
+          <li class="print-hide accomplishment_desc">
+            Pioneered AI-assisted design tooling for the VA, building an
+            open-source prototyping ecosystem that enables designers to build
+            accessible, testable Veteran-facing prototypes without front-end
+            engineering expertise.
+          </li>
+          <li>
+            Designed, built, and published the VA Design System MCP server, an
+            open-source Model Context Protocol integration with 8 tools covering
+            component lookup, validation, token management, and Figma integration
+            — enabling AI coding agents to generate VA-compliant interfaces
+            directly from the Design System.
+          </li>
+          <li>
+            Wrote a Product Requirements Document and then built the VA Prototype
+            Kit, a toolchain allowing designers to build interactive prototypes
+            from real Design System components with AI agent assistance —
+            reducing the time to produce an accessibility-ready, testable
+            prototype from weeks to days.
+          </li>
+          <li>
+            Piloted and scaled both tools to 10+ VA designers actively using the
+            toolchain, producing testable Veteran-facing prototypes including an
+            Overpayment Balances flow ready for usability testing — confirming
+            the approach reduces technical barriers for non-engineering
+            designers.
+          </li>
+          <li class="print-hide accomplishment_desc">
+            Product Owner of the VA Design System, driving infrastructure
+            modernization, adoption, and quality improvements across 60+ VA.gov
+            product teams.
+          </li>
+          <li class="print-hide">
+            Design System Council lead since April 2022, overseeing contribution
+            and quality standards for 40+ components and 26 design patterns used
+            across all VA.gov product teams, with 34,682 monthly documentation
+            page views and 189 monthly pull requests.
+          </li>
+          <li class="print-hide">
+            Completed an 18-month upgrade of the Design System and component
+            library to align with USWDS v3, re-establishing VA as an active
+            contributor to the federal design system community.
+          </li>
+          <li class="print-hide">
+            Led migration of design tooling from Sketch to Figma in February
+            2024, with 15 of 29 VA designers rating the new Figma component
+            libraries as "Excellent" — the highest rating — shortly after launch.
+          </li>
+          <li class="print-hide">
+            Designed, built, and automated a public-facing Design System metrics
+            dashboard — built with AI tooling — tracking adoption, quality, and
+            governance trends across VA.gov, the first of its kind for a federal
+            design system.
+          </li>
+          <li class="print-hide accomplishment_desc">
+            Product Owner for Veteran-facing Forms and the VA Forms System,
+            leading digitization of paper forms, resolution of silent submission
+            failures, and architectural improvements to the Forms Library.
+          </li>
+          <li class="print-hide">
+            Shipped the 21-4138 Statement in Support of Claim, one of those 10
+            forms, making it easier for Veterans and their families to apply for
+            benefits online.
+          </li>
+          <li class="print-hide">
+            Commissioned and oversaw service design research identifying the top
+            reasons form digitization took up to 9 months, resulting in
+            recommendations delivered to the Design Community of Practice and a
+            consolidated resource guide.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job" id="us-digital-service">
+      <div class="job__details">
+        <h3>U.S. Digital Service</h3>
+        <h4>Digital Service Expert</h4>
+        <p class="job__meta">GS-343-14, Promoted to GS-343-15</p>
+        <p class="job__meta">June 2019 - June 2023 (4 years)</p>
+      </div>
+      <ul class="accomplishments">
+        <li class=" accomplishment_desc">
+          Team lead on USDS support of the Treasury Department Emergency Rental
+          Assistance program to distribute government funds to state and local
+          rent relief programs — leading a team of three and serving as liaison
+          to Treasury leadership.
+        </li>
+        <li class="print-hide">
+          Designed and coded the program website including the information
+          architecture, interaction, and visual design.
+        </li>
+        <li class="accomplishment_desc">
+          Contributed to the completion of the first pilots of the Subject Matter
+          Expert Qualification Assessments (SME-QA) process with USDS teammates
+          and the Office of Personnel Management.
+        </li>
+        <li class="print-hide">
+          The pilots contributed towards the Developing a Workforce for the 21st
+          Century CAP Goal and culminated in an OPM memo allowing and encouraging
+          all agencies to use the process.
+        </li>
+        <li class="print-hide">
+          Researched and redesigned the job announcement template, now used on
+          usajobs.gov for all positions, and helped evangelize the process
+          through oral presentations at the Partnership for Public Service and
+          AIGA.
+        </li>
+        <li class="print-hide accomplishment_desc">
+          Led a 6-person research effort on behalf of the CDC to assess the
+          expectations of U.S. citizens searching for information on COVID-19 and
+          to generate recommendations on how to satisfy those expectations.
+        </li>
+        <li class="print-hide">
+          Operationalized a research pipeline that allowed the team to speak with
+          41 people in 18 calendar days by combining multiple tools for
+          recruitment, scheduling, and conducting interviews.
+        </li>
+        <li class="print-hide">
+          Served the final year of USDS tenure embedded at the Department of
+          Veterans Affairs (June 2022–June 2023), joining the VA Design System
+          team and leading the Design System Council — work that continued
+          seamlessly upon converting to a permanent VA position in June 2023.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job" id="the-lab-at-opm">
+      <div class="job__details">
+        <h3>The Lab at OPM</h3>
+        <h4>Management Program Analyst - Lead Designer, USAJOBS Project</h4>
+        <p class="job__meta">GS-343-13, Promoted to GS-343-14</p>
+        <p class="job__meta">October 2015 - June 2019 (3 years, 8 months)</p>
+      </div>
+      <ul class="accomplishments">
+        <li class="print-hide accomplishment_desc">
+          Lead designer on OPM's USAJOBS project responsible for digital
+          transformation of federal hiring, and for the design strategy and user
+          experience of usajobs.gov, openopps.usajobs.gov, and
+          agencyportal.usajobs.gov.
+        </li>
+        <li>
+          Supervised expert designers for the full duration of the role —
+          beginning with 2 and growing to 3–4 — holding monthly one-on-ones
+          providing critique of their work, developing their abilities, and
+          instituting regularly scheduled design critique.
+        </li>
+        <li class="print-hide">
+          Led a team of 2 expert designers in designing, prototyping, and
+          delivering 6 key releases in 2016 that improved the user experience,
+          including reducing the exit rate during job applications from 7.3% to
+          5%.
+        </li>
+        <li class="print-hide">
+          Synthesized existing design methods — Human-Centered Design, Design
+          Thinking, Lean UX, Agile, and design sprint frameworks — into a new
+          framework and revised SCRUM team models, resulting in a 1 week
+          reduction in the design and development cycle of all releases and
+          enabling one team to deliver a full application rewrite in 3 cycles of
+          8 weeks.
+        </li>
+        <li class="print-hide">
+          Built and maintained the USAJOBS Design System, a fork of the US Web
+          Design System, governing 3 products managed by the USAJOBS Program
+          Office.
+        </li>
+        <li class="print-hide accomplishment_desc">
+          Planned, managed, and performed the design and development of a project
+          that demonstrated the initial capability of an automated hiring advisor
+          for managers, a key milestone of CAP goal 3 of the President's
+          Management Agenda.
+        </li>
+        <li class="print-hide">
+          Performed ethnographic research with over 60 individuals, built a fully
+          functional web application prototype in under 90 days across 3 phases,
+          and created and presented a 68-page report to senior OPM and OMB
+          leadership.
+        </li>
+        <li class="print-hide">
+          Developed, planned, and conducted 20 usability tests over 2017 and 2018
+          speaking with over 130 people, plus 9 co-design sessions with users,
+          federal employees, HR Specialists, hiring managers, and Chief Human
+          Capital Officers.
+        </li>
+        <li>
+          Developed and delivered design education offerings on Information
+          Architecture and Problem Framing for The Lab's Design School sessions.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job" id="eightshapes-llc">
+      <div class="job__details">
+        <h3>EightShapes, LLC</h3>
+        <h4>Senior Interaction Designer</h4>
+        <p class="job__meta">November 2011 - July 2015 (3 years, 9 months)</p>
+      </div>
+      <ul class="accomplishments">
+        <li class="accomplishment_desc">
+          Design systems consultancy delivering billable client engagements for
+          Marriott, Cisco, and NCARB.
+        </li>
+        <li class="print-hide">
+          Contributed to the design system that enabled Marriott to make their
+          site responsive and drive reservations on mobile devices — designing
+          and coding Section 508 accessible search and reservation forms and the
+          documentation used by all Marriott designers and developers.
+        </li>
+        <li class="print-hide">
+          Designed and built many of the responsive components behind Cisco's
+          Unified Computing Servers product category, seeding a reusable
+          responsive prototyping toolkit adopted across their site.
+        </li>
+        <li class="print-hide">
+          Led qualitative prototyping and ethnographic research on the membership
+          renewal process for NCARB, managing the project including an expert
+          designer, budget, and time tracking.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job" id="earlier-experience">
+      <div class="job__details">
+        <h3>Earlier Experience</h3>
+      </div>
+      <ul class="accomplishments">
+          <li class="screen-hide accomplishment_desc">
+            <strong>Microsoft</strong> — Senior Software Engineer (2008–2011).
+            <strong>Tellme Networks</strong> — Software Engineer, promoted to
+            Senior Software Engineer (1999–2008).
+            <strong>WebTV Networks / Microsoft</strong> — Customer Service,
+            promoted to Team Lead of the Previews beta program, then Service
+            Operations Team Lead (1996–1999).
+          </li>
+        <li class="print-hide accomplishment_desc">
+          <strong>Microsoft</strong> — Senior Software Engineer, Business
+          Solutions Engineering/Network &amp; Cloud (November 2008 - May 2011).
+          Interaction designer and lead software engineer for Tellme Platform
+          Central, building the user interface infrastructure in Ruby on Rails
+          across ten on-time releases including the 2010 general availability
+          launch. Mentored junior developers, created code review guidelines, and
+          stood up continuous integration.
+        </li>
+        <li class="print-hide accomplishment_desc">
+          <strong>Tellme Networks</strong> — Software Engineer, promoted to
+          Senior Software Engineer (December 1999 - October 2008). Joined the
+          Network Operations team and moved into front-end engineering, building
+          the internal web applications that ran the Tellme Network. Led a
+          specialized team of three addressing complex and critical engineering
+          endeavors.
+        </li>
+        <li class="print-hide accomplishment_desc">
+          <strong>WebTV Networks / Microsoft</strong> — Customer Service,
+          promoted to Team Lead of the Previews beta program, then Service
+          Operations Team Lead (August 1996 - December 1999). Led a team of six
+          including performance reviews, then served as technical team lead in the
+          Service Operations Center monitoring the software running the WebTV
+          Network.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="section_title">
+    <h2>Education</h2>
+  </div>
+  <div class="section_body">
+    <dl class="education__list">
+      <dt>George Washington University - Washington, DC</dt>
+      <dd>Bachelor of Arts, American Literature</dd>
+    </dl>
+  </div>
+</section>
+<p class="notes notes--extended">
+  Portfolio and code samples at abarrelofthis.com. References available by
+  request.
+</p>

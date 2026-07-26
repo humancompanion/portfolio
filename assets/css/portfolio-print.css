@@ -3257,3 +3257,108 @@ ol > li{
 .l-compact-resume .notes--extended{
   margin:0.2rem 0 0;
 }
+
+@media print{
+  .print-hide{
+    display:none !important;
+  }
+}
+@media screen{
+  .screen-hide{
+    display:none !important;
+  }
+}
+@media print{
+  .l-tight-headings h2{
+    font-size:18px;
+    font-size:1.125rem;
+    line-height:24px;
+    line-height:1.5rem;
+    margin:0.6rem 0 0.35rem;
+  }
+  .l-tight-headings h3{
+    font-size:16px;
+    font-size:1rem;
+    line-height:21px;
+    line-height:1.3125rem;
+    margin:0.7rem 0 0.2rem;
+  }
+  .l-tight-headings h4{
+    font-size:13px;
+    font-size:0.8125rem;
+    line-height:17px;
+    line-height:1.0625rem;
+    margin:0.15rem 0 0.15rem;
+  }
+  .l-tight-headings .section_title{
+    margin-bottom:0.2rem;
+  }
+  .l-tight-headings .job{
+    margin-bottom:0.55rem;
+  }
+  .l-tight-headings .job__role{
+    margin-bottom:0.45rem;
+  }
+  .l-tight-headings .job__meta{
+    margin:0 0 0.1rem;
+  }
+  .l-tight-headings .accomplishments li{
+    margin-bottom:6px;
+  }
+  .l-tight-headings #education .section_body,
+  .l-tight-headings #eduction .section_body{
+    margin-top:0;
+  }
+  .l-tight-headings .education__list dt{
+    margin-bottom:0;
+  }
+  .l-tight-headings .notes--extended{
+    margin-top:0.1rem;
+    -webkit-column-break-before:avoid;
+       -moz-column-break-before:avoid;
+            break-before:avoid;
+    page-break-before:avoid;
+  }
+  .l-tight-headings #education,
+  .l-tight-headings #eduction{
+    -webkit-column-break-inside:avoid;
+       -moz-column-break-inside:avoid;
+            break-inside:avoid;
+    page-break-inside:avoid;
+  }
+}
+@media screen{
+  .l-resume .section_body,
+  .l-resume .accomplishments li,
+  .l-resume .job__meta,
+  .l-resume .education__list,
+  .l-federal-resume .section_body,
+  .l-federal-resume .accomplishments li,
+  .l-federal-resume .job__meta,
+  .l-federal-resume .education__list{
+    font-size:17px;
+    font-size:1.0625rem;
+    line-height:27px;
+    line-height:1.6875rem;
+  }
+  .l-resume .accomplishments li,
+  .l-federal-resume .accomplishments li{
+    margin-bottom:8px;
+  }
+  .l-resume p.enlarge,
+  .l-federal-resume p.enlarge{
+    font-size:19px;
+    font-size:1.1875rem;
+    line-height:30px;
+    line-height:1.875rem;
+  }
+  .l-resume .print-note,
+  .l-federal-resume .print-note{
+    display:block;
+  }
+}
+@media print{
+  .print-note{
+    display:none !important;
+  }
+}
