@@ -258,10 +258,11 @@ project_url_display: "https://smeqa.usds.gov"
       <p>
         The job announcement is where federal hiring either sets expectations or
         destroys trust. The pilots needed an announcement that read like a job,
-        not like a position description pasted into a form. I researched and
-        redesigned the
-        <a href="https://usajobs.github.io/design-system/job-announcement/v7.0/" target="_blank" rel="noopener">job announcement template<span class="visually-hidden"> (opens in new tab)</span></a>,
-        in plain language and styled closer to a private sector posting. Four
+        not like a position description pasted into a form. This piece was mine
+        end to end &mdash; I was the sole designer on it, ran the research
+        behind it, and built the
+        <a href="https://usajobs.github.io/design-system/job-announcement/v7.0/" target="_blank" rel="noopener">template<span class="visually-hidden"> (opens in new tab)</span></a>
+        in plain language, styled closer to a private sector posting. Four
         decisions did the work:
       </p>
       <ul class="list--bullet">
@@ -289,12 +290,11 @@ project_url_display: "https://smeqa.usds.gov"
         closed within two days of opening. This template is now the one used on
         usajobs.gov for <strong>all</strong> positions, not just SME-QA ones,
         which makes it the widest-reaching artifact I have shipped in government.
-        {% comment %} TODO(interview): light confirmation now that timing is settled - you
-             were working the pilots daily from The Lab, and the USAJOBS Design
-             System was already yours, so this template sitting in the USAJOBS
-             design system repo reads as your work throughout. Confirm and I'll
-             drop this comment. Also: did testing produce numbers you can stand
-             behind (comprehension, time on page, applicant feedback)? {% endcomment %}
+        {% comment %} Attribution confirmed July 2026: Matthew was sole designer on
+             the job announcement and ran the research behind it. Still open,
+             minor: did testing produce numbers worth citing here (comprehension,
+             time on page, applicant feedback)? Optional - the 164/224 response
+             and two-day close already carry the paragraph. {% endcomment %}
       </p>
 
       <h4>Designed and built smeqa.usds.gov</h4>
@@ -322,14 +322,15 @@ project_url_display: "https://smeqa.usds.gov"
         point.
       </p>
 
-      <h4>Ran the design research</h4>
+      <h4>Contributed to the design research</h4>
       <p>
-        I conducted multiple rounds of research with subject matter experts,
-        hiring managers, and job applicants &mdash; to understand what each group
-        needed, to build the team's shared picture of the process from both the
-        front stage and the back stage, and to resolve the problems that
-        surfaced. The findings changed the process repeatedly between and during
-        pilots.
+        Research ran continuously through both pilots, with subject matter
+        experts, hiring managers, and job applicants. I conducted a share of
+        those interviews rather than all of them &mdash; the work was split
+        across the team &mdash; and contributed to the synthesis that turned them
+        into process changes. What follows is what we learned, not a list of
+        things I did alone. It is worth reading in that spirit, because the
+        findings are more interesting than the credit.
       </p>
       <p>
         <img
@@ -350,27 +351,26 @@ project_url_display: "https://smeqa.usds.gov"
         through spring 2019, so presence is no longer the question. What's
         left is how much of each finding was yours.
 
-        Put a letter after each number, then tell me (or just save the file):
-          A = I ran or designed this
-          B = I contributed to it, alongside others
-          C = a teammate's work I'm reporting
+        RESOLVED - Matthew's tags, July 2026. Keep this note so the wording
+        isn't accidentally inflated later.
 
-        As written, all five read as team findings ("the team contracted...",
-        "interviews with SMEs..."). That's safe but under-claims anything
-        that was actually yours. I'll rewrite each to match its tag - first
-        person for A, "we" for B, naming the person for C.
+          1. Blind review experiment (388 resumes)          = B  contributed
+          2. SME training length, 27% -> 20% tie-break rate  = C  teammate's
+          3. Resume page limit did not impair judgement      = B  contributed
+          4. HR time cost (118 hrs, HHS's extra 145)         = B  contributed
+          5. Job analysis workshop under-scoped              = B  contributed
 
-        1. Blind review experiment (388 resumes, two HR specialists) =
-        2. SME training length and the 27% -> 20% tie-break rate        =
-        3. Resume page limit did not impair SME judgement               =
-        4. HR time cost (118 hrs/pilot, HHS's extra 145 hrs)            =
-        5. Job analysis workshop was under-scoped (9-12 -> 16-20 hrs)   =
+        Matthew conducted some but not all of the underlying interviews, so
+        the four B items are written as "we" and finding 2 is reported
+        plainly as a team result with no first person attached. The section
+        intro states the split explicitly. Do not upgrade any of these to "I"
+        without a reason to.
       {% endcomment %}
       <ul class="list--bullet">
         <li>
           <strong>The blind review experiment.</strong> To test whether SMEs were
           actually necessary &mdash; or whether HR specialists could get the same
-          result using SME-written criteria &mdash; the team contracted two
+          result using SME-written criteria &mdash; we contracted two
           independent HR specialists to review all <strong>388 pilot
           resumes</strong> against the identical competencies the SMEs had used.
           Their determinations diverged from the SMEs' <em>and from each
@@ -378,25 +378,26 @@ project_url_display: "https://smeqa.usds.gov"
           criteria are not the hard part, the expertise to apply them is.
         </li>
         <li>
-          <strong>Training length changed inter-rater reliability.</strong> At
+          <strong>Training length changed inter-rater reliability.</strong> This
+          one was a teammate's finding, and it is my favourite of the set. At
           HHS, <strong>27%</strong> of resume reviews needed a third SME to break
           a tie &mdash; a signal that SMEs were applying the standards
           inconsistently. Extending SME training from two hours to three to allow
           practice and calibration, and eliminating a confusing
           &ldquo;borderline&rdquo; rating, dropped that to <strong>20%</strong>
-          at DOI.
+          at DOI. One hour of training and one fewer option on a rating scale.
         </li>
         <li>
-          <strong>The page limit did not hurt anyone.</strong> Interviews with
-          SMEs after resume review confirmed the two-to-three page limit did not
-          impair their ability to judge qualifications, and applicants who
-          submitted longer resumes were not disqualified at a higher rate. OPM
-          has since updated the Delegated Examining Operations Handbook to permit
-          the practice government-wide.
+          <strong>The page limit did not hurt anyone.</strong> When we
+          interviewed SMEs after resume review, they confirmed the two-to-three
+          page limit did not impair their ability to judge qualifications, and
+          applicants who submitted longer resumes were not disqualified at a
+          higher rate. OPM has since updated the Delegated Examining Operations
+          Handbook to permit the practice government-wide.
         </li>
         <li>
-          <strong>The real cost to HR.</strong> Interviews with participating HR
-          specialists established that they contributed an average of
+          <strong>The real cost to HR.</strong> Interviewing the participating HR
+          specialists let us put a number on their contribution: an average of
           <strong>118 hours</strong> per pilot over three months. HHS's decision
           to put an HR specialist on every interview for legal defensibility
           added <strong>145 hours</strong> on its own and produced no benefit
@@ -404,12 +405,14 @@ project_url_display: "https://smeqa.usds.gov"
           assurance for a fraction of the cost.
         </li>
         <li>
-          <strong>The job analysis workshop was under-scoped.</strong> Research
-          with participating SMEs showed the workshops felt rushed at both
-          agencies. HHS allotted nine hours and DOI 12; SMEs at both said they
-          needed to spend more time testing and iterating the interview
-          questions, given how much weight those assessments carried. The
-          recommendation moved to a full 16&ndash;20 hours.
+          <strong>The job analysis workshop was under-scoped.</strong> Talking to
+          participating SMEs told us the workshops felt rushed at both agencies.
+          HHS allotted nine hours and DOI 12; SMEs at both said they needed more
+          time testing and iterating the interview questions, given how much
+          weight those assessments carried. We moved the recommendation to a full
+          16&ndash;20 hours &mdash; the single largest time increase we asked
+          agencies to accept, and the one with the most leverage, because every
+          later phase inherits the quality of what comes out of that room.
         </li>
       </ul>
 
