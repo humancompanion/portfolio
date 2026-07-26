@@ -1,0 +1,148 @@
+// ---------------------------------------------------------------------------
+// Screen / print split for resume pages
+//
+// Context: _includes/print-head.html loads the print stylesheet for BOTH
+// media="screen" and media="print", so resume pages look identical on screen
+// and on paper. These blocks deliberately separate the two.
+//
+// Import from portfolio-print.scss ONLY. Do not import from portfolio.scss —
+// that file already pulls resume-print in via an @media print wrapper, and
+// nesting @media inside @media would produce invalid output.
+// ---------------------------------------------------------------------------
+
+// PRINT: drop supporting detail so an application PDF lands in ~2 pages.
+// Bullets tagged .print-hide in the page markup stay visible on screen.
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+}
+
+// Mirror of the above: content that appears ONLY in print. Used for the
+// condensed profile — the full two-paragraph version stays on screen, while
+// the PDF runs a tighter one since the cover letter carries the narrative.
+@media screen {
+  .screen-hide {
+    display: none !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Opt-in heading tightening for print. Add `l-tight-headings` to a page's
+// body-class to use it; pages without the class are unaffected.
+//
+// Defaults in this codebase are h2 38px, h3 28px, h4 21px with ~1.5rem
+// margins — generous for screen, but on a two-page resume the MARGINS cost
+// more vertical space than the type sizes do. Both are reduced below.
+// Adjust these five values to taste.
+// ---------------------------------------------------------------------------
+$tight-h2: 18px;
+$tight-h3: 16px;
+$tight-h4: 13px;
+
+@media print {
+  .l-tight-headings {
+    h2 {
+      @include fontSize($tight-h2);
+      @include lineHeight(24px);
+      margin: 0.6rem 0 0.35rem;
+    }
+
+    h3 {
+      @include fontSize($tight-h3);
+      @include lineHeight(21px);
+      margin: 0.7rem 0 0.2rem;
+    }
+
+    h4 {
+      @include fontSize($tight-h4);
+      @include lineHeight(17px);
+      margin: 0.15rem 0 0.15rem;
+    }
+
+    // The section titles column and job blocks can close up too.
+    .section_title {
+      margin-bottom: 0.2rem;
+    }
+
+    .job {
+      margin-bottom: 0.55rem;
+    }
+
+    .job__role {
+      margin-bottom: 0.45rem;
+    }
+
+    .job__meta {
+      margin: 0 0 0.1rem;
+    }
+
+    // Widow control. With ~17 bullets, shaving 2px off each list item reclaims
+    // roughly two lines — enough to pull a trailing Education block or closing
+    // note back onto page 2 without cutting any content.
+    .accomplishments li {
+      margin-bottom: 6px;
+    }
+
+    #education,
+    #eduction {
+      .section_body {
+        margin-top: 0;
+      }
+    }
+
+    .education__list dt {
+      margin-bottom: 0;
+    }
+
+    // Never let the closing note break away from Education onto its own page.
+    .notes--extended {
+      margin-top: 0.1rem;
+      break-before: avoid;
+      page-break-before: avoid;
+    }
+
+    #education,
+    #eduction {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+}
+
+// SCREEN: the on-screen version keeps every bullet, so bump the type for
+// comfortable reading. Scoped to the resume layouts to avoid touching
+// case studies or the home page.
+@media screen {
+  .l-resume,
+  .l-federal-resume {
+    .section_body,
+    .accomplishments li,
+    .job__meta,
+    .education__list {
+      @include fontSize(17px);
+      @include lineHeight(27px);
+    }
+
+    .accomplishments li {
+      margin-bottom: $size-S;
+    }
+
+    p.enlarge {
+      @include fontSize(19px);
+      @include lineHeight(30px);
+    }
+
+    // Screen-only note that the printed version is abridged.
+    .print-note {
+      display: block;
+    }
+  }
+}
+
+// The abridged-version note is for screen only.
+@media print {
+  .print-note {
+    display: none !important;
+  }
+}

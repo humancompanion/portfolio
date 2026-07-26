@@ -33,10 +33,11 @@ jobs:
             descriptions:
               - desc: 'Oversaw three year-long workstreams — serving as Product Owner of the AI-assisted form creation workstream (Form Builder) — alongside standardized authenticated experience patterns and accessible data visualization patterns for VA clinical applications, all developed in collaboration with the US Web Design System (USWDS) team for reuse by any federal agency.'
               - desc: 'Pivoted the form creation workstream from low/no-code tooling to AI-assisted development, reducing form prototyping from 5 sprints with a team of 8 to 4 sprints with a team of 4 — an 80% reduction in cost per form, with estimated savings of $384,000 per form across 228 remaining Veteran-facing forms to be digitized.'
-              - desc: 'Contributed to shipping 10 digitized VA forms under the TMF project, saving an estimated 2,385 years of cumulative burden time for approximately 350,000 Veterans — and codified the List and Loop pattern that unlocks faster implementation for 55 additional Veteran-facing forms.'
+              - desc: 'Led the team that digitized and shipped 10 Veteran-facing VA forms under the TMF project, saving an estimated 2,385 years of cumulative burden time for approximately 350,000 Veterans — and codified the List and Loop pattern that unlocks faster implementation for 55 additional Veteran-facing forms.'
               - desc: 'Developed authenticated experience patterns reducing pre-fill implementation cost by 50% — from $24,000 to $12,000 per form — with potential savings of $636,000 across 53 forms that do not yet use pre-fill.'
               - desc: 'Data visualization patterns developed under the TMF project are now deployed in clinical applications used by 45,000+ VHA clinicians, impacting over 6 million patients across tools including the Clinical Decision Support Console, MyWorkWeek, and Lung Cancer Screening.'
               - desc: 'VA.gov customer satisfaction increased 8.6% and monthly authenticated users grew 8.3% (from 2.4M to 2.6M/month) during the project period.'
+              - desc: 'Co-presented to the Technology Modernization Fund board alongside the OCTO Design Director, answering the board&apos;s technical questions on the investment proposal.'
           - accomplishment: 'Led the VA-wide Zero Silent Failures (ZSF) initiative — an OCTO organizational goal — as Goal Champion, charged by OCTO CTO Charles Worthington following two Congressional testimonies to eliminate a class of failures in which VA.gov accepted a Veteran&apos;s form submission that then failed silently in handoff to downstream systems, with no notification to the Veteran.'
             descriptions:
               - desc: 'Led a 9-person cross-functional tiger team over 3 months, cataloguing 143 known Veteran-facing products for silent failure risk, holding 20+ meetings with Product Owners across the platform, and producing a comprehensive report of findings and recommendations to OCTO leadership.'
@@ -44,6 +45,7 @@ jobs:
               - desc: 'Defined and published the "Help users to stay informed of their application status" pattern in the VA Design System, providing all VFS teams implementation guidance for surfacing form submission status and errors to Veterans via VA Notify and in the MyVA interface.'
               - desc: 'The ZSF system now avoids hundreds of silent failures per month — 584 in January 2025, 314 in February, 448 in March, 509 in April — protecting Veterans from losing benefits claims without notification.'
               - desc: 'Produced a long-term recommendations report identifying systemic architectural issues including Central Mail Portal dependency, lack of standardized submission infrastructure, and gaps in OCTO product ownership — laying out a roadmap for keeping digital form submissions digital end-to-end by FY2030.'
+              - desc: 'Briefed the OCTO Chief Technology Officer and OCTO leadership on findings and recommendations multiple times over the course of the initiative, and presented the project to the full OCTO organization.'
       - title: Design & Forms Systems Product Owner
         dates: April 2022 - Current
         timespan: 4 years, 3 months
@@ -59,7 +61,7 @@ jobs:
               - desc: 'Design System Council lead since April 2022, overseeing contribution and quality standards for 40+ components and 26 design patterns used across all VA.gov product teams, with 34,682 monthly documentation page views and 189 monthly pull requests.'
           - accomplishment: 'Product Owner for Veteran-facing Forms and the VA Forms System, leading digitization of paper forms, resolution of silent submission failures, and architectural improvements to the Forms Library.'
             descriptions:
-              - desc: 'Oversaw digitization of 10+ VA paper forms under the TMF project, and subsequently shipped the 21-4138 Statement in Support of Claim — the second most submitted paper form in the VA — making it easier for Veterans and their families to apply for benefits online.'
+              - desc: 'Led the team that digitized and shipped 10 Veteran-facing VA forms, including the 21-4138 Statement in Support of Claim, making it easier for Veterans and their families to apply for benefits online.'
               - desc: 'Extended VA Form Upload to support submission of supporting documents, expanding the feature across multiple Pension forms and improving the end-to-end experience of submitting evidence with claims.'
               - desc: 'Led the Zero Silent Failures initiative across VA.gov forms — revising form confirmation pages, surfacing submission status via the Benefits Intake API on MyVA, and establishing org-wide visibility into previously hidden processing failures.'
               - desc: 'Commissioned and oversaw service design research identifying the top reasons form digitization took up to 9 months, resulting in recommendations delivered to the Design Community of Practice and a consolidated resource guide for digitizing VA forms.'
@@ -151,7 +153,7 @@ jobs:
           - desc: Reviewed the new framework with the USAJOBS Program Office and fellow designers in The Lab at OPM, revising it based on their feedback.
           - desc: Developed new SCRUM Agile team models in order to build capacity for Human-Centered Design within the USAJOBS Program Office.
           - desc: The adoption of the revised team model resulted in a 1 week reduction in the design and agile development cycle of all software releases and allowed one team to deliver a full re-write of their application, openopps.usajobs.gov, in 3 cycles of 8 weeks.
-      - accomplishment: Monitored, managed, and supervised 2-4 expert designers who utilized software applications for graphic design and illustrations.
+      - accomplishment: Supervised expert designers for the full duration of the role — beginning with 2 designers and growing to 3-4 — who utilized software applications for graphic design and illustrations.
         descriptions:
           - desc: Held monthly one on one meetings with design team members providing critique of their work, developing their abilities to perform and contribute to the organization, and providing them opportunities to learn at conferences and via online channels I introduced to The Lab.
           - desc: Reviewed timesheets for design team members and managed work load via daily stand-up meetings.
@@ -184,3 +186,47 @@ jobs:
         descriptions:
           - desc: 'Contributed to ten on-time releases, including the general availability launch in 2010.'
           - desc: 'Provided technical leadership — mentoring junior developers, creating code review guidelines, and standing up a continuous integration system for the code base.'
+
+  # Restored 2026-07-25. Dropped from this file in e395bff ("Split resume data into
+  # concise and federal sources") and absent until now; survived in the federal file.
+  # Start date corrected October 2001 -> December 1999 per LinkedIn record.
+  #
+  # Progression confirmed by Matthew 2026-07-25: joined the Network Operations team,
+  # moved into front-end engineering, promoted to Senior Software Engineer in 2001.
+  - name: Tellme Networks
+    location: Mountain View, CA
+    title: Software Engineer, Promoted to Senior Software Engineer
+    org: Network Operations, then Platform Engineering
+    start-date: December 1999
+    end-date: October 2008
+    timespan: 8 years, 11 months
+    accomplishments:
+      - accomplishment: 'Joined the Network Operations team and moved into front-end engineering, building the internal web applications that ran the Tellme Network. Promoted to Senior Software Engineer in 2001.'
+        descriptions:
+          - desc: 'Co-designed, built, and deployed internal web applications for viewing call traffic across the network and for provisioning every phone number it used.'
+          - desc: 'Co-designed and built a common framework for managing software across the Tellme Network.'
+          - desc: 'Led a specialized team of three addressing complex and critical engineering endeavors.'
+
+  # Restored 2026-07-25. Never present in any resume version — the 1996 start appears
+  # only in pages/about.html ("worked my way from customer service at WebTV").
+  # This entry is what supports the "30 years of experience" claim.
+  - name: Microsoft/WebTV Networks
+    location: Palo Alto, CA
+    title: Service Operations Team Lead
+    start-date: November 1998
+    end-date: December 1999
+    timespan: 1 year, 2 months
+    accomplishments:
+      - accomplishment: 'Helped run the operations center monitoring the software behind the WebTV Network — the first and largest consumer "cloud-based" network of its time.'
+        descriptions: []
+
+  - name: WebTV Networks
+    location: Palo Alto, CA
+    title: Customer Service, Promoted to Team Lead, Previews Beta Program
+    start-date: August 1996
+    end-date: October 1998
+    timespan: 2 years, 3 months
+    accomplishments:
+      - accomplishment: 'Joined WebTV in customer service and became Team Lead for Previews, the beta program for the WebTV Network, before moving to the Service Operations Center.'
+        descriptions:
+          - desc: 'Led a team of six, including writing performance reviews, and coordinated participant feedback from the beta program ahead of release.'
