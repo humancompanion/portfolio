@@ -9,6 +9,9 @@
   "repository": "http://github.com/humancompanion/portfolio",
   "sass": "sass/portfolio.scss",
   "devDependencies": {
+    "@guidepup/guidepup": "^0.28.1",
+    "@guidepup/playwright": "^0.17.0",
+    "@playwright/test": "^1.61.1",
     "autoprefixer": "^10.4.16",
     "bourbon": "^7.3.0",
     "bourbon-neat": "^4.0.0",
@@ -49,6 +52,9 @@
     "open:site": "opener http://www.abarrelofthis.com/",
     "start": "npm run dev",
     "test": "bundle exec htmlproofer ./_dist",
+    "test:sr": "playwright test",
+    "test:sr:voiceover": "playwright test --project=voiceover",
+    "test:sr:nvda": "playwright test --project=nvda",
     "update": "bundle update",
     "watch": "gulp watch",
     "postinstall": "echo 'If fsevents installation failed, it is optional and can be ignored on non-macOS platforms.'"
