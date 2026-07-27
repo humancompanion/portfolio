@@ -1,25 +1,3 @@
-{% comment %}
-  "What I would do differently" - SME-QA case study.
-
-  Pulled out of pages/case-study/smeqa.html so it can be edited on its own.
-  Rendered by {% raw %}{% include case-study/smeqa-lessons.html %}{% endraw %}
-  inside the painted full-bleed row on that page, so this file holds only the
-  section content - no wrapping .l-grid or .g-cell markup.
-
-  This is a Liquid comment, not an HTML one, so none of it reaches the built
-  page. Keep notes here rather than in <!-- --> comments.
-
-  Editing notes:
-  - Each lesson is an <li> that opens with a bolded claim, then the evidence.
-    Keeping that shape makes the list skimmable; a reader should be able to
-    read only the bold text and still get the argument.
-  - Order is deliberate: the two structural misreads first, the two about
-    what actually got adopted next, then the operational ones. Reorder freely,
-    but the "wrong customer" lesson is the strongest and should stay first.
-  - Prose style matches the rest of the site: em dashes as &mdash;, curly
-    quotes as &ldquo; &rdquo;, straight apostrophes are fine.
-{% endcomment %}
-
 <h3>What I would do differently</h3>
 <p>
   SME-QA did not become the default way government hires, and I think the
@@ -27,40 +5,28 @@
 </p>
 <ul class="list--bullet">
   <li>
-    <strong>We optimized for the wrong customer.</strong> We aimed almost
-    everything at HR specialists. But HR is not punished for a bad hire or
-    rewarded for a good one &mdash; HR is punished for failing to follow
-    process. The people who bear the cost of a broken hire are hiring
-    managers, and they had no lever. If I ran this again I would organize
-    hiring managers first and let the demand come down from agency
-    leadership, rather than trying to persuade HR from the side.
-  </li>
-  <li>
-    <strong>Telling people is not the same as changing behavior.</strong>
-    We did a full roadshow to agencies and taught a class. Both cost
+    <strong>Changing handbooks does not change behavior.</strong>
+    The team did a full roadshow to agencies and taught a class. Both cost
     enormous effort. Agencies hear recommendations constantly; we were one
     more voice. What actually moved an agency was being in the room running
-    a real hiring action with them.
-  </li>
-  <li>
-    <strong>The thing you build to make your thing work may be the more
-    valuable thing.</strong> We built a resume review tool and bought a
-    scheduler so the process could run. Those got adopted far more readily
-    than the process itself. Watch what the market picks up on its own and
-    lean into it.
+    a real hiring action with them. OPM made changes to the handbook but never really endorsed SME-QA as a way to hire
+    tech talent. The USDS team didn't scale to be able to run the process repeatedly across agencies and for multiple
+    roles. In retrospect, it may have been better to make our first 2 pilot agencies more successful across roles and
+    then use those as case studies to get other agencies to adopt the process.
   </li>
   <li>
     <strong>A process that needs a dedicated project manager is a process
-    with a design flaw.</strong> Our own case study concluded that SME-QA
+      with a design flaw.</strong> Our own case study concluded that SME-QA
     needs a project manager outside HR to hold the schedule together. That
     was an honest finding, but in hindsight it was also a warning: we had
     built something that only ran when we were personally pushing it. The
     adoption data bears that out.
   </li>
   <li>
-    <strong>Working outside your home turf is an away game.</strong> USDS
+    <strong>Building up credibility in a byzantine system is difficult.</strong> USDS
     had no inherent authority in hiring policy. The team put in
-    <a href="https://github.com/usds/SME-QA/wiki/Policy-Call-Notes" target="_blank" rel="noopener">57,000 words of policy call notes<span class="visually-hidden"> (opens in new tab)</span></a>
+    <a href="https://github.com/usds/SME-QA/wiki/Policy-Call-Notes" target="_blank" rel="noopener">57,000 words of
+      policy call notes<span class="visually-hidden"> (opens in new tab)</span></a>
     over two and a half years just to be credible enough in the room to
     answer &ldquo;isn't this illegal?&rdquo; That was the price of
     admission, not overhead.
