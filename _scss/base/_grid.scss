@@ -22,8 +22,13 @@
     margin-bottom: util.$size-L;
   }
 
+  // $grey-lighter, not $grey-light. On $grey-light (#bebfc5) the link colour
+  // #135fd7 lands at 3.14:1 and fails WCAG AA (needs 4.5:1), and body text
+  // only reaches 4.88:1. On #f1f1f1 body text is 7.92:1 and links are 5.10:1,
+  // so everything clears AA and body copy clears AAA. This is the same value
+  // .g-row--painted.is-feature already uses.
   &.g-row--painted {
-    background-color: util.$grey-light;
+    background-color: util.$grey-lighter;
   }
 }
 
