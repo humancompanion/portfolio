@@ -1,17 +1,17 @@
 // ---------------------------------------------------------------------------
 // Layout: Case Study
 
-@import "util/util";
+@use "util/util";
 
 .l-case_studies,
 .l-case_study {
   .g-row--bleed {
-    margin-left: -#{$page--gutter-width-S};
-    margin-right: -#{$page--gutter-width-S};
+    margin-left: -#{util.$page--gutter-width-S};
+    margin-right: -#{util.$page--gutter-width-S};
 
-    @include breakpoint(XL) {
-      margin-left: -#{$page--gutter-width-XL};
-      margin-right: -#{$page--gutter-width-XL};
+    @include util.breakpoint(XL) {
+      margin-left: -#{util.$page--gutter-width-XL};
+      margin-right: -#{util.$page--gutter-width-XL};
     }
   }
 
@@ -20,7 +20,7 @@
   }
 
   .g-B--full {
-    margin-bottom: $size-M;
+    margin-bottom: util.$size-M;
   }
 
   .img--1x,
@@ -32,21 +32,21 @@
 // Eyebrow label above expectation headings; keeps its former h6 (type-6)
 // styling now that it's a <p>
 .l-case_study__sub-title {
-  @include type-6();
+  @include util.type-6();
 }
 
 .l-case_studies {
   .t-usajobs {
-    background-color: $color_usajobs;
+    background-color: util.$color_usajobs;
   }
   .t-smeqa {
-    background-color: $color_smeqa;
+    background-color: util.$color_smeqa;
   }
   .t-cisco {
-    background-color: $color_cisco;
+    background-color: util.$color_cisco;
   }
   .t-marriott {
-    background-color: $color_marriott;
+    background-color: util.$color_marriott;
   }
 
   .case-study-spread {
@@ -62,7 +62,7 @@
 
     &__title,
     &__project-title {
-      color: $white;
+      color: util.$white;
     }
 
     &__title {
@@ -75,7 +75,7 @@
     }
 
     &__feature-img {
-      @include breakpoint(SM) {
+      @include util.breakpoint(SM) {
         width: 128px;
       }
     }
@@ -86,14 +86,14 @@
   .g-row--bleed {
     padding-right: 1rem;
 
-    @include breakpoint(XL) {
+    @include util.breakpoint(XL) {
       padding-left: 1.8rem;
       padding-right: 1.8rem;
     }
   }
 
   .g-row--painted.is-feature {
-    background-color: $grey-lighter;
+    background-color: util.$grey-lighter;
   }
 
   .enlarge {
@@ -101,7 +101,7 @@
   }
 
   .caption {
-    @include type-xsmall();
+    @include util.type-xsmall();
   }
 
   .list--bullet {
@@ -111,7 +111,7 @@
   .case_study-section__header-img {
     text-align: center;
 
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       text-align: right;
     }
   }
@@ -120,7 +120,7 @@
     margin-top: 0;
   }
 
-  @include breakpoint(SM) {
+  @include util.breakpoint(SM) {
     &__photo-pair-container {
       display: flex;
     }
@@ -142,11 +142,11 @@
       }
 
       &.is-left {
-        margin-right: $size-L;
+        margin-right: util.$size-L;
       }
 
       &.is-right {
-        margin-left: $size-L;
+        margin-left: util.$size-L;
       }
     }
   }

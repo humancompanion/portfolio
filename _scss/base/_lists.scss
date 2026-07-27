@@ -1,3 +1,5 @@
+@use "util/util";
+
 /*////////////////////////////////////////////////////////*/
 /*//                                                    //*/
 /*//    Lists                                           //*/
@@ -6,12 +8,12 @@
 
 @mixin defaultList() {
   list-style: none;
-  @include type-body();
+  @include util.type-body();
   margin: 0;
   padding: 0;
 
   > li {
-    line-height: $base-line-height;
+    line-height: util.$base-line-height;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,7 +37,7 @@ ol {
   > li {
     list-style-type: disc;
     margin-left: 1.25rem;
-    margin-bottom: $size-S;
+    margin-bottom: util.$size-S;
   }
 }
 
@@ -45,7 +47,7 @@ ol {
   > li {
     list-style-type: decimal;
     margin-left: 1.25rem;
-    line-height: $base-line-height;
+    line-height: util.$base-line-height;
   }
 }
 
@@ -70,7 +72,7 @@ ol {
     }
   }
 
-  @include breakpoint(SM) {
+  @include util.breakpoint(SM) {
     li {
       display: inline;
 
@@ -80,7 +82,7 @@ ol {
       }
 
       a {
-        padding: $size-base;
+        padding: util.$size-base;
       }
     }
     li:last-child:after {
@@ -90,7 +92,7 @@ ol {
 }
 
 .list--inline.contact-info--buttons {
-  padding: 0 $page--gutter-width-S;
+  padding: 0 util.$page--gutter-width-S;
 
   li {
     display: block;
@@ -98,13 +100,13 @@ ol {
     margin-bottom: .5rem;
     padding: 0;
 
-    @include breakpoint(SM) {
+    @include util.breakpoint(SM) {
       display: inline;
       width: auto;
     }
 
     &:first-child {
-      @include breakpoint(SM) {
+      @include util.breakpoint(SM) {
         margin-right: .5rem;
       }
     }
@@ -112,10 +114,10 @@ ol {
 
   .btn,
   .btn--primary {
-    font-size: $type-XS;
+    font-size: util.$type-XS;
     width: 100%;
 
-    @include breakpoint(SM) {
+    @include util.breakpoint(SM) {
       width: auto;
     }
   }
@@ -138,7 +140,7 @@ ol {
   margin-bottom: $margin-bottom-default;
 
   dd + dt {
-    margin-top: $margin-bottom-default / 2;
+    margin-top: $margin-bottom-default * 0.5;
   }
 }
 
@@ -183,6 +185,6 @@ ol {
   }
 
   &__link {
-    color: $color_link;
+    color: util.$color_link;
   }
 }

@@ -2,38 +2,43 @@
 
 // ---------------------------------------------------------------------------
 // Vendor
-@import "util/variables-vendor";
-@import "lib/bourbon";
-@import "lib/neat";
-@import "lib/normalize";
+@forward "util/variables-vendor";
+@use "lib/normalize";
 // @import 'font-awesome/font-awesome.scss';
 
-@import "util/util";
+@use "util/util";
 // Handy dev helper
 // @import 'util/grid-breakpointbar';
 
 // ---------------------------------------------------------------------------
 // Base
-@import "base/typography";
-@import "base/links";
-@import "base/buttons";
-@import "base/images";
-@import "base/grid";
-@import "base/shell";
-@import "base/lists";
-@import "base/accessibility";
+@use "base/typography";
+@use "base/links";
+@forward "base/buttons";
+@use "base/images";
+@forward "base/grid";
+@use "base/shell";
+@forward "base/lists";
+@use "base/accessibility";
 
 // ---------------------------------------------------------------------------
 // Components
-@import "components/header";
-@import "components/nav";
-@import "components/footer";
+@use "components/header";
+@forward "components/nav";
+@use "components/footer";
 
 // ---------------------------------------------------------------------------
 // Layouts
-@import "layouts/portfolio";
-@import "layouts/home";
-@import "layouts/case_study";
-@import "layouts/resume";
-@import "layouts/resume-print";
-@import "layouts/resume-screen-print-split";
+@use "layouts/portfolio";
+@use "layouts/home";
+@use "layouts/case_study";
+@use "layouts/resume";
+@use "layouts/resume-print";
+@forward "layouts/resume-screen-print-split";
+
+@forward "util/functions";
+@forward "util/type_mixins";
+@forward "util/var/color";
+@forward "util/var/layout";
+@forward "util/var/sizing";
+@forward "util/var/type_sizes";

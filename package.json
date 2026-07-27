@@ -33,7 +33,7 @@
     "postcss-discard-comments": "^6.0.0",
     "rimraf": "^3.0.2",
     "run-sequence": "^2.2.1",
-    "sass": "^1.69.5",
+    "sass": "^1.102.0",
     "stylelint": "^15.11.0",
     "stylelint-scss": "^5.2.1",
     "tar": "^7.5.21"

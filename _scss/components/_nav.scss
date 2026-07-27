@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // Component: Navigation
 
-@import "util/util";
+@use "util/util";
 
 .primary-nav {
   &__body {
@@ -15,49 +15,49 @@
 
 .primary-nav,
 .primary-nav--home {
-  border-top: 8px solid $red;
+  border-top: 8px solid util.$red;
 
   &__a {
     position: relative;
     display: block;
     width: 100%;
-    @include nav-4();
+    @include util.nav-4();
     margin: 0;
-    padding: $size-M $size-M ($size-M - 7.125px) 0;
-    color: $red;
+    padding: util.$size-M util.$size-M (util.$size-M - 7.125px) 0;
+    color: util.$red;
     line-height: 1.25;
     text-decoration: none;
     border-bottom: 7.125px solid transparent;
 
-    @include breakpoint(M) {
-      @include nav-2();
+    @include util.breakpoint(M) {
+      @include util.nav-2();
       margin: 0;
-      padding: $size-SM $size-SM $size-SM 0;
-      color: $red;
+      padding: util.$size-SM util.$size-SM util.$size-SM 0;
+      color: util.$red;
     }
 
     &:hover {
-      color: $red;
+      color: util.$red;
       text-decoration: none;
       border-bottom-color: inherit;
     }
 
     &:focus {
-      color: $red;
+      color: util.$red;
     }
 
     &::before {
       content: "/";
-      padding-right: $size-SM;
+      padding-right: util.$size-SM;
     }
 
     &.is-first {
-      @include breakpoint(SM) {
-        padding-left: $size-M;
+      @include util.breakpoint(SM) {
+        padding-left: util.$size-M;
       }
 
-      @include breakpoint(M) {
-        padding-left: $size-SM;
+      @include util.breakpoint(M) {
+        padding-left: util.$size-SM;
       }
 
       &::before {
@@ -72,7 +72,7 @@
 
   .list-item {
     display: inline-block;
-    color: $red;
+    color: util.$red;
   }
 
   &__body {
@@ -86,7 +86,7 @@
 
 .primary-nav--home {
   &__body {
-    max-width: $page--max-width;
+    max-width: util.$page--max-width;
     margin-left: auto;
     margin-right: auto;
   }
@@ -94,55 +94,55 @@
   // Red on the dark home background needs large text (24px+) for WCAG 1.4.3;
   // tighten item spacing below 480px so the larger links fit on one line
   &__a {
-    @include fontSize($type-ML);
-    padding-right: $size-S;
+    @include util.fontSize(util.$type-ML);
+    padding-right: util.$size-S;
 
     &::before {
-      padding-right: $size-S;
+      padding-right: util.$size-S;
     }
 
-    @include breakpoint(SM) {
-      padding-right: $size-M;
+    @include util.breakpoint(SM) {
+      padding-right: util.$size-M;
 
       &::before {
-        padding-right: $size-SM;
+        padding-right: util.$size-SM;
       }
     }
 
-    @include breakpoint(M) {
-      @include fontSize($type-XL);
-      padding-right: $size-SM;
+    @include util.breakpoint(M) {
+      @include util.fontSize(util.$type-XL);
+      padding-right: util.$size-SM;
     }
   }
 }
 
 .case-study-nav__body {
-  @include type-body($font_light);
-  @include lineHeight($base-line-height + 2px);
+  @include util.type-body(util.$font_light);
+  @include util.lineHeight(util.$base-line-height + 2px);
 }
 
 .home-nav__body {
-  @include type-body($font_cover2);
-  @include lineHeight($base-line-height + 2px);
+  @include util.type-body(util.$font_cover2);
+  @include util.lineHeight(util.$base-line-height + 2px);
 }
 
 .case-study-nav__title {
   &.is-current {
-    padding-left: $size-base;
+    padding-left: util.$size-base;
   }
 }
 
 .home-nav__header,
 .case-study-nav__header {
   // Keep type-3 sizing now that these are h2s (one h1 per page)
-  @include type-3();
+  @include util.type-3();
   font-weight: bold;
   text-transform: none;
 }
 
 // home-nav
-$home-nav-item-margin: $size-M;
-$home-nav-item-margin-L: $size-L;
+$home-nav-item-margin: util.$size-M;
+$home-nav-item-margin-L: util.$size-L;
 
 .home-nav {
   display: flex;
@@ -151,15 +151,15 @@ $home-nav-item-margin-L: $size-L;
   padding: 0;
 
   &__container {
-    max-width: $page--max-width;
+    max-width: util.$page--max-width;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__header {
-    font-family: $font_cover;
-    @include fontSize($type-L);
-    color: $white;
+    font-family: util.$font_cover;
+    @include util.fontSize(util.$type-L);
+    color: util.$white;
     text-transform: uppercase;
   }
 
@@ -168,19 +168,19 @@ $home-nav-item-margin-L: $size-L;
     width: 100%;
     margin-bottom: $home-nav-item-margin;
 
-    @include breakpoint(M) {
+    @include util.breakpoint(M) {
       flex: 1 1 40%;
       margin-right: $home-nav-item-margin;
     }
 
-    @include breakpoint(L) {
+    @include util.breakpoint(L) {
       margin-right: $home-nav-item-margin-L;
       margin-bottom: $home-nav-item-margin-L;
     }
   }
 
   &__item:nth-child(2n) {
-    @include breakpoint(M) {
+    @include util.breakpoint(M) {
       margin-right: 0;
     }
   }
@@ -217,8 +217,8 @@ $home-nav-item-margin-L: $size-L;
     // 0.7 alpha keeps white 16px text >= 4.5:1 even over pure-white image
     // pixels (WCAG 1.4.3); 0.6 dipped to 4.13:1 on light screenshots
     background: rgba(38, 38, 38, 0.7);
-    color: $white;
-    font-family: $font_cover;
+    color: util.$white;
+    font-family: util.$font_cover;
   }
 
   &__item a {
@@ -229,21 +229,21 @@ $home-nav-item-margin-L: $size-L;
 
 .home-nav--small {
   .home-nav__item {
-    @include breakpoint(M) {
+    @include util.breakpoint(M) {
       flex: 1;
     }
   }
   .home-nav__item:nth-child(2n) {
-    @include breakpoint(M) {
+    @include util.breakpoint(M) {
       margin-right: $home-nav-item-margin;
     }
-    @include breakpoint(L) {
+    @include util.breakpoint(L) {
       margin-right: $home-nav-item-margin-L;
     }
   }
 }
 
 .site-nav {
-  margin-top: $size-L;
+  margin-top: util.$size-L;
   padding: 1rem;
 }

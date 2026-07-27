@@ -1,3 +1,5 @@
+@use "util/util";
+
 // ---------------------------------------------------------------------------
 // Screen / print split for resume pages
 //
@@ -43,20 +45,20 @@ $tight-h4: 13px;
 @media print {
   .l-tight-headings {
     h2 {
-      @include fontSize($tight-h2);
-      @include lineHeight(24px);
+      @include util.fontSize($tight-h2);
+      @include util.lineHeight(24px);
       margin: 0.6rem 0 0.35rem;
     }
 
     h3 {
-      @include fontSize($tight-h3);
-      @include lineHeight(21px);
+      @include util.fontSize($tight-h3);
+      @include util.lineHeight(21px);
       margin: 0.7rem 0 0.2rem;
     }
 
     h4 {
-      @include fontSize($tight-h4);
-      @include lineHeight(17px);
+      @include util.fontSize($tight-h4);
+      @include util.lineHeight(17px);
       margin: 0.15rem 0 0.15rem;
     }
 
@@ -120,17 +122,17 @@ $tight-h4: 13px;
     .accomplishments li,
     .job__meta,
     .education__list {
-      @include fontSize(17px);
-      @include lineHeight(27px);
+      @include util.fontSize(17px);
+      @include util.lineHeight(27px);
     }
 
     .accomplishments li {
-      margin-bottom: $size-S;
+      margin-bottom: util.$size-S;
     }
 
     p.enlarge {
-      @include fontSize(19px);
-      @include lineHeight(30px);
+      @include util.fontSize(19px);
+      @include util.lineHeight(30px);
     }
 
     // Screen-only note that the printed version is abridged.

@@ -1,3 +1,5 @@
+@use "util/util";
+
 // ---------------------------------------------------------------------------
 // Base: Images - Responsive
 
@@ -39,17 +41,17 @@ img {
   }
 
   &__XL {
-    width: (1024px /2);
+    width: (1024px *0.5);
   }
 }
 
 .img--reduce.img__XL {
-  width: (1024px / 2);
+  width: (1024px * 0.5);
 }
 
 .figure-frame {
   padding: 0.5rem;
-  background-color: $white;
+  background-color: util.$white;
   text-align: center;
 }
 

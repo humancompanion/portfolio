@@ -61,6 +61,10 @@ function css() {
       sass({
         includePaths: ["_scss"],
         outputStyle: "expanded",
+        // gulp-sass still drives Dart Sass through its legacy JS API (needed
+        // for gulp-sourcemaps integration). Silence only that tooling
+        // deprecation; our own SCSS is fully migrated to the module system.
+        silenceDeprecations: ["legacy-js-api"],
       }).on("error", sass.logError)
     )
     .pipe(postcss(pluginsProcess))

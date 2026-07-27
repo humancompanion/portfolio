@@ -1,14 +1,13 @@
 // ---------------------------------------------------------------------------
 // Outside help
-@import "lib/bourbon";
 
 // ---------------------------------------------------------------------------
 // Variables
 
-@import "variables-print";
+@forward "variables-print";
 
 // ---------------------------------------------------------------------------
-// Functions
+// Functions (type mixins bound to the print type scale)
 
-@import "functions";
-@import "type_mixins";
+@forward "functions";
+@forward "type_mixins-print";

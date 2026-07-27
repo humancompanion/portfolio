@@ -1,25 +1,25 @@
 // ---------------------------------------------------------------------------
 // Component: Header
 
-@import "util/util";
+@use "util/util";
 
 .header,
 .header--home {
-  margin-bottom: $size-L;
-  border-top: 16px solid $red;
+  margin-bottom: util.$size-L;
+  border-top: 16px solid util.$red;
 
   &__body {
-    padding: 0 $page--gutter-width-S;
+    padding: 0 util.$page--gutter-width-S;
 
-    @include breakpoint(XL) {
-      padding: 0 $page--gutter-width-XL;
+    @include util.breakpoint(XL) {
+      padding: 0 util.$page--gutter-width-XL;
     }
   }
 }
 
 .header {
-  border-bottom: 1px solid $red;
-  background-color: $white;
+  border-bottom: 1px solid util.$red;
+  background-color: util.$white;
 
   &__title {
     margin-top: 0;
@@ -29,65 +29,65 @@
   &__sub-title {
     display: block;
     margin: 0;
-    font-family: $font_cover2;
+    font-family: util.$font_cover2;
     font-style: normal;
     font-weight: bold;
-    padding: $size-base 0;
-    color: $red;
+    padding: util.$size-base 0;
+    color: util.$red;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 
     &:hover {
-      color: $red;
+      color: util.$red;
       text-decoration: none;
       font-weight: 700;
     }
 
     &:focus {
-      color: $red;
+      color: util.$red;
     }
 
     .title {
-      color: $grey-cover;
+      color: util.$grey-cover;
     }
   }
 
   // Keep type-2 sizing now that the page title is the h1 (one h1 per page)
   &__page-title {
-    @include type-2();
+    @include util.type-2();
   }
 }
 
 .header--home {
   &__body {
-    max-width: $page--max-width;
+    max-width: util.$page--max-width;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__title {
     margin: 0;
-    font-family: $font_cover2;
+    font-family: util.$font_cover2;
     font-style: normal;
     font-weight: bold;
     padding: 0;
-    color: $red;
+    color: util.$red;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 
-    @include breakpoint(L) {
-      font-size: $type-XXL;
+    @include util.breakpoint(L) {
+      font-size: util.$type-XXL;
     }
   }
 
   .title {
-    color: $white;
+    color: util.$white;
   }
 }
 
 .header-resume {
-  @include clearfix();
+  @include util.clearfix();
   vertical-align: baseline;
 
   .header__body {
@@ -111,14 +111,14 @@
   }
 
   .header__portfolio {
-    @include type-body($font_light);
+    @include util.type-body(util.$font_light);
     margin: 0;
   }
 }
 
 .header-case-study {
   &__title {
-    margin-bottom: $size-S;
+    margin-bottom: util.$size-S;
   }
 
   &__project {
@@ -129,11 +129,11 @@
   }
 
   &__url {
-    @include type-xsmall($font_light);
+    @include util.type-xsmall(util.$font_light);
     text-transform: lowercase;
 
-    @include breakpoint(MLL) {
-      @include type-body($font_light);
+    @include util.breakpoint(MLL) {
+      @include util.type-body(util.$font_light);
       float: right;
       margin-top: 1.2rem;
     }
