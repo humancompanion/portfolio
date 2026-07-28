@@ -1,0 +1,15 @@
+# Jekyll templates: Prettier's HTML parser treats Liquid tags as text and will
+# reformat markup that appears inside Liquid arguments. For example, in
+# _includes/head.html it rewrites
+#   replace: '<br />', ' '
+# into a multi-line '<br />' string, which changes the filter's argument and
+# breaks the build. Keep Prettier away from all markup.
+*.html
+_includes/
+_layouts/
+pages/
+
+# Build output
+_site/
+_dist/
+node_modules/

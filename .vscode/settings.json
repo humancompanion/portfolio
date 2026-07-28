@@ -1,4 +1,10 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  // Jekyll pages/includes are Liquid templates, not plain HTML. Neither the
+  // built-in HTML formatter nor Prettier parses Liquid safely, so leave the
+  // markup alone on save. See .prettierignore.
+  "[html]": {
+    "editor.formatOnSave": false
+  }
 }
