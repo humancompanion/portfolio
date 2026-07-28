@@ -17,9 +17,10 @@ $grey-lighter: #f1f1f1;
 $grey-lightest: #fafafc;
 $grey-cover: #262626;
 $white-off: rgb(243, 240, 227);
+$ink: #1b1b1b; // near-black body text (15.9:1 on white)
 
 // by Type
-$color_base: $grey-medium;
+$color_base: $ink;
 $color_link: color.adjust($blue, $lightness: -10%); // 5.76:1 on white (WCAG 1.4.3)
 $color_linkhover: color.adjust($blue, $lightness: -15%);
 $color_linkactive: color.adjust($blue, $lightness: -20%);

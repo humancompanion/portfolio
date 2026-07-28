@@ -23,6 +23,8 @@
 
 // ---------------------------------------------------------------------------
 // Components
+@use "components/skip-link";
+@use "components/section-nav";
 @use "components/header";
 @forward "components/nav";
 @use "components/footer";
