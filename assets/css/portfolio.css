@@ -169,7 +169,7 @@ body{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin-bottom:0;
 }
@@ -305,7 +305,7 @@ p{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   max-width:48rem;
 }
@@ -355,7 +355,7 @@ blockquote{
   line-height:24px;
   line-height:1.5rem;
   margin:0.75rem 0 0.5rem;
-  color:#454958;
+  color:#1b1b1b;
   padding-left:1.8rem;
   margin:2rem auto;
 }
@@ -1515,7 +1515,7 @@ ol{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
@@ -1536,7 +1536,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
@@ -1573,7 +1573,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
@@ -1654,7 +1654,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
@@ -1677,7 +1677,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
@@ -1881,7 +1881,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   margin:0;
   overflow-wrap:anywhere;
@@ -1911,7 +1911,7 @@ ol > li{
     font-size:1rem;
     line-height:24px;
     line-height:1.5rem;
-    color:#454958;
+    color:#1b1b1b;
     margin-bottom:0.75rem;
     float:right;
     margin-top:1.2rem;
@@ -2053,7 +2053,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   line-height:26px;
   line-height:1.625rem;
@@ -2065,7 +2065,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   line-height:26px;
   line-height:1.625rem;
@@ -2249,7 +2249,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   color:#262626;
 }
@@ -2275,7 +2275,7 @@ ol > li{
   font-size:1rem;
   line-height:24px;
   line-height:1.5rem;
-  color:#454958;
+  color:#1b1b1b;
   margin-bottom:0.75rem;
   display:inline-block;
   padding:4px 0;
@@ -2799,7 +2799,7 @@ ol > li{
     font-size:0.75rem;
     line-height:18px;
     line-height:1.125rem;
-    color:#454958;
+    color:#1b1b1b;
     margin-bottom:0.5625rem;
     margin-bottom:0;
   }
@@ -2945,7 +2945,7 @@ ol > li{
     font-size:0.75rem;
     line-height:18px;
     line-height:1.125rem;
-    color:#454958;
+    color:#1b1b1b;
     margin-bottom:0.5625rem;
     max-width:48rem;
   }
@@ -2997,7 +2997,7 @@ ol > li{
     line-height:18px;
     line-height:1.125rem;
     margin:0.5625rem 0 0.3125rem;
-    color:#454958;
+    color:#1b1b1b;
     padding-left:1.8rem;
     margin:2rem auto;
   }
@@ -3031,7 +3031,7 @@ ol > li{
   }
   .l-resume .notes,
   .l-federal-resume .notes{
-    font-size:10px;
+    font-size:12px;
   }
   .l-resume .notes--extended,
   .l-federal-resume .notes--extended{

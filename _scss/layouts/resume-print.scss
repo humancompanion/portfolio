@@ -21,7 +21,9 @@
   }
 
   .notes {
-    font-size: util-print.$type-XS;
+    // 12px, not 10px — the smallest size was hard to read on screen. This note
+    // is screen-only anyway (.print-note is hidden in @media print).
+    font-size: util-print.$type-S;
 
     &--extended {
       padding: 0;
@@ -105,6 +107,16 @@
 
     @include util.breakpoint(MLL) {
       border-bottom: 1px solid util.$red;
+    }
+
+    // Screen-only breathing room below the contact block: keeps the portfolio
+    // URL off the red border and gives the link's focus ring room to clear it
+    // (the ring was landing on the border and reading as a double line). Scoped
+    // to @media screen so the 2-page print layout keeps its tight header.
+    @media screen {
+      .header__body {
+        padding-bottom: util.$size-SM;
+      }
     }
   }
 
