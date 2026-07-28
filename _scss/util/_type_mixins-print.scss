@@ -1,0 +1,140 @@
+@use "variables-print" as v;
+
+// https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_fontSize.scss
+// Function for converting a px based font-size to rem.
+@use "sass:math";
+
+@function calculateRem($size) {
+  $remSize: math.div($size, v.$base-font-size);
+  // Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin lineHeight($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+@mixin header() {
+  font-family: v.$font_light;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0;
+  color: v.$grey-darkest;
+}
+
+@mixin nav() {
+  font-family: v.$font_cover;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0;
+  color: v.$red;
+}
+
+@mixin nav-2() {
+  @include nav();
+  @include fontSize(v.$type-XL);
+  @include lineHeight(v.$base-line-height * 2);
+  margin: calculateRem(v.$base-line-height * 2) 0 calculateRem(v.$base-line-height);
+}
+
+@mixin nav-3() {
+  @include nav();
+  @include fontSize(v.$type-L);
+  @include lineHeight(v.$base-line-height * 1.5);
+  margin: calculateRem(v.$base-line-height) 0 calculateRem(v.$base-line-height - 4);
+}
+
+@mixin nav-4() {
+  @include nav();
+  @include fontSize(v.$type-M);
+  @include lineHeight(v.$base-line-height);
+  margin: calculateRem(v.$base-line-height) 0 calculateRem(v.$base-line-height - 6);
+}
+
+@mixin type-1 {
+  @include header();
+  font-weight: 800;
+  @include fontSize(v.$type-XL);
+  @include lineHeight(v.$base-line-height * 2.5);
+  margin: calculateRem(v.$base-line-height * 2) 0;
+}
+
+@mixin type-2 {
+  @include header();
+  @include fontSize(v.$type-XL);
+  @include lineHeight(v.$base-line-height * 2);
+  margin: calculateRem(v.$base-line-height * 2) 0 calculateRem(v.$base-line-height);
+  text-transform: uppercase;
+}
+
+@mixin type-3 {
+  @include header();
+  @include fontSize(v.$type-L);
+  @include lineHeight(v.$base-line-height * 1.5);
+  margin: calculateRem(v.$base-line-height) 0 calculateRem(v.$base-line-height - 4);
+}
+
+@mixin type-4 {
+  @include header();
+  @include fontSize(v.$type-M);
+  @include lineHeight(v.$base-line-height);
+  margin: calculateRem(v.$base-line-height) 0 calculateRem(v.$base-line-height - 6);
+}
+
+@mixin type-5($font_family: v.$font_light) {
+  @include header();
+  font-family: $font_family;
+  @include fontSize(v.$type-SM);
+  @include lineHeight(v.$base-line-height);
+  margin: 1.25rem 0 0.5rem;
+}
+
+@mixin type-6 {
+  @include header();
+  font-weight: 500;
+  @include fontSize(v.$type-S);
+  @include lineHeight(v.$base-line-height);
+  margin: calculateRem(v.$base-line-height * 0.5) 0
+    calculateRem((v.$base-line-height * 0.5) - 4);
+}
+
+@mixin type-small {
+  font-family: v.$font_regular;
+  @include fontSize(v.$type-XS);
+  margin: 0;
+}
+
+@mixin type-body($font_family: v.$font_regular) {
+  font-family: $font_family;
+  @include fontSize(v.$type-S);
+  @include lineHeight(v.$base-line-height);
+  color: v.$color_base;
+  margin-bottom: calculateRem(v.$base-line-height * 0.5);
+}
+
+@mixin type-xsmall($font_family: v.$font_regular) {
+  font-family: $font_family;
+  @include fontSize(v.$type-XS);
+  @include lineHeight(v.$type-SM);
+  letter-spacing: 0.008rem;
+  margin: 0;
+}
+
+@mixin type-label() {
+  font-family: v.$font_light;
+  font-style: normal;
+  font-weight: 800;
+  @include fontSize(v.$type-S);
+  @include lineHeight(v.$type-S);
+  letter-spacing: 0.008rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: calculateRem(20px) 0 calculateRem(10px);
+}

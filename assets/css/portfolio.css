@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Lora|Montserrat|Libre+Franklin|Domine");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html{
   line-height:1.15;
   -webkit-text-size-adjust:100%;
@@ -31,8 +31,7 @@ a{
 abbr[title]{
   border-bottom:none;
   text-decoration:underline;
-  -webkit-text-decoration:underline dotted;
-          text-decoration:underline dotted;
+  text-decoration:underline dotted;
 }
 b,
 strong{
@@ -375,7 +374,7 @@ blockquote{
   line-height:31.2px;
 }
 a{
-  color:rgb(18.72, 94.64, 215.28);
+  color:rgb(7.3411764706%, 37.1137254902%, 84.4235294118%);
   line-height:inherit;
   text-decoration:underline;
 }
@@ -383,13 +382,13 @@ a:link{
   -webkit-tap-highlight-color:transparent;
 }
 a:hover{
-  color:rgb(16.68, 84.3266666667, 191.82);
+  color:rgb(6.5411764706%, 33.0692810458%, 75.2235294118%);
 }
 a:active{
-  color:rgb(14.64, 74.0133333333, 168.36);
+  color:rgb(5.7411764706%, 29.0248366013%, 66.0235294118%);
 }
 a:focus{
-  color:rgb(14.64, 74.0133333333, 168.36);
+  color:rgb(5.7411764706%, 29.0248366013%, 66.0235294118%);
   outline-offset:2px;
 }
 .btn{
@@ -421,11 +420,11 @@ a:focus{
 }
 .btn:hover:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(60.0343949045, 63.5146496815, 76.5656050955);
+  background-color:rgb(23.5428999625%, 24.9077057575%, 30.0257274884%);
 }
 .btn:focus:not(.btn--disabled), .btn:active:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(51.0687898089, 54.0292993631, 65.1312101911);
+  background-color:rgb(20.0269763957%, 21.1879605345%, 25.5416510553%);
 }
 .btn--primary{
   position:relative;
@@ -456,11 +455,11 @@ a:focus{
 }
 .btn--primary:hover:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(69.0565445026, 153.1738219895, 229.5434554974);
+  background-color:rgb(27.0809978442%, 60.0681654861%, 90.0170413715%);
 }
 .btn--primary:focus:not(.btn--disabled), .btn--primary:active:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(51.1130890052, 143.3476439791, 227.0869109948);
+  background-color:rgb(20.0443486295%, 56.2147623447%, 89.0536905862%);
 }
 .btn--secondary{
   position:relative;
@@ -491,11 +490,11 @@ a:focus{
 }
 .btn--secondary:hover:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(91.8, 91.8, 91.8);
+  background-color:rgb(36%, 36%, 36%);
 }
 .btn--secondary:focus:not(.btn--disabled), .btn--secondary:active:not(.btn--disabled){
   color:#fff;
-  background-color:rgb(81.6, 81.6, 81.6);
+  background-color:rgb(32%, 32%, 32%);
 }
 .btn--block{
   display:block;
@@ -1541,7 +1540,6 @@ ol > li{
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
-  margin-bottom:1rem;
 }
 .list--bullet > li{
   line-height:24px;
@@ -1549,6 +1547,9 @@ ol > li{
   margin:0;
   padding:0;
   zoom:1;
+}
+.list--bullet{
+  margin-bottom:1rem;
 }
 .list--bullet > li{
   list-style-type:disc;
@@ -1576,7 +1577,6 @@ ol > li{
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
-  margin-bottom:1rem;
 }
 .list--inline > li{
   line-height:24px;
@@ -1584,6 +1584,9 @@ ol > li{
   margin:0;
   padding:0;
   zoom:1;
+}
+.list--inline{
+  margin-bottom:1rem;
 }
 .list--inline > li{
   display:inline;
@@ -1678,7 +1681,6 @@ ol > li{
   margin-bottom:0.75rem;
   margin:0;
   padding:0;
-  margin-bottom:1rem;
 }
 .list--definition > li{
   line-height:24px;
@@ -1686,6 +1688,9 @@ ol > li{
   margin:0;
   padding:0;
   zoom:1;
+}
+.list--definition{
+  margin-bottom:1rem;
 }
 .list--definition dd + dt{
   margin-top:0.5rem;
@@ -1725,7 +1730,7 @@ ol > li{
   padding-top:0;
 }
 .list--media-object__link{
-  color:rgb(18.72, 94.64, 215.28);
+  color:rgb(7.3411764706%, 37.1137254902%, 84.4235294118%);
 }
 
 .visually-hidden{
@@ -1840,13 +1845,13 @@ ol > li{
   color:#fff;
 }
 
-.header-resume{
-  vertical-align:baseline;
-}
 .header-resume::after{
   clear:both;
   content:"";
   display:block;
+}
+.header-resume{
+  vertical-align:baseline;
 }
 .header-resume .header__body{
   display:-webkit-box;
@@ -2195,16 +2200,16 @@ ol > li{
   padding:1rem;
 }
 
+.footer::after{
+  clear:both;
+  content:"";
+  display:block;
+}
 .footer{
   margin:48px 0 0;
   padding:24px 0;
   border-top:16px solid rgb(226, 32, 43);
   background-color:#fff;
-}
-.footer::after{
-  clear:both;
-  content:"";
-  display:block;
 }
 .footer__body{
   display:-webkit-box;
@@ -2458,6 +2463,9 @@ ol > li{
 .l-case_studies .t-usajobs{
   background-color:#112e51;
 }
+.l-case_studies .t-smeqa{
+  background-color:#1a4480;
+}
 .l-case_studies .t-cisco{
   background-color:#007fc5;
 }
@@ -2574,8 +2582,12 @@ ol > li{
 .l-resume .content-well dl dd{
   margin:0;
 }
+.l-resume{
+}
 .l-resume .enlarge{
   margin-top:0;
+}
+.l-resume{
 }
 .l-resume section::after{
   clear:both;
@@ -2600,13 +2612,13 @@ ol > li{
     line-height:1.4;
   }
 }
-.l-resume .section_body{
-  max-width:850px;
-}
 .l-resume .section_body::after{
   clear:both;
   content:"";
   display:block;
+}
+.l-resume .section_body{
+  max-width:850px;
 }
 @media (min-width: 48rem){
   .l-resume .section_body{
@@ -2621,6 +2633,8 @@ ol > li{
 }
 .l-resume .section_body.first{
   border-top:0;
+}
+.l-resume{
 }
 .l-resume .skills-list li{
   margin:3px 0;
@@ -2659,6 +2673,8 @@ ol > li{
   margin:1.25rem 0 0.5rem;
   margin-top:0;
 }
+.l-resume{
+}
 .l-resume .content-well .talent{
   margin:0;
   padding-bottom:0;
@@ -2671,6 +2687,8 @@ ol > li{
 }
 .l-resume .talent h2{
   margin-bottom:6px;
+}
+.l-resume{
 }
 .l-resume .job{
   position:relative;
@@ -2751,11 +2769,6 @@ ol > li{
 
 @media print{
   @import url("https://fonts.googleapis.com/css?family=Roboto:300");
-  .l-resume,
-  .l-federal-resume{
-    @import url("https://fonts.googleapis.com/css?family=Lora|Montserrat|Libre+Franklin|Domine");
-    background-color:#fff;
-  }
   .l-resume html,
   .l-federal-resume html{
     -webkit-font-smoothing:antialiased;
@@ -2989,6 +3002,10 @@ ol > li{
     margin:1.125rem 0 0.75rem;
     line-height:23.4px;
   }
+  .l-resume,
+  .l-federal-resume{
+    background-color:#fff;
+  }
   .l-resume p,
   .l-resume .section_body,
   .l-resume .notes,
@@ -3158,15 +3175,15 @@ ol > li{
   .l-federal-resume .skills{
     display:none;
   }
-  .l-resume .job,
-  .l-federal-resume .job{
-    margin-bottom:0.8rem;
-  }
   .l-resume .job::after,
   .l-federal-resume .job::after{
     clear:both;
     content:"";
     display:table;
+  }
+  .l-resume .job,
+  .l-federal-resume .job{
+    margin-bottom:0.8rem;
   }
   .l-resume .job:last-child,
   .l-federal-resume .job:last-child{
@@ -3191,15 +3208,15 @@ ol > li{
     float:left;
     width:33%;
   }
-  .l-resume .job__role,
-  .l-federal-resume .job__role{
-    margin-bottom:0.6rem;
-  }
   .l-resume .job__role::after,
   .l-federal-resume .job__role::after{
     clear:both;
     content:"";
     display:table;
+  }
+  .l-resume .job__role,
+  .l-federal-resume .job__role{
+    margin-bottom:0.6rem;
   }
   .l-resume .job__role:last-child,
   .l-federal-resume .job__role:last-child{

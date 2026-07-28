@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // ---------------------------------------------------------------------------
 // Base: Color
 
@@ -18,14 +20,15 @@ $white-off: rgb(243, 240, 227);
 
 // by Type
 $color_base: $grey-medium;
-$color_link: darken($blue, 10%); // 5.76:1 on white (WCAG 1.4.3)
-$color_linkhover: darken($blue, 15%);
-$color_linkactive: darken($blue, 20%);
+$color_link: color.adjust($blue, $lightness: -10%); // 5.76:1 on white (WCAG 1.4.3)
+$color_linkhover: color.adjust($blue, $lightness: -15%);
+$color_linkactive: color.adjust($blue, $lightness: -20%);
 
 $color_button-default: $grey-medium;
 $color_button-default-text: $white;
 
 // by Client
 $color_usajobs: #112e51;
+$color_smeqa: #1a4480;
 $color_cisco: #007fc5;
 $color_marriott: $black;

@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Variables
 
-@import "var/type_sizes";
-@import "var/sizing";
-@import "var/color";
-@import "var/layout";
+@forward "var/type_sizes";
+@forward "var/sizing";
+@forward "var/color";
+@forward "var/layout";

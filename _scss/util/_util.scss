@@ -2,10 +2,10 @@
 // ---------------------------------------------------------------------------
 // Variables
 
-@import "variables";
+@forward "variables";
 
 // ---------------------------------------------------------------------------
 // Functions
 
-@import "functions";
-@import "type_mixins";
+@forward "functions";
+@forward "type_mixins";

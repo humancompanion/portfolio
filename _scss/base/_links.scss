@@ -1,7 +1,9 @@
+@use "util/util";
+
 /* Links
 ---------------------------------------- */
 a {
-  color: $color_link;
+  color: util.$color_link;
   line-height: inherit;
   text-decoration: underline;
 
@@ -10,15 +12,15 @@ a {
   }
 
   &:hover {
-    color: $color_linkhover;
+    color: util.$color_linkhover;
   }
 
   &:active {
-    color: $color_linkactive;
+    color: util.$color_linkactive;
   }
 
   &:focus {
-    color: $color_linkactive;
+    color: util.$color_linkactive;
     outline-offset: 2px;
   }
 }

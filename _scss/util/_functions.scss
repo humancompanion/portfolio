@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:string";
+@use "var/layout";
+
 // -----------------------------------------------------------------------------
 // Breakpoints
 //
@@ -37,10 +42,10 @@ $breakpoints: (
 // @param {String} $replace ('') - New value
 // @return {String} - Updated string
 @function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
+  $index: string.index($string, $search);
 
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
   }
 
   @return $string;
@@ -48,8 +53,8 @@ $breakpoints: (
 
 @mixin breakpoint($point, $direction: "up") {
   @each $breakpoint in $breakpoints {
-    $query: nth($breakpoint, 1);
-    $name: nth($breakpoint, 2);
+    $query: list.nth($breakpoint, 1);
+    $name: list.nth($breakpoint, 2);
 
     @if $direction == up {
       @if ($name == $point) {
@@ -96,13 +101,13 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // Add percentage of white to a color
 @function tint($color, $percent){
-    @return mix(white, $color, $percent);
+    @return color.mix(white, $color, $percent);
 }
 
 // -----------------------------------------------------------------------------
 // Add percentage of black to a color
 @function shade($color, $percent){
-    @return mix(black, $color, $percent);
+    @return color.mix(black, $color, $percent);
 }
 
 // -----------------------------------------------------------------------------
@@ -115,6 +120,36 @@ $breakpoints: (
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;
     }
+}
+
+// -----------------------------------------------------------------------------
+// Clearfix: contains floats (formerly Bourbon's clearfix).
+// $display defaults to block; the print resume uses table to match the older
+// Bourbon clearfix it historically pulled in.
+@mixin clearfix($display: block) {
+  &::after {
+    clear: both;
+    content: "";
+    display: $display;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Flexbox shorthand with legacy prefixes (formerly Bourbon's flex())
+@mixin flex($value) {
+  // Grab flex-grow for older browsers.
+  $flex-grow: list.nth($value, 1);
+
+  // 2009
+  -webkit-box-flex: $flex-grow;
+  -moz-box-flex: $flex-grow;
+  box-flex: $flex-grow;
+
+  // 2011 (IE 10), 2012
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
 }
 
 // -----------------------------------------------------------------------------
@@ -132,7 +167,7 @@ $breakpoints: (
 
 // -----------------------------------------------------------------------------
 // Bleed: Bleeds components to the edge of the viewport
-@mixin bleed($padding: $page--gutter-width-S, $sides: left right) {
+@mixin bleed($padding: layout.$page--gutter-width-S, $sides: left right) {
   @if $sides == 'all' {
     margin: -#{$padding};
     padding: $padding;

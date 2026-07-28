@@ -1,0 +1,125 @@
+@use "util/util-print";
+
+// ---------------------------------------------------------------------------
+// Typography
+
+// Fonts
+
+// Normalization to start
+html {
+  @include util-print.font-smoothing(on);
+  font-size: util-print.$base-font-size;
+  text-size-adjust: none;
+}
+
+body {
+  @include util-print.type-body();
+  margin-bottom: 0;
+}
+
+*[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+*[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+bdo[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+bdo[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Break long words rather than overflow at narrow widths / wide text
+  // spacing (WCAG 1.4.10, 1.4.12)
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  @include util-print.type-1();
+}
+
+h2 {
+  @include util-print.type-2();
+}
+
+h3 {
+  @include util-print.type-3();
+}
+
+h4 {
+  @include util-print.type-4();
+}
+
+h5 {
+  @include util-print.type-5();
+}
+
+h6 {
+  @include util-print.type-6();
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+h5 + p {
+  margin-top: 0;
+}
+
+p {
+  @include util-print.type-body();
+  max-width: 48rem;
+}
+
+.small {
+  @include util-print.type-small();
+}
+
+.fine-print {
+  @include util-print.type-xsmall();
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+hr {
+  margin: 0.5rem 0;
+  height: 1px;
+  border: 1px solid util-print.$grey-medium;
+}
+
+blockquote {
+  @include util-print.type-6();
+  color: util-print.$color_base;
+  padding-left: 1.8rem;
+  margin: 2rem auto;
+}
+
+.enlarge {
+  @include util-print.type-4();
+  line-height: util-print.$base-line-height * 1.3;
+}

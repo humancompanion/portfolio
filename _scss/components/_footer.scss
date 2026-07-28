@@ -1,44 +1,44 @@
 // ---------------------------------------------------------------------------
 // Component: Footer
 
-@import "util/util";
+@use "util/util";
 
 .footer {
-  @include clearfix();
-  margin: $size-XL 0 0;
-  padding: $size-ML 0;
-  border-top: 16px solid $red;
-  background-color: $white;
+  @include util.clearfix();
+  margin: util.$size-XL 0 0;
+  padding: util.$size-ML 0;
+  border-top: 16px solid util.$red;
+  background-color: util.$white;
 
   &__body {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
-    padding: 0 $page--gutter-width-S;
+    padding: 0 util.$page--gutter-width-S;
 
-    @include breakpoint(XL) {
-      padding: 0 $page--gutter-width-XL;
+    @include util.breakpoint(XL) {
+      padding: 0 util.$page--gutter-width-XL;
     }
   }
 
   &__identity {
-    margin-right: $size-ML;
+    margin-right: util.$size-ML;
   }
 
   &__name {
     display: block;
-    font-family: $font_cover2;
+    font-family: util.$font_cover2;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: $red;
+    color: util.$red;
   }
 
   &__title {
     display: block;
-    @include type-body($font_light);
-    color: $grey-cover;
+    @include util.type-body(util.$font_light);
+    color: util.$grey-cover;
   }
 
   &__links {
@@ -49,7 +49,7 @@
     list-style: none;
 
     li {
-      margin: $size-S 0 0 $size-ML;
+      margin: util.$size-S 0 0 util.$size-ML;
 
       &:first-child {
         margin-left: 0;
@@ -57,16 +57,16 @@
     }
 
     a {
-      @include type-body($font_light);
+      @include util.type-body(util.$font_light);
       display: inline-block;
       // Meet the 24px minimum target size (WCAG 2.5.8)
-      padding: $size-base 0;
-      color: $grey-cover;
+      padding: util.$size-base 0;
+      color: util.$grey-cover;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: $red;
+        color: util.$red;
         text-decoration: none;
       }
     }

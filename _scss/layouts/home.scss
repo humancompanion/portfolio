@@ -1,14 +1,14 @@
 // ---------------------------------------------------------------------------
 // Layout: Home
 
-@import "util/util";
+@use "util/util";
 
 .l-home,
 .l-home-content-well {
-  background-color: $grey-cover;
+  background-color: util.$grey-cover;
 
   :focus {
-    outline: 2px solid $white;
+    outline: 2px solid util.$white;
     outline-offset: 2px;
   }
 }
@@ -17,7 +17,7 @@
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  border: solid $grey-cover;
+  border: solid util.$grey-cover;
   border-width: 8px 0 2px 0;
 }
 
@@ -25,7 +25,7 @@
   &__photo {
     position: relative;
     max-height: 80vh;
-    max-width: $page--max-width;
+    max-width: util.$page--max-width;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -40,25 +40,25 @@
   }
 
   &__callout-text {
-    font-family: $font_cover2;
-    @include fontSize($type-SM);
-    @include lineHeight($base-line-height * 1.4);
-    margin: calculateRem($base-line-height) 0
-      calculateRem($base-line-height - 4);
-    padding: 0 $page--gutter-width-S;
+    font-family: util.$font_cover2;
+    @include util.fontSize(util.$type-SM);
+    @include util.lineHeight(util.$base-line-height * 1.4);
+    margin: util.calculateRem(util.$base-line-height) 0
+      util.calculateRem(util.$base-line-height - 4);
+    padding: 0 util.$page--gutter-width-S;
     width: 100%;
     max-width: 66ch;
     margin-left: auto;
     margin-right: auto;
     font-style: normal;
     font-weight: bold;
-    color: $white;
+    color: util.$white;
 
-    @include breakpoint(SM) {
-      @include fontSize($type-M);
+    @include util.breakpoint(SM) {
+      @include util.fontSize(util.$type-M);
     }
 
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       width: 45%;
     }
   }
@@ -67,26 +67,26 @@
 .l-home-case-studies,
 .l-home-experience,
 .l-home-skills {
-  padding: $size-M $page--gutter-width-S 3rem;
+  padding: util.$size-M util.$page--gutter-width-S 3rem;
 
-  @include breakpoint(XL) {
-    padding: $size-M ($page--gutter-width-XL * 2) 3rem;
+  @include util.breakpoint(XL) {
+    padding: util.$size-M (util.$page--gutter-width-XL * 2) 3rem;
   }
 }
 
 .l-home-experience {
-  background-color: $grey-lightest;
+  background-color: util.$grey-lightest;
 
-  @include breakpoint(XL) {
+  @include util.breakpoint(XL) {
     background-image: url("../images/experience/background-XL-2x.png");
     background-repeat: no-repeat;
   }
 
   .home-nav__header {
-    color: $grey-cover;
+    color: util.$grey-cover;
 
-    @include breakpoint(XL) {
-      color: $grey-medium;
+    @include util.breakpoint(XL) {
+      color: util.$grey-medium;
     }
   }
 }

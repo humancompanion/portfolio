@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // Layout: Resume
-@import "util/util";
+@use "util/util";
 
 .l-resume {
   /* ----------------------------- Base -----------------------------------*/
@@ -33,13 +33,13 @@
 
   /* ----------------------------- Sections -----------------------------------*/
   section {
-    @include clearfix();
+    @include util.clearfix();
   }
 
   .section_title {
     margin-bottom: 0.5em;
 
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       float: left;
       width: 25%;
       margin-bottom: 0;
@@ -47,26 +47,26 @@
     }
 
     h2 {
-      @include breakpoint(ML) {
+      @include util.breakpoint(ML) {
         margin-top: 0;
-        font-size: $type-L;
+        font-size: util.$type-L;
         line-height: 1.4;
       }
     }
   }
 
   .section_body {
-    @include clearfix();
+    @include util.clearfix();
     max-width: 850px;
 
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       float: right;
       width: 73%;
       margin-left: 2%;
       margin-bottom: 1em;
       padding-top: 2em;
       padding-bottom: 1em;
-      border-top: 1px solid $grey-darkest;
+      border-top: 1px solid util.$grey-darkest;
     }
 
     &.first {
@@ -89,7 +89,7 @@
 
   .skills div.section_body {
     // 2 x 2 grid of skill categories at the MML breakpoint (640px) and up.
-    @include breakpoint(MML) {
+    @include util.breakpoint(MML) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 24px;
@@ -102,7 +102,7 @@
   }
 
   .skills div.section_body dl dt {
-    @include type-5($font_light);
+    @include util.type-5(util.$font_light);
     margin-top: 0;
   }
 
@@ -111,7 +111,7 @@
     margin: 0;
     padding-bottom: 0;
 
-    @include breakpoint(SM) {
+    @include util.breakpoint(SM) {
       float: left;
       width: 33%;
     }
@@ -128,13 +128,13 @@
   }
 
   .job .location {
-    @include type-6();
+    @include util.type-6();
     margin-top: 0;
   }
 
   // Job metadata (grade, dates) — paragraphs styled like the h5s they replaced
   .job__meta {
-    @include type-5();
+    @include util.type-5();
   }
 
   .job h3 {
@@ -152,7 +152,7 @@
 
   // At the ML breakpoint the section body already draws its own top border, so
   // drop the first employer's soft h3 divider to avoid a double line.
-  @include breakpoint(ML) {
+  @include util.breakpoint(ML) {
     #experience .job:first-of-type h3 {
       border-top: 0;
       padding-top: 0;
@@ -172,7 +172,7 @@
     list-style-type: none;
     margin-left: -1em;
     margin-top: 1em;
-    margin-bottom: calculateRem($base-line-height / 2);
+    margin-bottom: util.calculateRem(util.$base-line-height * 0.5);
   }
 
   #experience ul li ol li {
@@ -181,7 +181,7 @@
 
   .notes,
   ol.notes li {
-    @include type-small();
+    @include util.type-small();
   }
 
   .notes {

@@ -1,24 +1,27 @@
+@use "sass:meta";
+@use "util/util";
+@use "util/util-print";
+
 // ---------------------------------------------------------------------------
 // Layout: Print version of Resume
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
 
 .l-resume,
 .l-federal-resume {
-  @import "util/util-print";
-  @import "base/typography";
+  @include meta.load-css("base/typography-print");
 
-  background-color: $white;
+  background-color: util.$white;
 
   p,
   .section_body,
   .notes {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    font-size: $base-font-size;
+    font-size: util-print.$base-font-size;
   }
 
   .notes {
-    font-size: $type-XS;
+    font-size: util-print.$type-XS;
 
     &--extended {
       padding: 0;
@@ -63,7 +66,7 @@
   // Job metadata (grade, dates) — paragraphs styled like the h5s they
   // replaced; margin overrides below must stay after this rule
   .job__meta {
-    @include type-5();
+    @include util-print.type-5();
   }
 
   // Have to get everything onto a page so remove header margins
@@ -92,16 +95,16 @@
   }
 
   .header__title {
-    font-size: $type-XXL;
+    font-size: util-print.$type-XXL;
     padding: 0;
-    margin: $size-base 0 0;
+    margin: util.$size-base 0 0;
   }
 
   .header {
     margin-bottom: 0;
 
-    @include breakpoint(MLL) {
-      border-bottom: 1px solid $red;
+    @include util.breakpoint(MLL) {
+      border-bottom: 1px solid util.$red;
     }
   }
 
@@ -127,7 +130,7 @@
   }
 
   .section_body {
-    @include clearfix();
+    @include util.clearfix(table);
   }
 
   p {
@@ -136,9 +139,9 @@
   }
 
   .enlarge {
-    @include type-5();
+    @include util-print.type-5();
     margin: 0 0 0.5rem;
-    line-height: $base-line-height * 1.1;
+    line-height: util-print.$base-line-height * 1.1;
   }
 
   #technical {
@@ -151,7 +154,7 @@
   }
 
   .job {
-    @include clearfix();
+    @include util.clearfix(table);
     margin-bottom: 0.8rem;
 
     &:last-child {
@@ -176,7 +179,7 @@
     }
     // Each role keeps its own two-column (details / accomplishments) row.
     &__role {
-      @include clearfix();
+      @include util.clearfix(table);
       margin-bottom: 0.6rem;
 
       &:last-child {
@@ -212,10 +215,10 @@
     li {
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      @include lineHeight($base-line-height);
+      @include util-print.lineHeight(util-print.$base-line-height);
       list-style-type: disc;
       margin-left: 1.25rem;
-      margin-bottom: $size-S;
+      margin-bottom: util.$size-S;
     }
 
     li.accomplishment_desc {
@@ -224,7 +227,7 @@
       list-style-type: none;
       margin-left: 0;
       margin-top: 0;
-      margin-bottom: $size-base;
+      margin-bottom: util.$size-base;
     }
   }
 

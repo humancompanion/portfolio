@@ -1,3 +1,5 @@
+@use "util/util";
+
 // ---------------------------------------------------------------------------
 // Component: Skip link
 .skip-link {
@@ -5,9 +7,9 @@
   top: -100%;
   left: 50%;
   z-index: 10;
-  padding: $size-S $size-M;
-  color: $grey-cover;
-  background: $white;
+  padding: util.$size-S util.$size-M;
+  color: util.$grey-cover;
+  background: util.$white;
   transform: translateX(-50%);
 
   &:focus {

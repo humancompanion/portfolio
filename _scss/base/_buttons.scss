@@ -1,3 +1,7 @@
+@use "util/util";
+
+@use "sass:color";
+
 /* ---------------------------------------------------------------------------*/
 /* BASE: BUTTONS                                                              */
 
@@ -7,12 +11,12 @@
   display: inline-block;
   margin: 0;
   padding: 16px 24px 14px;
-  @include font-smoothing(on);
+  @include util.font-smoothing(on);
   user-select: none;
   text-decoration: none;
   text-align: center;
-  font-family: $font_light;
-  font-size: $base-font-size;
+  font-family: util.$font_light;
+  font-size: util.$base-font-size;
   line-height: 1;
   border: 0;
   cursor: pointer;
@@ -20,7 +24,7 @@
   border-radius: 4px;
 }
 
-@mixin button-colors($bgcolor: $color_button-default, $color: $color_button-default-text) {
+@mixin button-colors($bgcolor: util.$color_button-default, $color: util.$color_button-default-text) {
   background-color: $bgcolor;
   color: $color;
 
@@ -31,14 +35,14 @@
   }
 
   &:hover:not(.btn--disabled) {
-    color: $white;
-    background-color: darken($bgcolor, 4%);
+    color: util.$white;
+    background-color: color.adjust($bgcolor, $lightness: -4%);
   }
 
   &:focus:not(.btn--disabled),
   &:active:not(.btn--disabled) {
-    color: $white;
-    background-color: darken($bgcolor, 8%);
+    color: util.$white;
+    background-color: color.adjust($bgcolor, $lightness: -8%);
   }
 }
 
@@ -52,12 +56,12 @@
 
   &--primary {
     @include button();
-    @include button-colors($blue-light);
+    @include button-colors(util.$blue-light);
   }
 
   &--secondary {
     @include button();
-    @include button-colors($grey-dark);
+    @include button-colors(util.$grey-dark);
   }
 
   &--block {

@@ -1,0 +1,657 @@
+---
+permalink: case-study/smeqa/
+title: SME-QA Case Study
+client: U.S. Digital Service
+project_title: SME-QA - Rebuilding how the federal government hires
+layout: case-study
+project_url: "https://smeqa.usds.gov/"
+project_url_display: "https://smeqa.usds.gov"
+---
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <p class="enlarge">
+        I spent four years at
+        <a href="{{ site.baseurl }}/case-study/usajobs/">The Lab at OPM redesigning USAJOBS</a>,
+        and the whole time I was staring at a problem I could not fix from
+        inside a job board. We could guide a job seeker to the right
+        announcement, help them understand it, and get them cleanly through
+        apply. Then their application disappeared into a process we did not
+        control &mdash; and often nobody got hired at all. The bottleneck was
+        never the front door. It was the assessment.
+      </p>
+      <p>
+        As of March 2023, <strong>48% of all competitive examining certificates
+        were thrown out</strong> &mdash; hiring managers looked at the list of
+        &ldquo;qualified&rdquo; applicants HR handed them and chose no one. For
+        technical positions the rate was worse. Hires made through competitive
+        public job announcements had fallen to <strong>20% by FY17</strong>.
+        Managers had learned to route around the competitive process entirely,
+        because a process that asks applicants to rate themselves and asks HR
+        specialists to evaluate skills they have never practiced does not
+        reliably produce people who can do the job.
+      </p>
+      <p>
+        Subject Matter Expert Qualification Assessments (SME-QA) was the fix:
+        put actual practitioners &mdash; the engineers, the data scientists, the
+        CX strategists &mdash; in the assessment seat alongside HR, using
+        structured resume reviews and interviews instead of self-rated
+        questionnaires. And critically, let HR adjudicate veterans' preference
+        only <em>after</em> the technical assessment, so preference is applied to
+        a list of people who can actually do the work. No new law required. It
+        was legal the whole time.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>How I got onto the project</h3>
+      <p>
+        By 2018 I had spent three years at The Lab watching this problem from the
+        front door. I had
+        <a href="{{ site.baseurl }}/resume/#the-lab">co-created a journey map of the front- and backstage federal hiring experience</a>
+        &mdash; job seekers, applicants, HR specialists, and hiring managers on
+        one page &mdash; and taken it to OPM leadership including the Director. I
+        had run ethnographic research with more than 60 hiring managers for the
+        Hiring Manager Advisor prototype, a milestone of
+        <a href="https://trumpadministration.archives.performance.gov/CAP/CAP_goal_3.html" target="_blank" rel="noopener">CAP Goal 3<span class="visually-hidden"> (opens in new tab)</span></a>.
+        I knew exactly where the process broke and I could not get at it from
+        USAJOBS.
+      </p>
+      <p>
+        Buried in that research was the shape of the answer. When we asked hiring
+        managers about the tools available to them, they told us that
+        <strong>SME panels were &ldquo;believed by some to be unlawful,&rdquo;</strong>
+        that panels had worked for the few who tried them, but that most managers
+        either did not know they existed or had
+        <strong>struggled to convince their agency of their lawfulness</strong>.
+        That is a remarkable finding. The technique worked. It was legal. And the
+        thing standing in its way was not policy but belief. Three years later
+        the SME-QA team would still be fighting that exact sentence.
+      </p>
+      <p>
+        Getting USDS to pick this up took a campaign. Arianne Miller, the
+        Director of The Lab, and Sean Baker went to Eddie Hartwig, then Deputy
+        Director of USDS, repeatedly, asking him to take up federal hiring. The
+        instrument they used was
+        <a href="{{ site.baseurl }}/assets/pdf/improving-hiring-outcomes-v2.7.pdf">Improving hiring outcomes</a>,
+        a report I wrote with my Lab colleagues Ben Winter, Han Wang, Jen Kaczor,
+        Min Chung, and Tim Vienckowski &mdash; four years of USAJOBS research
+        condensed into the case for why the remaining problems were systemic and
+        could not be solved inside a single program office. It took some doing.
+        An earlier draft is what finally moved him. The version linked above is
+        the last one, published in February 2019 after the USDS sprint had
+        concluded &mdash; which is why it closes with The Lab's proposal for how
+        to help scale the pilot that resulted.
+      </p>
+      <p>
+        The argument against USDS taking it on was that hiring is not
+        citizen-facing work. Our counter was that every citizen interaction is
+        downstream of who the government manages to hire &mdash; especially in
+        technology, where government has always struggled to recruit the best
+        people. There was a self-interested version of the argument too, and it
+        was the one that landed hardest: The Lab, USDS, 18F, and every other
+        tech-focused innovation shop in government had been hiring through the
+        same excepted service Schedule A workaround. We all knew the competitive
+        process did not work, because none of us used it. Paving that path so
+        other agencies could do the same seemed like the obvious move.
+      </p>
+      <p>
+        Eddie assigned it to Stephanie Grosser. Once we started talking she got
+        excited, and it was Stephanie who pushed to go after the competitive
+        service itself rather than widen the Schedule A exception. I agreed with
+        her, and we both knew it was the much harder nut to crack. Stephanie is a
+        force of nature; other people at USDS caught the same enthusiasm for
+        fixing federal hiring, and I ended up bringing what I had learned to a
+        genuinely talented team.
+      </p>
+      <p>
+        USDS ran its own
+        <a href="https://github.com/usds/usds/blob/master/discovery-sprint-reports/2018/hiring-technical-talent-using-the-competitive-process.pdf" target="_blank" rel="noopener">two-week discovery sprint<span class="visually-hidden"> (opens in new tab)</span></a>
+        in November 2018 and concluded that the competitive process
+        <em>can</em> be executed in a way that hands hiring managers a short list
+        of truly qualified candidates. Of its five recommendations, the second
+        was the whole ballgame: <strong>subject matter experts should evaluate
+        their peers' technical abilities before preference is applied.</strong>
+      </p>
+      <p>
+        So I started working with the USDS team on this while I was still at The
+        Lab. Through the spring of 2019 &mdash; the HHS and DOI pilots &mdash; I
+        was working with them daily. My Lab term was due to end that October, so
+        I applied to USDS and transitioned in June 2019 with time to spare. The
+        job title changed in the middle of the pilots; the work did not.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>The hypothesis, and how it was tested</h3>
+      <p>
+        The team's hypothesis was precise enough to be wrong: <em>if SMEs
+        complete the assessments before HR determines anyone qualified, fewer
+        unqualified applicants reach the certificate, and hiring managers will
+        make more selections.</em>
+      </p>
+      <p>
+        Two agencies were chosen in spring 2019 on deliberately hard criteria
+        &mdash; they had to have already received a certificate with no usable
+        candidates despite knowing qualified people had applied, have at least
+        five vacancies for the same role, be using public delegated examination
+        rather than a shortcut authority, and be hiring at GS-12 or above.
+        <strong>HHS</strong> (CTO and CIO offices, up to 10 GS-13 IT Specialist
+        roles) and <strong>DOI's National Park Service</strong> (up to seven
+        GS-13 System Administrator roles across three locations) were the first
+        two to qualify.
+      </p>
+      <p>
+        Eight SMEs at each agency &mdash; GS-13 to GS-15 staff currently doing
+        or managing the job being filled, none of them the selecting official
+        &mdash; defined the competencies, wrote the assessments, and made the
+        qualification calls.
+      </p>
+      <p>
+        <img
+          alt="The five-phase SME-QA process. Phase 1, job analysis workshop, run by subject matter experts, HR, and the hiring manager. Phase 2, job announcement, owned by HR. Phase 3, resume review, where two SMEs review each resume against the core competencies. Phase 4, assessments, up to two rounds conducted by SMEs. Phase 5, issuing a certificate, where HR applies veterans preference and category ratings. Feedback loops run backward from each phase to the ones before it."
+          src="{{ site.baseurl }}/assets/images/case-study/smeqa/process-XL-2x.png"
+          class="img--1x"
+        />
+        <span class="caption">
+          The process we documented and published. Note who owns each phase
+          &mdash; SMEs hold the two assessment steps, and HR does not touch
+          veterans' preference until phase five.
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge">
+  <div class="g-cell g-B--full">
+    <h4>The applicant funnel</h4>
+    <p>
+      The shape of the funnel is the whole argument. Fewer people called
+      qualified, more people actually hired.
+    </p>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of2">
+    <h5>HHS</h5>
+    <ul class="list--bullet">
+      <li><strong>164</strong> original applicants</li>
+      <li><strong>103</strong> passed resume review</li>
+      <li><strong>54</strong> passed the first interview</li>
+      <li><strong>36</strong> found qualified &mdash; <strong>22%</strong></li>
+      <li><strong>7</strong> selections</li>
+    </ul>
+    <h6>The baseline it replaced</h6>
+    <ul class="list--bullet">
+      <li>
+        Across the five most recent comparable GS-13/14 hiring actions at HHS,
+        HR specialists found an average of <strong>51%</strong> of applicants
+        qualified, and hiring managers made an average of <strong>3</strong>
+        selections.
+      </li>
+    </ul>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of2">
+    <h5>DOI / National Park Service</h5>
+    <ul class="list--bullet">
+      <li><strong>224</strong> original applicants</li>
+      <li><strong>78</strong> passed resume review</li>
+      <li><strong>38</strong> passed the first interview</li>
+      <li><strong>25</strong> found qualified &mdash; <strong>11%</strong></li>
+      <li><strong>13</strong> selections</li>
+    </ul>
+    <h6>The baseline it replaced</h6>
+    <ul class="list--bullet">
+      <li>
+        In DOI's most recent similar hiring action, HR specialists found
+        <strong>95%</strong> of applicants qualified and the hiring manager made
+        <strong>zero</strong> selections from the resulting certificate.
+      </li>
+    </ul>
+  </div>
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <p>
+        That DOI pair is the clearest statement of the problem I have ever seen
+        in federal hiring: a process that called 95% of applicants qualified
+        produced nobody worth hiring. A process that called 11% qualified filled
+        every vacancy and then some. Hiring managers made their first selections
+        within <strong>11 and 16 days</strong> of receiving the certificates, and
+        both agencies shared their certificates with other offices once their own
+        vacancies were filled.
+      </p>
+      <p>
+        Veterans' preference was adjudicated only after SMEs finished. Four of
+        the 36 qualified applicants at HHS were veterans; five of 25 at DOI. The
+        team's conclusion was blunt, and it holds up: veterans' preference
+        complaints are a scapegoat for weak assessment strategies. Assess
+        properly first, and preference gets applied to a list of people who can
+        genuinely do the job.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>What I worked on</h3>
+      <p>
+        SME-QA ran from the 2018 discovery sprint through the 2019 pilots, a
+        second round in 2020&ndash;2021, government-wide shared hiring actions, a
+        detail into OPM in 2022, and a wrap in 2023. I was one of a small team
+        &mdash; Stephanie Grosser, Will Slack, Kelvin Luu, Neil Sharma, Amy
+        Paris, Jenn Noinaj, and Katherine Nammacher at USDS, with Roseanna
+        Ciarlante, Dianna Saxman, and Kim Holden at OPM. These were the pieces I
+        owned or led.
+      </p>
+
+      <h4>Rebuilt the job announcement</h4>
+      <p>
+        The job announcement is where federal hiring either sets expectations or
+        destroys trust. The pilots needed an announcement that read like a job,
+        not like a position description pasted into a form. This piece was mine
+        end to end &mdash; I was the sole designer on it, ran the research
+        behind it, and built the
+        <a href="https://usajobs.github.io/design-system/job-announcement/v7.0/" target="_blank" rel="noopener">template<span class="visually-hidden"> (opens in new tab)</span></a>
+        in plain language, styled closer to a private sector posting. Four
+        decisions did the work:
+      </p>
+      <ul class="list--bullet">
+        <li>
+          <strong>Responsibilities</strong> described the duties SMEs defined in
+          the job analysis workshop &mdash; not the text of the position
+          description.
+        </li>
+        <li>
+          <strong>Qualifications</strong> listed the technical competencies SMEs
+          had identified as genuinely required.
+        </li>
+        <li>
+          <strong>How You'll Be Assessed</strong> stated plainly that SMEs would
+          review only the first two or three pages of work history. Telling
+          applicants the rule is the difference between a limit and a trap.
+        </li>
+        <li>
+          <strong>Overview</strong> declared that the announcement would close at
+          midnight on the day it hit 100 applications.
+        </li>
+      </ul>
+      <p>
+        HHS received 164 applications and DOI 224 &mdash; both announcements
+        closed within two days of opening. This template is now the one used on
+        usajobs.gov for <strong>all</strong> positions, not just SME-QA ones,
+        which makes it the widest-reaching artifact I have shipped in government.
+        {% comment %} Attribution confirmed July 2026: Matthew was sole designer on
+             the job announcement and ran the research behind it. Still open,
+             minor: did testing produce numbers worth citing here (comprehension,
+             time on page, applicant feedback)? Optional - the 164/224 response
+             and two-day close already carry the paragraph. {% endcomment %}
+      </p>
+
+      <h4>Designed and built smeqa.usds.gov</h4>
+      <p>
+        Results do not spread themselves. HR specialists across 100+ agencies
+        needed a place to see that this was legal, see how it worked phase by
+        phase, and see the numbers. I co-designed and built
+        <a href="https://smeqa.usds.gov/" target="_blank" rel="noopener">smeqa.usds.gov<span class="visually-hidden"> (opens in new tab)</span></a>
+        &mdash; a static site walking a hiring team through
+        <a href="https://smeqa.usds.gov/hiring-phases/getting-started/" target="_blank" rel="noopener">every phase<span class="visually-hidden"> (opens in new tab)</span></a>
+        from job analysis workshop to issuing the certificate, with
+        <a href="https://smeqa.usds.gov/about/authority/" target="_blank" rel="noopener">the legal authority<span class="visually-hidden"> (opens in new tab)</span></a>
+        for each step and
+        <a href="https://smeqa.usds.gov/results/" target="_blank" rel="noopener">public outcome data<span class="visually-hidden"> (opens in new tab)</span></a>
+        for every action we ran &mdash; including the ones that went badly.
+      </p>
+      <p>
+        Publishing the numbers was deliberate. The team's first case study and
+        final report sat in White House clearance for <strong>one year and four
+        months</strong> and were stale by the time they cleared. A site we
+        controlled and could update let us put results in front of agencies while
+        they still mattered. Same pattern I used for the USAJOBS Help Center:
+        small, static, open tools, cheap to host, impossible to break under
+        traffic. It is still up years after the program ended, which was the
+        point.
+      </p>
+
+      <h4>Contributed to the design research</h4>
+      <p>
+        Research ran continuously through both pilots, with subject matter
+        experts, hiring managers, and job applicants. I conducted a share of
+        those interviews rather than all of them &mdash; the work was split
+        across the team &mdash; and contributed to the synthesis that turned them
+        into process changes. What follows is what we learned, not a list of
+        things I did alone. It is worth reading in that spirit, because the
+        findings are more interesting than the credit.
+      </p>
+      <p>
+        <img
+          alt="A workshop in progress. Participants stand at a glass wall covered in sticky notes grouped under headings including Measurement and Metrics, Data Ecosystem and Tools, Hiring, and Reporting, while others work at tables covered in printed materials."
+          src="{{ site.baseurl }}/assets/images/case-study/smeqa/workshop-L-2x.jpg"
+          class="img--1x img__XL"
+        />
+        <span class="caption">
+          A workshop I led, with SMEs from across government mapping what they
+          actually measure and which tools they actually use. Getting the right
+          people in a room to define what a job requires is the step everything
+          downstream depends on &mdash; and the one both pilot agencies
+          under-scoped.
+        </span>
+      </p>
+      {% comment %}
+        ATTRIBUTION TAGS - five research findings below.
+
+        Timing is settled: you were working the pilots daily from The Lab
+        through spring 2019, so presence is no longer the question. What's
+        left is how much of each finding was yours.
+
+        RESOLVED - Matthew's tags, July 2026. Keep this note so the wording
+        isn't accidentally inflated later.
+
+          1. Blind review experiment (388 resumes)          = B  contributed
+          2. SME training length, 27% -> 20% tie-break rate  = C  teammate's
+          3. Resume page limit did not impair judgement      = B  contributed
+          4. HR time cost (118 hrs, HHS's extra 145)         = B  contributed
+          5. Job analysis workshop under-scoped              = B  contributed
+
+        Matthew conducted some but not all of the underlying interviews, so
+        the four B items are written as "we" and finding 2 is reported
+        plainly as a team result with no first person attached. The section
+        intro states the split explicitly. Do not upgrade any of these to "I"
+        without a reason to.
+      {% endcomment %}
+      <ul class="list--bullet">
+        <li>
+          <strong>The blind review experiment.</strong> To test whether SMEs were
+          actually necessary &mdash; or whether HR specialists could get the same
+          result using SME-written criteria &mdash; we contracted two
+          independent HR specialists to review all <strong>388 pilot
+          resumes</strong> against the identical competencies the SMEs had used.
+          Their determinations diverged from the SMEs' <em>and from each
+          other's</em>. That is the finding that closes the argument: the
+          criteria are not the hard part, the expertise to apply them is.
+        </li>
+        <li>
+          <strong>Training length changed inter-rater reliability.</strong> This
+          one was a teammate's finding, and it is my favourite of the set. At
+          HHS, <strong>27%</strong> of resume reviews needed a third SME to break
+          a tie &mdash; a signal that SMEs were applying the standards
+          inconsistently. Extending SME training from two hours to three to allow
+          practice and calibration, and eliminating a confusing
+          &ldquo;borderline&rdquo; rating, dropped that to <strong>20%</strong>
+          at DOI. One hour of training and one fewer option on a rating scale.
+        </li>
+        <li>
+          <strong>The page limit did not hurt anyone.</strong> When we
+          interviewed SMEs after resume review, they confirmed the two-to-three
+          page limit did not impair their ability to judge qualifications, and
+          applicants who submitted longer resumes were not disqualified at a
+          higher rate. OPM has since updated the Delegated Examining Operations
+          Handbook to permit the practice government-wide.
+        </li>
+        <li>
+          <strong>The real cost to HR.</strong> Interviewing the participating HR
+          specialists let us put a number on their contribution: an average of
+          <strong>118 hours</strong> per pilot over three months. HHS's decision
+          to put an HR specialist on every interview for legal defensibility
+          added <strong>145 hours</strong> on its own and produced no benefit
+          &mdash; DOI reviewed SME transcripts afterward instead, and got the same
+          assurance for a fraction of the cost.
+        </li>
+        <li>
+          <strong>The job analysis workshop was under-scoped.</strong> Talking to
+          participating SMEs told us the workshops felt rushed at both agencies.
+          HHS allotted nine hours and DOI 12; SMEs at both said they needed more
+          time testing and iterating the interview questions, given how much
+          weight those assessments carried. We moved the recommendation to a full
+          16&ndash;20 hours &mdash; the single largest time increase we asked
+          agencies to accept, and the one with the most leverage, because every
+          later phase inherits the quality of what comes out of that room.
+        </li>
+      </ul>
+
+      <h4>Attacked the scheduling bottleneck</h4>
+      <p>
+        Two frictions consistently stalled hiring actions: corralling resume
+        reviews out of busy SMEs, and scheduling hundreds of interviews by hand.
+        The team identified a cloud-based scheduling tool before the pilots
+        began, but it had not been approved for government use &mdash; so round
+        one was scheduled manually by HR liaisons at HHS and by the hiring
+        managers' administrative staff at DOI, with guidelines capping SMEs at
+        three interviews a day and forbidding back-to-back slots. Those
+        guidelines broke under real conditions almost immediately.
+      </p>
+      <p>
+        The fix that worked at DOI cost nothing: run the two interviews
+        concurrently. Instead of finishing every first interview before starting
+        any second one, schedulers used a shared cloud spreadsheet that HR
+        updated in real time, and booked an applicant's second interview as soon
+        as they passed the first. That single change is most of the difference
+        between HHS's <strong>3.5 months</strong> and DOI's <strong>2
+        months</strong> from announcement to certificate.
+      </p>
+      <p>
+        I later helped procure a self-service scheduling tool so applicants could
+        book their own slots, and teammates prototyped a resume review and
+        tie-breaking tool that let SMEs check off requirements rather than write
+        prose justifications. With both in place, round two pilots reached
+        <strong>5.5 weeks</strong> from announcement to certificate.
+      </p>
+      <p>
+        <img
+          alt="The Resume Review Tool as a subject matter expert sees it. A named applicant is shown with buttons to recuse yourself or flag the applicant for HR. Below, a competency called Communication and Collaboration lists its required proficiency level, a yes or no control for whether the applicant meets it, radio buttons giving a reason, and a free text justification field."
+          src="{{ site.baseurl }}/assets/images/case-study/smeqa/resume-review-tool-XL-2x.png"
+          class="img--1x"
+        />
+        <span class="caption">
+          The Resume Review Tool, as an SME sees it. Every design decision here
+          is a finding from the pilots: the yes/no per competency instead of a
+          prose justification, the structured reason codes so HR can audit
+          without second-guessing, the recuse button for the conflict-of-interest
+          problem we hit when SMEs came from multiple offices, and the note that
+          once an applicant misses one competency you can stop reading.
+        </span>
+      </p>
+
+      <h4>Evangelized the process</h4>
+      <p>
+        I was part of a presentation on SME-QA at the Partnership for Public
+        Service. The team also maintained three standing decks &mdash; one for
+        USDS audiences, one for government audiences, one for the public &mdash;
+        so that any new talk started from an edit rather than a blank page. It is
+        a small operational habit that saved an enormous amount of time over four
+        years, and I have used it on every team since.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge">
+  <div class="g-cell g-B--full">
+    <h3>What it produced</h3>
+    <p>
+      Every hiring action was published with its outcomes. As of the last update
+      to the public results page:
+    </p>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of3">
+    <h4>Across the program</h4>
+    <ul class="list--bullet">
+      <li><strong>17</strong> completed hiring actions</li>
+      <li><strong>42</strong> agencies</li>
+      <li><strong>6,450</strong> applicants assessed</li>
+      <li><strong>933</strong> qualified by subject matter experts</li>
+      <li><strong>406</strong> selections</li>
+      <li><strong>274</strong> accepted offers</li>
+    </ul>
+    <h6>The point</h6>
+    <ul class="list--bullet">
+      <li>
+        These are people who are actually in the job. The comparison is not
+        &ldquo;406 versus some other number&rdquo; &mdash; it is 406 versus
+        certificates that got thrown out and positions that stayed empty.
+      </li>
+    </ul>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of3">
+    <h4>Time to hire collapsed</h4>
+    <ul class="list--bullet">
+      <li>
+        HHS, the first pilot: <strong>3.5 months</strong> from announcement to
+        certificate, with OPM auditing every stage.
+      </li>
+      <li>
+        DOI, immediately after: <strong>2 months</strong>, via concurrent
+        interviews and dropping the indecisive &ldquo;borderline&rdquo; rating.
+      </li>
+      <li>
+        Round two, having swapped the first interview for written and
+        asynchronous assessments and added the Resume Review Tool:
+        <strong>5.5 weeks</strong>. EPA and CMS made immediate selections.
+      </li>
+      <li>
+        CMS's fall 2021 action ran in under <strong>five business weeks</strong>.
+      </li>
+    </ul>
+    <p>
+      <img
+        alt="An eight-week hiring action schedule. Week one, job analysis workshop. Week two, recruit applicants and prepare the job announcement. Week three, post the announcement and run resume review training. Weeks four to five, resume review. Weeks five to six, first round assessments. Weeks six to seven, second round assessments. Week eight, issue certificates, conduct fit interviews, and make offers."
+        src="{{ site.baseurl }}/assets/images/case-study/smeqa/timeline-XL-2x.png"
+        class="img--1x"
+      />
+      <span class="caption">
+        What a hiring action looks like when the tooling is in place: eight
+        weeks from workshop to offers.
+      </span>
+    </p>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of3">
+    <h4>Quality held</h4>
+    <ul class="list--bullet">
+      <li>
+        <strong>100% approval rating</strong> on hires made through SME-QA.
+      </li>
+      <li>
+        The largest action &mdash; the government-wide
+        <a href="https://smeqa.usds.gov/results/gov-wide/data/" target="_blank" rel="noopener">data scientist hiring action<span class="visually-hidden"> (opens in new tab)</span></a>
+        &mdash; qualified <strong>107 data scientists</strong> from 513
+        applicants and produced 105 selections.
+      </li>
+      <li>
+        Two people hired through pilots came back around: one joined USDS, and
+        one became USDS's primary partner at their agency.
+      </li>
+    </ul>
+  </div>
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h4>It opened the door to people outside government</h4>
+      <p>
+        Federal hiring quietly rewards applicants who know how to write a federal
+        resume. Round two tracked employment background through the funnel to see
+        whether SME assessment changed that. At CMS, private sector candidates
+        were <strong>50%</strong> of applicants but <strong>67%</strong> of those
+        found qualified. Resume length tracking showed the page limit neither
+        advantaged nor disadvantaged either group &mdash; though applicants with
+        one-page resumes or resumes over ten pages fared worse than those in
+        between.
+      </p>
+      <p>
+        There is a postscript to the page limit work. In September 2025 OPM made
+        a <a href="https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/agency-guidance-on-the-two-page-limit-on-resume-length/" target="_blank" rel="noopener">two-page limit on resume length<span class="visually-hidden"> (opens in new tab)</span></a>
+        government-wide policy under the Merit Hiring Plan, and USAJOBS now
+        enforces it at upload. I am not going to claim we caused that &mdash; six
+        years and two administrations sit in between. But it is a development
+        worth noting, and our data has something to say about it: we found the
+        sweet spot was two to nine pages, and that applicants with
+        <em>one</em>-page resumes fared worse than the middle of the range. A
+        limit on what reviewers must read is not quite the same instrument as a
+        hard cap on what applicants may submit.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge">
+  <div class="g-cell g-B--full g-ML--1of2">
+    <div class="g-cell-content">
+      <img
+        alt="Employment background of the 238 applicants to the CMS round two action: 22 percent contractors, 28 percent federal employees, 50 percent private sector."
+        src="{{ site.baseurl }}/assets/images/case-study/smeqa/cms-applied.png"
+        class="img--1x img__ML"
+      />
+      <span class="caption">Who applied at CMS</span>
+    </div>
+  </div>
+  <div class="g-cell g-B--full g-ML--1of2">
+    <div class="g-cell-content">
+      <img
+        alt="Employment background of the 12 applicants found qualified in the CMS round two action: 17 percent contractors, 17 percent federal employees, 67 percent private sector."
+        src="{{ site.baseurl }}/assets/images/case-study/smeqa/cms-qualified.png"
+        class="img--1x img__ML"
+      />
+      <span class="caption">Who was found qualified at CMS</span>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>What outlasted us</h3>
+      <p>
+        The most durable outcome was not the process. It was the plumbing. OPM
+        rebuilt our resume review and tie-breaking prototype inside
+        <strong>USA Staffing</strong>, which means every federal hiring team now
+        has the ability to route resume review and tie-breaking to subject matter
+        experts rather than to HR. That single integration reaches further than
+        any pilot we ran.
+      </p>
+      <p>
+        OPM also updated the Delegated Examining Operations Handbook to let
+        agencies limit the work history pages reviewed during qualification
+        &mdash; a small change that came directly out of what we measured. We
+        made hiring data public, published guidance agencies still use, and stood
+        up a hiring experience office inside OPM (HX, originally scoped as a
+        Hiring Assessment Line of Business) so the work had somewhere to live
+        after USDS left. The qualification definitions from the government-wide
+        CX and data science actions &mdash; what it actually means to be a CX
+        strategist, what it actually means to be a data scientist &mdash; have
+        been reused by agencies over and over.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-row g-row--painted g-row--bleed g-B-guttersLarge g-bottom">
+  <div class="g-cell">
+    <div class="g-cell-content">
+      {% include case-study/smeqa-lessons.html %}
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>Why this one stays with me</h3>
+      <p>
+        This is the piece of work I point to when someone asks what civic tech is
+        for. Nobody had to change a law. The authority to do this existed the
+        entire time; what was missing was a team willing to learn the policy well
+        enough to prove it, design a process people could actually follow,
+        measure it honestly enough to publish the parts that did not work, and
+        stay with it for four years. The site is still up. The numbers are still
+        public. The tooling is still in USA Staffing.
+      </p>
+    </div>
+  </div>
+</div>

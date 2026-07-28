@@ -1,21 +1,21 @@
 // ---------------------------------------------------------------------------
 // Layout: Portfolio
 
-@import "util/util";
+@use "util/util";
 
 .l-portfolio {
   .home__body {
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       padding-left: 15%;
     }
   }
 
   .home__body-left {
     margin-right: 1em;
-    padding-right: $size-S;
-    border-right: 1px solid $black;
+    padding-right: util.$size-S;
+    border-right: 1px solid util.$black;
 
-    @include breakpoint(SM) {
+    @include util.breakpoint(SM) {
       margin-right: 1.5em;
     }
   }
@@ -26,11 +26,11 @@
 
   .home__title {
     margin-top: 0;
-    color: $red;
+    color: util.$red;
   }
 
   .footer {
-    @include breakpoint(ML) {
+    @include util.breakpoint(ML) {
       position: fixed;
       bottom: 0;
       right: 0;
@@ -39,6 +39,6 @@
   }
 
   .list--inline.contact-info {
-    @include type-xsmall($font_light);
+    @include util.type-xsmall(util.$font_light);
   }
 }
