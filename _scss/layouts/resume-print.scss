@@ -114,10 +114,11 @@
 
   .header__contact {
     display: block;
-
-    a {
-      white-space: nowrap;
-    }
+    // No white-space:nowrap here: the long email must be allowed to break at
+    // narrow widths (WCAG 1.4.10) instead of forcing horizontal scroll. It
+    // inherits overflow-wrap:anywhere from .header__portfolio and only breaks
+    // when it would otherwise overflow; the short phone number still fits on
+    // one line.
   }
 
   .section_title {
@@ -176,6 +177,9 @@
     &__details {
       float: left;
       width: 33%;
+      // Break long unbreakable tokens (e.g. domains) instead of overflowing the
+      // narrow column at small viewports (WCAG 1.4.10).
+      overflow-wrap: anywhere;
     }
     // Each role keeps its own two-column (details / accomplishments) row.
     &__role {
@@ -219,6 +223,9 @@
       list-style-type: disc;
       margin-left: 1.25rem;
       margin-bottom: util.$size-S;
+      // Domain strings like agencyportal.usajobs.gov must break rather than
+      // force horizontal scroll in the narrow column (WCAG 1.4.10).
+      overflow-wrap: anywhere;
     }
 
     li.accomplishment_desc {
@@ -236,6 +243,19 @@
 
     dd {
       margin: 0;
+    }
+  }
+
+  // Reflow (WCAG 1.4.10): the details/accomplishments float columns are far too
+  // narrow at ~400% zoom (a 320px viewport). Below the SM breakpoint, stack them
+  // into a single full-width column. Print (~816px) never matches this max-width
+  // query, so the two-column resume page layout is untouched.
+  @include util.breakpoint(SM, "down") {
+    .job__details,
+    .accomplishments {
+      float: none;
+      width: 100%;
+      margin-left: 0;
     }
   }
 }

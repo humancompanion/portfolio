@@ -113,6 +113,10 @@
   .header__portfolio {
     @include util.type-body(util.$font_light);
     margin: 0;
+    // Let the long email and portfolio URL break instead of forcing horizontal
+    // scroll in the 50%-width column at narrow viewports (WCAG 1.4.10);
+    // inherits to the contact links.
+    overflow-wrap: anywhere;
   }
 }
 
