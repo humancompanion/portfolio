@@ -85,7 +85,7 @@ profile: v2
       <div class="job__details">
         <h3>{{ job.name }}</h3>
         <p class="location">{{ job.location }}</p>
-        <h4>{{ job.title }} {% if job.org %}<span class="job__org">, {{ job.org }}{% endif %}</span></h4>
+        <h4>{{ job.title }}{% if job.org %}<span class="job__org">, {{ job.org }}</span>{% endif %}</h4>
         {% if job.grade %}
         <p class="job__meta">{{ job.grade }}; {{ job.work-schedule }}, {{ job.appointment-type }}</p>
         {% endif %}

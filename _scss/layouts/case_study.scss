@@ -78,6 +78,14 @@
       @include util.breakpoint(SM) {
         width: 128px;
       }
+
+      @include util.breakpoint(ML) {
+        width: 200px;
+      }
+
+      @include util.breakpoint(XL) {
+        width: 260px;
+      }
     }
   }
 }

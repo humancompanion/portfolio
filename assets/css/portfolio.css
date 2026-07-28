@@ -2496,6 +2496,16 @@ ol > li{
     width:128px;
   }
 }
+@media (min-width: 48rem){
+  .l-case_studies .case-study-spread__feature-img{
+    width:200px;
+  }
+}
+@media (min-width: 64rem){
+  .l-case_studies .case-study-spread__feature-img{
+    width:260px;
+  }
+}
 
 .l-case_study .g-row--bleed{
   padding-right:1rem;
