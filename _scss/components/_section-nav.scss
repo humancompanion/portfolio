@@ -1,0 +1,51 @@
+@use "util/util";
+
+// ---------------------------------------------------------------------------
+// Component: Section nav ("On this page")
+//
+// A JS-built landmark that jumps to the sections a resume page renders. Screen
+// only — hidden from the printed/PDF version, which needs neither the links nor
+// the vertical space. Built in _layouts/print-resume.html.
+
+.section-nav {
+  @media print {
+    display: none;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: util.$size-S util.$size-M;
+  padding: util.$size-SM util.$page--gutter-width-S;
+  font-family: util.$font_light;
+
+  @include util.breakpoint(XL) {
+    padding-left: util.$page--gutter-width-XL;
+    padding-right: util.$page--gutter-width-XL;
+  }
+
+  &__title {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 12px;
+    color: util.$grey-dark;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: util.$size-S util.$size-M;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    font-size: 14px;
+  }
+}

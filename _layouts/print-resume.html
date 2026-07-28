@@ -3,6 +3,7 @@
   {% include print-head.html %}
 
   <body class="{{ page.body-class }}">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="l-shell">
       <header class="header header-resume" data-object="header">
         <div class="header__body">
@@ -30,5 +31,60 @@
         </div>
       </main>
     </div>
+
+    {% comment %}
+    Build an "On this page" landmark from whatever sections the page actually
+    renders (they vary: every resume has Profile/Experience/Education, some add
+    Skills/Technical). Screen-only — the CSS hides .section-nav in @media print,
+    and if JS is off the skip link above still covers keyboard bypass.
+    {% endcomment %}
+    <script>
+      (function () {
+        var main = document.getElementById("main");
+        if (!main) return;
+        var items = [];
+        main.querySelectorAll("section").forEach(function (section) {
+          var heading = section.querySelector("h2");
+          var label = heading ? heading.textContent.trim() : "";
+          if (!label) return;
+          var id = section.id;
+          if (!id) {
+            id = label
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-+|-+$/g, "");
+            section.id = id;
+          }
+          items.push({ id: id, label: label });
+        });
+        if (items.length < 2) return; // a one-item jump list isn't worth a landmark
+
+        var nav = document.createElement("nav");
+        nav.className = "section-nav";
+        nav.setAttribute("aria-label", "On this page");
+
+        var title = document.createElement("span");
+        title.className = "section-nav__title";
+        title.textContent = "On this page:";
+        nav.appendChild(title);
+
+        var list = document.createElement("ul");
+        list.className = "section-nav__list";
+        items.forEach(function (item) {
+          var li = document.createElement("li");
+          li.className = "section-nav__item";
+          var link = document.createElement("a");
+          link.className = "section-nav__link";
+          link.href = "#" + item.id;
+          link.textContent = item.label;
+          li.appendChild(link);
+          list.appendChild(li);
+        });
+        nav.appendChild(list);
+
+        var shell = main.parentNode;
+        shell.insertBefore(nav, main);
+      })();
+    </script>
   </body>
 </html>
