@@ -575,7 +575,7 @@ img{
   margin-bottom:36px;
 }
 .l-grid.g-row--painted{
-  background-color:#bebfc5;
+  background-color:#f1f1f1;
 }
 
 .g-cell{
@@ -2530,6 +2530,8 @@ ol > li{
   line-height:1.125rem;
   letter-spacing:0.008rem;
   margin:0;
+  display:block;
+  margin-top:0.5rem;
 }
 .l-case_study .list--bullet{
   max-width:48rem;

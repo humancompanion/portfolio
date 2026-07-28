@@ -108,8 +108,14 @@
     margin-top: 0;
   }
 
+  // Captions sit below their figure, not beside it. Without display:block a
+  // caption <span> flows inline after the <img> and only wraps underneath when
+  // the image happens to fill the column - so any width-constrained figure
+  // (img__ML, img__XL) ends up with its caption floating to the right.
   .caption {
     @include util.type-xsmall();
+    display: block;
+    margin-top: 0.5rem;
   }
 
   .list--bullet {
