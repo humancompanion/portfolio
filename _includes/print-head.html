@@ -9,15 +9,22 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% comment %} Production links the committed compressed CSS; `jekyll serve`
+  (JEKYLL_ENV=development) links the expanded, source-mapped build that
+  `npm run watch:css` writes — see .gitignore. {% endcomment %}
+  {% assign print_css = site.print-styles %}
+  {% if jekyll.environment == "development" %}
+    {% assign print_css = print_css | replace: ".min.css", ".css" %}
+  {% endif %}
   <link
     rel="stylesheet"
     media="screen"
-    href="{{ site.baseurl }}/assets/css/{{ site.print-styles }}"
+    href="{{ site.baseurl }}/assets/css/{{ print_css }}"
   />
   <link
     rel="stylesheet"
     media="print"
-    href="{{ site.baseurl }}/assets/css/{{ site.print-styles }}"
+    href="{{ site.baseurl }}/assets/css/{{ print_css }}"
   />
   <link
     rel="stylesheet"
