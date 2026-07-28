@@ -1,0 +1,23 @@
+#!/bin/sh
+# Guard: block commits whose author/committer email is not a GitHub noreply address.
+# Prevents leaking a private email (e.g. a personal gmail) into commit metadata.
+# Installed manually; see the "private email" guard set up on 2026-07-28.
+
+allowed_suffix="users.noreply.github.com"
+
+a_email=$(git var GIT_AUTHOR_IDENT | sed -n 's/.*<\(.*\)>.*/\1/p')
+c_email=$(git var GIT_COMMITTER_IDENT | sed -n 's/.*<\(.*\)>.*/\1/p')
+
+for e in "$a_email" "$c_email"; do
+  case "$e" in
+    *"$allowed_suffix") ;;
+    *)
+      echo "✖ commit blocked: email '$e' is not an allowed @$allowed_suffix address." >&2
+      echo "  This repo requires a GitHub noreply email so a private address never leaks." >&2
+      echo "  Fix: git config user.email <id>@users.noreply.github.com" >&2
+      echo "  (also check the EMAIL / GIT_AUTHOR_EMAIL env vars and your editor's git author setting)" >&2
+      exit 1
+      ;;
+  esac
+done
+exit 0

@@ -1,0 +1,43 @@
+#!/bin/sh
+# Guard: block pushing any commit whose author/committer email is not a GitHub
+# noreply address. Catches commits created by other tools (or with --no-verify)
+# before they leave this machine.
+# Installed manually; see the "private email" guard set up on 2026-07-28.
+
+allowed_suffix="users.noreply.github.com"
+bad=0
+
+is_zero() { case "$1" in *[!0]*) return 1 ;; *) return 0 ;; esac; }
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  # Skip branch deletions (local sha all zeros).
+  is_zero "$local_sha" && continue
+
+  if is_zero "$remote_sha"; then
+    # New branch on the remote: check commits not already present on any remote.
+    range=$(git rev-list "$local_sha" --not --remotes)
+  else
+    range=$(git rev-list "$remote_sha..$local_sha")
+  fi
+
+  for c in $range; do
+    a_email=$(git show -s --format='%ae' "$c")
+    c_email=$(git show -s --format='%ce' "$c")
+    for e in "$a_email" "$c_email"; do
+      case "$e" in
+        *"$allowed_suffix") ;;
+        *)
+          echo "✖ push blocked: commit $(git rev-parse --short "$c") has email '$e' (not @$allowed_suffix)" >&2
+          bad=1
+          ;;
+      esac
+    done
+  done
+done
+
+if [ "$bad" -ne 0 ]; then
+  echo "  Rewrite authorship before pushing, e.g.:" >&2
+  echo "    git rebase <base> --exec 'git commit --amend --no-edit --author=\"Name <id@users.noreply.github.com>\"'" >&2
+  exit 1
+fi
+exit 0
