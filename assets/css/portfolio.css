@@ -1884,6 +1884,7 @@ ol > li{
   color:#454958;
   margin-bottom:0.75rem;
   margin:0;
+  overflow-wrap:anywhere;
 }
 
 .header-case-study__title{
@@ -3139,10 +3140,6 @@ ol > li{
   .l-federal-resume .header__contact{
     display:block;
   }
-  .l-resume .header__contact a,
-  .l-federal-resume .header__contact a{
-    white-space:nowrap;
-  }
   .l-resume .section_title,
   .l-federal-resume .section_title{
     margin-top:0;
@@ -3219,6 +3216,7 @@ ol > li{
   .l-federal-resume .job__details{
     float:left;
     width:33%;
+    overflow-wrap:anywhere;
   }
   .l-resume .job__role::after,
   .l-federal-resume .job__role::after{
@@ -3269,6 +3267,7 @@ ol > li{
     list-style-type:disc;
     margin-left:1.25rem;
     margin-bottom:8px;
+    overflow-wrap:anywhere;
   }
   .l-resume .accomplishments li.accomplishment_desc,
   .l-federal-resume .accomplishments li.accomplishment_desc{
@@ -3287,6 +3286,18 @@ ol > li{
   .l-federal-resume .education__list dd{
     margin:0;
   }
+}
+@media print and (max-width: 30rem){
+  .l-resume .job__details,
+  .l-resume .accomplishments,
+  .l-federal-resume .job__details,
+  .l-federal-resume .accomplishments{
+    float:none;
+    width:100%;
+    margin-left:0;
+  }
+}
+@media print{
   .l-resume .accomplishments li{
     display:none;
   }
