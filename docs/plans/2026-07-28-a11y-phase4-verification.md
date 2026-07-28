@@ -64,9 +64,16 @@ The reflow suite caught real horizontal-scroll bugs on the resume pages at 320px
   **5.66:1** (AA normal needs 4.5). Home-nav red renders at ≥24px (large text),
   so its 3.23:1 passes the 3:1 large-text threshold. ✅
 
-## Remaining
+## VoiceOver spot-check (§1.3.1 / AT verification)
 
-- **VoiceOver spot-check (manual)** — `tests/screen-reader/voiceover.spec.ts`
-  covers the home heading. A headed VoiceOver pass over a case study, a resume,
-  and about is a manual step (VoiceOver drives the whole machine and needs
-  Accessibility permission, so it is not run unattended here).
+Automated via Guidepup rather than a manual pass. `tests/screen-reader/voiceover.spec.ts`
+now covers all four page types from #63 — home, a case study (usajobs), the
+resume, and about — navigating into the web content and asserting VoiceOver
+announces each page's `<h1>`.
+
+These run in **CI only** (`.github/workflows/screen-reader-tests.yml`, macOS
+runner, on every PR to `main`) because screen readers can't drive a headless
+browser and VoiceOver takes over the whole machine. Locally they are available
+via `npm run test:sr:voiceover` after `npx @guidepup/setup`, but the workflow is
+the source of truth. The parallel NVDA suite (`nvda.spec.ts`) still covers the
+home page only.
