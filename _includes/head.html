@@ -22,7 +22,16 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
 
-  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/{{ site.styles }}">
-  <link rel="stylesheet" media="print" href="{{ site.baseurl }}/assets/css/{{ site.print-styles }}">
+  {% comment %} Production links the committed compressed CSS; `jekyll serve`
+  (JEKYLL_ENV=development) links the expanded, source-mapped build that
+  `npm run watch:css` writes — see .gitignore. {% endcomment %}
+  {% assign main_css = site.styles %}
+  {% assign print_css = site.print-styles %}
+  {% if jekyll.environment == "development" %}
+    {% assign main_css = main_css | replace: ".min.css", ".css" %}
+    {% assign print_css = print_css | replace: ".min.css", ".css" %}
+  {% endif %}
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/{{ main_css }}">
+  <link rel="stylesheet" media="print" href="{{ site.baseurl }}/assets/css/{{ print_css }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>

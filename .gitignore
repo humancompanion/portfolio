@@ -11,3 +11,9 @@ _archive
 _site
 test-results
 playwright-report
+
+# Local-only expanded + source-mapped CSS from `npm run watch:css`.
+# Only the committed *.min.css is served in production (see _includes/head.html).
+/assets/css/portfolio.css
+/assets/css/portfolio-print.css
+/assets/css/*.css.map
