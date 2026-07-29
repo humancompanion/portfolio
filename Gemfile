@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -13,6 +13,10 @@ source "http://rubygems.org"
 gem "rubyzip", "~> 1.3.0"
 
 gem "html-proofer"
+
+# webrick was removed from Ruby's default gems in 3.0; Jekyll 3.9's local
+# `serve` still needs it. Local-dev only — GitHub Pages builds without it.
+gem "webrick", "~> 1.8"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
