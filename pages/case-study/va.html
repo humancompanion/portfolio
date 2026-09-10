@@ -1,0 +1,344 @@
+---
+permalink: case-study/va/
+title: VA Forms Digitization Case Study
+client: Department of Veterans Affairs
+project_title: Forms Digitization - Changing how we build, mid-project
+layout: case-study
+project_url: "https://tmf.cio.gov/investment/a-unified-modern-way-for-veterans-to-access-benefits-across-va/"
+project_url_display: "tmf.cio.gov"
+---
+
+{% comment %}
+  DRAFT NOTES - delete this block before publishing.
+
+  SOURCING RULE FOR THIS FILE: every fact here traces to a public source, and
+  each one is linked inline. That is deliberate - it is what makes this case
+  study publishable while you are still a VA employee. If you add a number,
+  add the public link with it. If a number exists only in an internal doc, a
+  performance goal, or a dashboard, leave it out.
+
+  Public sources used:
+  - TMF investment page (tmf.cio.gov) - scope, approach, dollar figure, status
+  - GSA press release, July 6, 2023 - the announcement
+  - GSA blog, May 18, 2026 - outcome figures
+  - FedScoop, June 11, 2026 - TMF acting director on the AI angle
+
+  DO NOT reference the July 2026 TMF proposal (agent-mediated service delivery,
+  MCP / SMART on FHIR / Web Bot Auth). It is not accepted, not public, and names
+  Anthropic products while an Anthropic application is in flight. Different
+  project, stays out entirely.
+
+  Open items are flagged inline in Liquid comment blocks marked VERIFY (confirm
+  against the primary source) or YOU (only you can write this). Search for
+  "VERIFY" and "YOU".
+{% endcomment %}
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <p class="enlarge">
+        Digitizing a single VA form, taking it from a PDF to a step by step guided user experience, used to cost about $500,000 and take a minimum of 10 weeks. There are 228 Veteran facing forms left to convert. That math does not work, especially when it comes to short, simple forms.
+      </p>
+      <p>
+        Veterans and their families use VA.gov to reach health care, disability,
+        education, and pension benefits. Most of those services and benefits require multiple forms to obtain, and many of those forms are
+        <a href="https://tmf.cio.gov/investment/a-unified-modern-way-for-veterans-to-access-benefits-across-va/" target="_blank" rel="noopener">used or downloaded more than two million times a month<span class="visually-hidden"> (opens in new tab)</span></a>.
+        Many still require paper or a PDF. If you have ever watched someone attempt to fill out a PDF form on their phone you know that it is beyond frustrating. Asking a user of assistive technology to fill out a PDF form can be very challenging. Many forms require a Veteran to enter the same information they had already given VA, again. While some automated processing exists, many paper forms still require VA staff to process it by hand.
+      </p>
+      <p>
+        In July 2023 the Technology Modernization Fund funded an attempt to
+        change the economics rather than the throughput. The stated goals were
+        specific and, at the time, uncomfortable: reduce the cost of digitizing
+        a form by <strong>at least 50%</strong>, reduce custom code by
+        <strong>at least 20%</strong>, and save Veterans
+        <strong>2.5 days of effort per form</strong> compared with paper.
+      </p>
+      <p>
+        The most interesting thing that happened was not in the original plan.
+        More than halfway through the project, the AI revolution arrived at the VA. I realized that how we had planned to solve the problem was no longer going to give us the flexibility to efficiently convert forms nor set us up for easy maintenance. So we needed a new approach.
+      </p>
+      <p>
+        Using AI to build forms with our patterns and components <a href="https://fedscoop.com/ai-can-save-veterans-time-but-tmf-head-says-reauthorization-needed-for-more-investments/" target="_blank" rel="noopener">accelerated delivery and made rapid form construction possible<span class="visually-hidden"> (opens in new tab)</span></a>.
+        Changing method deep into a funded, audited government
+        modernization effort is not a normal move. This case study is mostly
+        about that decision.
+      </p>
+      <p>
+        I was the Product Owner for the form building workstream.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>Why the unit cost was the real problem</h3>
+      <p>
+        The VA Digital Service, which later became the Office of the CTO (OCTO),
+        decided early on to focus on the most utilized forms. That was the right
+        call. It also meant every digitized form was, in effect, a bespoke build.
+      </p>
+      <p>
+        That is why one cost half a million dollars: it required an agile team to
+        run the research, do the design, and build the form. The process was
+        sound. It just doesn't scale, because not every form demands a full team.
+      </p>
+      <p>
+        An earlier team working on ancillary forms &mdash; the ones that support
+        or relate to the most utilized forms &mdash; audited all 283
+        Veteran-facing forms and found at least 80 simple enough to lift and ship
+        as-is.
+      </p>
+      <p>
+        The TMF approach was not &ldquo;digitize more forms.&rdquo; It was to
+        digitize and centralize forms <em>at scale</em>: create a repeatable pipeline for producing forms that could be modified and maintained, ideally by a VA stakeholder sitting with a designer. We also used the funds for improving form pre-population so Veterans stop re-entering what VA already knows.
+      </p>
+      <p>
+        The lever was a form building capability so that shipping a form stopped being a software project. VA
+        partnered with the U.S. Web Design System team, with a commitment
+        to contribute reusable code and research findings back in the form of patterns other
+        agencies could use. That commitment matters: it means the cheapest
+        form is not the fortieth VA ships, it is the first one some other agency
+        ships without paying to learn any of this.
+      </p>
+      <p>
+        My role was to oversee all three workstreams, with a particular focus on
+        keeping two things in lockstep: that the form builder tool leveraged
+        patterns already in the design system, and that new patterns entering the
+        design system expanded what the form builder could do. I also worked with
+        the team to keep those patterns accessible and usable by all Veterans.
+      </p>
+      <p>
+        On the form builder itself, the goal was a prototype that could convert a
+        form in our environment and get it into staging. The broader goal was to
+        reduce the time it takes <em>any</em> team to digitize and ship a form to
+        VA.gov.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>Changing method mid-project</h3>
+      <p>
+        Government modernization projects are not built to change approach
+        halfway. The proposal is the promise. Milestones are tracked, funds are
+        obligated against a plan, and the safest thing any team can do is
+        deliver what it said it would deliver in the way it said it would
+        deliver it.
+      </p>
+      <p>This project did the less safe thing.</p>
+      <blockquote>
+        <a href="https://fedscoop.com/ai-can-save-veterans-time-but-tmf-head-says-reauthorization-needed-for-more-investments/" target="_blank" rel="noopener">Public reporting describes a midstream shift to incorporate AI coding tools<span class="visually-hidden"> (opens in new tab)</span></a>
+      </blockquote>
+
+      <h4>Paper forms have no standards</h4>
+      <p>
+        About mid-way through, it became clear my original approach was too
+        rigid to survive a basic fact: there are no standards for paper forms.
+        Government has been producing them for years with no design system in
+        sight.
+      </p>
+      <p>
+        So each form carries variations that would need to be changed &mdash;
+        sometimes only slightly, always slowly. There were more deviations than
+        my initial audit had accounted for.
+      </p>
+      <p>
+        The plan called for a designer to sit with the VA stakeholder
+        responsible for each form and co-design the changes together, with the
+        designer translating paper fields into their digital equivalents. What I
+        realized is that an LLM could do that translation, given the right
+        context and harness, and do it fast enough to hand the designer and the
+        stakeholder a built form to react to.
+      </p>
+      <p>
+        We had assumed we needed a human with specialized knowledge to
+        kick-start the process. We realized along the way that our robot friends
+        could fill that role instead.
+      </p>
+
+      <h4>The test that made the case</h4>
+      <p>
+        I assigned a small group to see whether Copilot, running an early
+        iteration of Claude, could be given enough context to build a simple
+        form in one shot. They wrote a mega-prompt carrying the necessary Design System patterns and components, and over a single sprint they got very close.
+      </p>
+      <p>
+        More complex forms still needed follow-up iterations. But the first pass was enough to get a designer and a stakeholder to a form they could iterate on together &mdash; which was the whole point of the original plan, arrived at from the other direction.
+      </p>
+      <p>
+        They made a video demonstrating the result. That video is what convinced my co-author on the proposal to make the pivot.
+      </p>
+
+      <h4>Where it stands</h4>
+      <p>
+        We have not yet achieved the original goal of putting tools directly in the hands of a VA stakeholder. Since then I have built a VA Design System MCP server, now in rigorous testing, supporting a prototyping kit for designers. What we learn there will inform the next iteration of building forms with AI.
+      </p>
+      <p>
+        The pace of change means vendor teams now arrive with their own
+        workflows and tooling, which we evaluate and fold into ours. All of it still requires a skilled designer to ensure forms are accessible and that the right patterns and components are used. But we are closer than ever to building more forms with less effort, in less time.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>What it produced</h3>
+      <p>
+        The investment
+        <a href="https://tmf.cio.gov/investment/a-unified-modern-way-for-veterans-to-access-benefits-across-va/" target="_blank" rel="noopener">closed out at $6,289,783<span class="visually-hidden"> (opens in new tab)</span></a>,
+        fully transferred and fully repaid, with no schedule delay and no cost
+        overruns recorded.
+      </p>
+      <h4>Outcomes reported publicly</h4>
+      <ul class="list--bullet">
+        <li><strong>10</strong> forms completed, with <strong>53</strong> more underway</li>
+        <li><strong>350,000</strong> Veterans served by those forms</li>
+        <li><strong>2,385 years</strong> of Veteran time saved against the paper process</li>
+        <li>Satisfaction scores up <strong>8.6%</strong></li>
+        <li>On track to eliminate <strong>305,000</strong> lines of custom code</li>
+      </ul>
+      <p>
+        The time figure is the one worth sitting with. 2,385 years is not an
+        abstraction about efficiency; it is the aggregate of a great many
+        people not filling out a paper form, not mailing it, and not waiting for
+        someone to key it in on the other end. Jessie Posilkin, the TMF's acting
+        director, put it plainly in a June 2026 webinar: saving thousands of
+        years of the time of
+        <a href="https://fedscoop.com/ai-can-save-veterans-time-but-tmf-head-says-reauthorization-needed-for-more-investments/" target="_blank" rel="noopener">&ldquo;veterans who are entitled to benefits that they could not access&rdquo;<span class="visually-hidden"> (opens in new tab)</span></a>
+        is precisely the kind of return she wants the fund making.
+      </p>
+      <h4>Presenting to the TMF board</h4>
+      <p>
+        When the final work was presented to the TMF board, including the Federal
+        CIO, nearly every question was about the AI tooling and the form building
+        process. That told me something: this has been a problem for the federal
+        government for a long time, and people are hungry for a way through it.
+        The board was supportive of the work and of the pivot.
+      </p>
+      <p>
+        My answers deliberately went past what we had done on this project and
+        toward the design maturity that made it possible. Our design system is
+        robust, with accessible components built into patterns specific to
+        government forms. We have the APIs to submit those forms for back-end
+        processing. We have a dedicated governance team making sure that any team
+        using AI tooling is doing it responsibly.
+      </p>
+      <p>
+        So while I hope this project is instructive for other agencies, the road
+        to it was paved by earlier iterations of the digital service at VA and by
+        the work of many people over many years.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>What I would do differently</h3>
+
+      <h4>The audit was too small, and I did it by hand</h4>
+      <p>
+        Our audit would have been far more complete with an LLM helping
+        systematically categorize fields and assign them to known or new design
+        patterns. Run across a larger sample &mdash; possibly all 200+ remaining
+        forms &mdash; it would have identified the ideal candidates for
+        conversion and surfaced new patterns faster.
+      </p>
+      <p>
+        Most usefully, it would have shown me sooner that a rigid approach was
+        not going to scale. There is an irony here I have made my peace with: the
+        tool that eventually rescued the project would also have improved the
+        plan it replaced.
+      </p>
+
+      <h4>The co-design model was right for its moment, not wrong</h4>
+      <p>
+        I would not call the original strategy a mistake. It was right for the
+        moment and then overtaken by the technology. I would still argue a
+        designer has to be the human in the loop &mdash; that has not changed.
+      </p>
+      <p>
+        What changed is how fast a designer can reach a working form. I see it
+        now in the VA Prototype Kit I built alongside the Design System MCP
+        server: a designer on my Design System team recently sent me a pull
+        request converting a form in a few hours.
+      </p>
+
+      <h4>I assumed stakeholders wanted to co-design. They wanted to react.</h4>
+      <p>
+        The assumption underneath the original plan was that VA stakeholders
+        would want to sit with a designer and convert a form together. Co-design of that kind asks for a culture shift, and I underestimated how large of a shift it would require.
+      </p>
+      <p>
+        Now that we can prototype and build a form quickly, people would rather see a result and discuss it. That is a less romantic model of collaboration than the one I planned for, but it is the one that gets forms shipped.
+      </p>
+
+      <h4>Building the capability and getting it adopted are two projects</h4>
+      <p>
+        Active work concluded at 10 forms with 53 underway. That makes this an interrupted project rather than a finished one.
+      </p>
+      <p>
+        Last year VA surged additional teams onto forms digitization without
+        arming them with what we had built, so those teams took a more
+        brute-force approach using their own resources. Once they delivered a number of forms, focus moved onto other projects. I budgeted for building the capability. I did not budget for the work of getting it picked up as I did not anticipate reorganization and a culling of the federal workforce.
+      </p>
+
+      <h4>The contribution back to USWDS never reached anyone</h4>
+      <p>
+        The commitment in the proposal was to contribute reusable patterns and research back through the U.S. Web Design System so other agencies could benefit. By the time our pull requests were merged, the USWDS team had been reduced to a single person.
+      </p>
+      <p>
+        No other agency has been able to pick up the work. That is not a failure of VA or of GSA. But it is the same lesson I took from SME-QA: shipping a capability and getting it adopted are not the same accomplishment, and only one of them shows up in the outcome data.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="l-grid g-ML-guttersLarge g-XL-guttersRemoveOuter">
+  <div class="g-cell g-B--full g-ML--fit">
+    <div class="g-cell-content">
+      <h3>Why this one stays with me</h3>
+      <p>
+        There has been a desire for a decade to build one tool that digitizes forms for every agency. In my opinion that is very unlikely to work, and we have learned the lesson several times over. Every agency starts from a different place &mdash; different APIs, back-end systems, front-end frameworks, governance, design maturity. A single tool has to assume a starting point, and there isn't one.
+      </p>
+      <p>
+        What we need instead is a playbook flexible enough to hand agencies
+        different strategies depending on where they actually are.
+      </p>
+      <p>
+        With one caveat worth taking seriously: if agencies could align on modern LLM use, a shared harness engineering strategy might be flexible enough to be useful across agencies for converting a PDF into an online form prototype. That would be a real boost for a lot of people. It is still not the end-to-end solution that keeps getting sought.
+      </p>
+
+      <h4>On changing your mind in public</h4>
+      <p>
+        I did not have to make the call in front of the board on the fly. I had excellent support from my co-author on the proposal &mdash; a genuine collaborator, and someone I trust. He trusts my technical judgment and I trust his instincts. I also had a Design and Forms Systems team who could do the prompt engineering and context building to pilot a way forward.
+      </p>
+      <p>
+        So we discussed it internally, plotted a course, and ran tests comparing the outcomes &mdash; the actual generated forms &mdash; from both methodologies. Both produced a working form. The AI pathway was quicker and more flexible.
+      </p>
+      <p>
+        That is the part I would want anyone to take from this. You do not get to change method mid-project on the strength of an argument. You get to do it on the strength of a comparison.
+      </p>
+
+      <h4>What 2,385 years is and isn't</h4>
+      <p>
+        I want to be honest about that number, because it is a bit of a
+        press-release figure. It is an aggregate. No individual Veteran gets 2,385 years back, and the total papers over the fact that submitting a form is usually one step in a much longer process.
+      </p>
+      <p>
+        But there are real reasons an online form beats a PDF. Watch someone try to fill out a PDF on a phone and you will know within thirty seconds that it is not tenable. Ask someone using assistive technology to do it and it can be worse than that. An online form gives error checking, gives feedback, and confirms that the agency received the submission &mdash; usually in one sitting.
+      </p>
+      <p>
+        Not waiting on snail mail saves each person about two and a half days. That is not nothing.
+      </p>
+    </div>
+  </div>
+</div>
